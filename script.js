@@ -263,3 +263,54 @@ function setVH() {
 setVH();
 window.addEventListener('resize', setVH);
 window.addEventListener('orientationchange', setVH);
+
+// ─── GSAP ANIMATIONS ──────────────────────────────────────
+if (window.gsap) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('.home-content h1, .home-content h3, .home-content p, .social-icons, .btn-group', {
+    opacity: 0,
+    y: 28,
+    duration: 0.9,
+    ease: 'power3.out',
+    stagger: 0.16,
+    delay: 0.3,
+  });
+
+  gsap.from('.home-img', {
+    opacity: 0,
+    x: 40,
+    duration: 1,
+    ease: 'power3.out',
+    delay: 0.5,
+  });
+
+  gsap.from('.project-card', {
+    scrollTrigger: {
+      trigger: '.projects-grid',
+      start: 'top 80%',
+      end: 'bottom 20%',
+      toggleActions: 'play none none reverse',
+    },
+    opacity: 0,
+    y: 40,
+    duration: 0.85,
+    ease: 'power3.out',
+    stagger: 0.15,
+  });
+
+  gsap.utils.toArray('.service-box, .certificate-card, .testimonial-item, .about-card').forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 90%',
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      y: 35,
+      duration: 0.8,
+      ease: 'power3.out',
+      delay: 0.05,
+    });
+  });
+}
