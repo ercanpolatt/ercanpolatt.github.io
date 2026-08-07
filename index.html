@@ -54,23 +54,26 @@
       <i class="bx bx-menu" id="menu-icon"></i>
 
       <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#education">Education</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#testimonials">References</a>
-        <a href="#about">About Me</a>
+        <a href="#home" class="active" data-i18n="nav-home">Home</a>
+        <a href="#education" data-i18n="nav-education">Education</a>
+        <a href="#services" data-i18n="nav-services">Services</a>
+        <a href="#projects" data-i18n="nav-projects">Projects</a>
+        <a href="#skills" data-i18n="nav-skills">Skills</a>
+        <a href="#certificates" data-i18n="nav-certificates">Certificates</a>
+        <a href="#testimonials" data-i18n="nav-testimonials">References</a>
+        <a href="#about" data-i18n="nav-about">About Me</a>
+        <button class="lang-toggle-btn" id="lang-toggle" title="Dil Değiştir / Switch Language">
+          <i class='bx bx-globe'></i> <span id="lang-text">TR</span>
+        </button>
       </nav>
     </header>
 
     <!-- HOME -->
     <section class="home" id="home">
       <div class="home-content">
-        <h1>Ercan Polat | Software Engineer & Portfolio</h1>
-        <h3 class="text-animation">AI Engineer, Full Stack Developer & Data Scientist</h3>
-        <p>
+        <h1 data-i18n="hero-title">Ercan Polat | Computer Engineer &amp; Portfolio</h1>
+        <h3 class="text-animation"><span class="hero-im-text" data-i18n="hero-im">I'm a</span> <span class="typing-text"></span><span class="typing-cursor">|</span></h3>
+        <p data-i18n="hero-desc">
           I am Ercan Polat, a computer engineering graduate and software engineer specializing in artificial intelligence, full-stack web development, machine learning, and data science. I build modern digital products, practical solutions, and user-focused applications with clean code and continuous learning.
         </p>
         <div class="social-icons">
@@ -80,8 +83,8 @@
         </div>
         
         <div class="btn-group">
-          <a href="./cv/Ercan_Polat.pdf" class="btn" target="_blank" rel="noopener noreferrer">CV</a>
-          <a href="#about" class="btn">About Me</a>
+          <a href="./cv/Ercan_Polat.pdf" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="btn-cv">CV</a>
+          <a href="#about" class="btn" data-i18n="btn-about">About Me</a>
         </div>
       </div>
 
@@ -95,40 +98,32 @@
       </div>
     </section>
 
-    <!-- EDUCATION -->
+    <!-- EDUCATION & EXPERIENCE -->
     <section class="education" id="education">
-      <h2 class="heading">Education</h2>
+      <h2 class="heading" data-i18n="heading-education">Education &amp; Experience</h2>
       <div class="timeline-items">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2020</div>
+          <div class="timeline-date">2021 - 2026</div>
           <div class="timeline-content">
-            <h3>High School</h3>
-            <p>I graduated from Karacabey Anatolian High School. During my high school education, I built a strong foundation in mathematics and science. This period helped me develop my interest in technology and engineering.</p>
+            <h3 data-i18n="edu-1-title">Computer Engineering</h3>
+            <p data-i18n="edu-1-desc">Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis, machine learning algorithms, database architectures, and software engineering principles.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2025</div>
+          <div class="timeline-date">DP World Evyap</div>
           <div class="timeline-content">
-            <h3>University</h3>
-            <p>I graduated from Amasya University with a degree in Computer Engineering. My graduation average is 75.12 / 100. During my studies, I focused on software development, problem solving, and improving my technical skills.</p>
+            <h3 data-i18n="edu-2-title">IT &amp; Data Analytics Specialist Intern</h3>
+            <p data-i18n="edu-2-desc">Analyzed operational logistics workflows, maintained high data quality using SAP/ERP systems, provided first-line IT operations support, and contributed to cyber security audit log monitoring.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2025</div>
+          <div class="timeline-date">Freelance</div>
           <div class="timeline-content">
-            <h3>Internship</h3>
-            <p>I completed my internship at DP World Evyap. I worked on basic software development and technical support tasks. This internship helped me gain hands-on experience and improve my technical and communication skills.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Now</div>
-          <div class="timeline-content">
-            <h3>Work Experience</h3>
-            <p>Currently i am looking for a job.</p>
+            <h3 data-i18n="edu-3-title">Freelance Software Engineer &amp; Data Analyst</h3>
+            <p data-i18n="edu-3-desc">End-to-end development of custom full-stack web applications, data pipelines, statistical data cleaning, and automated SQL/NoSQL database workflows tailored to client business metrics.</p>
           </div>
         </div>
       </div>
@@ -136,13 +131,13 @@
 
     <!-- SERVICES -->
     <section id="services" class="services">
-      <h2 class="heading">Services</h2>
+      <h2 class="heading" data-i18n="heading-services">Services</h2>
       <div class="services-container">
         <div class="service-box">
           <div class="service-info">
             <div class="service-icon"><i class='bx bx-brain'></i></div>
-            <h4>AI Engineer</h4>
-            <p>I design and develop intelligent systems using artificial intelligence and machine learning techniques. My focus is on turning data into smart, scalable solutions that solve real problems and create value.</p>
+            <h4 data-i18n="srv-1-title">AI Engineer</h4>
+            <p data-i18n="srv-1-desc">I design and develop intelligent systems using artificial intelligence and machine learning techniques. My focus is on turning data into smart, scalable solutions that solve real problems and create value.</p>
             <div class="service-tags">
               <span>NLP / LLM</span><span>TensorFlow</span><span>Python</span><span>ML</span>
             </div>
@@ -151,8 +146,8 @@
         <div class="service-box">
           <div class="service-info">
             <div class="service-icon"><i class='bx bx-layer'></i></div>
-            <h4>Full Stack Developer</h4>
-            <p>I develop complete web applications by working on both front-end and back-end layers. I enjoy building well-structured systems that are efficient, maintainable, and user-focused.</p>
+            <h4 data-i18n="srv-2-title">Full Stack Developer</h4>
+            <p data-i18n="srv-2-desc">I develop complete web applications by working on both front-end and back-end layers. I enjoy building well-structured systems that are efficient, maintainable, and user-focused.</p>
             <div class="service-tags">
               <span>React.js</span><span>Node.js</span><span>Flask</span><span>SQL</span>
             </div>
@@ -161,8 +156,8 @@
         <div class="service-box">
           <div class="service-info">
             <div class="service-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
-            <h4>Data Scientist</h4>
-            <p>I work with data to analyze patterns, build predictive models, and visualize insights. I enjoy transforming raw data into meaningful information that supports better decisions.</p>
+            <h4 data-i18n="srv-3-title">Data Scientist</h4>
+            <p data-i18n="srv-3-desc">I work with data to analyze patterns, build predictive models, and visualize insights. I enjoy transforming raw data into meaningful information that supports better decisions.</p>
             <div class="service-tags">
               <span>Pandas</span><span>NumPy</span><span>Visualization</span><span>Modeling</span>
             </div>
@@ -171,8 +166,8 @@
         <div class="service-box">
           <div class="service-info">
             <div class="service-icon"><i class='bx bx-mobile-alt'></i></div>
-            <h4>Mobile Development</h4>
-            <p>I develop mobile applications for Android and iOS platforms. My goal is to create smooth, user-friendly apps with a strong focus on performance and usability.</p>
+            <h4 data-i18n="srv-4-title">Mobile Development</h4>
+            <p data-i18n="srv-4-desc">I develop mobile applications for Android and iOS platforms. My goal is to create smooth, user-friendly apps with a strong focus on performance and usability.</p>
             <div class="service-tags">
               <span>React Native</span><span>Flutter</span><span>Android</span><span>iOS</span>
             </div>
@@ -183,47 +178,132 @@
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
-      <h2 class="heading">Featured <span>Projects</span></h2>
+      <h2 class="heading" data-i18n="heading-projects">Featured <span>Projects</span></h2>
+      
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tümü</button>
+        <button class="filter-btn" data-filter="ai" data-i18n="filter-ai">Yapay Zekâ &amp; ML</button>
+        <button class="filter-btn" data-filter="fullstack" data-i18n="filter-fullstack">Full-Stack Web</button>
+        <button class="filter-btn" data-filter="mobile" data-i18n="filter-mobile">Mobil Uygulama</button>
+        <button class="filter-btn" data-filter="datascience" data-i18n="filter-datascience">Veri Bilimi</button>
+      </div>
+
       <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-meta">
-            <span class="project-badge">Web App</span>
-            <h3>AI Mentor Dashboard</h3>
+        <article class="project-card" data-category="ai">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-brain'></i></div>
+            <span class="project-badge" data-i18n="prj-1-badge">Yapay Zekâ</span>
           </div>
-          <p>Designed a responsive AI dashboard that tracks model performance, learning workflows, and analytics for smarter decision-making.</p>
-          <div class="project-tags">
-            <span>React</span><span>Node.js</span><span>AI</span>
+          <div class="project-content">
+            <h3>AI Mentor &amp; Sentiment Dashboard</h3>
+            <p data-i18n="prj-1-desc">NLP ve LLM modellerini kullanarak kullanıcı geri bildirimlerini analiz eden, performans ve öğrenme iş akışlarını takip eden duygu analizi ve AI asistan paneli.</p>
+            <div class="project-tags">
+              <span>NLP</span><span>Transformers</span><span>React</span><span>FastAPI</span><span>Python</span>
+            </div>
           </div>
-          <a href="#about" class="btn btn-secondary">Explore Details</a>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="1" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-meta">
-            <span class="project-badge">Data Platform</span>
-            <h3>Smart Analytics Portal</h3>
+
+        <article class="project-card" data-category="datascience">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+            <span class="project-badge" data-i18n="prj-2-badge">Veri Bilimi</span>
           </div>
-          <p>Built a high-performance data portal that visualizes insights, automates reporting, and keeps stakeholders aligned with real-time results.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Flask</span><span>Visualization</span>
+          <div class="project-content">
+            <h3>Smart Freight Analytics Portal</h3>
+            <p data-i18n="prj-2-desc">Lojistik ve liman operasyonları için veri analitiği platformu. Konteyner hareketlerini, operasyonel raporlamayı ve anlık veri akışını görselleştirir.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Pandas</span><span>Plotly</span><span>Flask</span><span>SQL</span>
+            </div>
           </div>
-          <a href="#about" class="btn btn-secondary">Explore Details</a>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="2" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
         </article>
-        <article class="project-card">
-          <div class="project-meta">
-            <span class="project-badge">Mobile</span>
-            <h3>Productivity Companion App</h3>
+
+        <article class="project-card" data-category="mobile">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-mobile-alt'></i></div>
+            <span class="project-badge" data-i18n="prj-3-badge">Mobil Uygulama</span>
           </div>
-          <p>Crafted a polished mobile experience for task management with fast interactions, offline-ready behavior, and modern UI transitions.</p>
-          <div class="project-tags">
-            <span>React Native</span><span>UX</span><span>Performance</span>
+          <div class="project-content">
+            <h3>Productivity &amp; Task Flow App</h3>
+            <p data-i18n="prj-3-desc">Hızlı etkileşimler, çevrimdışı senkronizasyon ve akıcı UI geçişleri sunan gelişmiş mobil görev ve üretkenlik yönetimi uygulaması.</p>
+            <div class="project-tags">
+              <span>React Native</span><span>Expo</span><span>Redux</span><span>Node.js</span>
+            </div>
           </div>
-          <a href="#about" class="btn btn-secondary">Explore Details</a>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="3" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="fullstack">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-code-block'></i></div>
+            <span class="project-badge" data-i18n="prj-4-badge">Full-Stack</span>
+          </div>
+          <div class="project-content">
+            <h3>Smart Logistics Container Tracker</h3>
+            <p data-i18n="prj-4-desc">Gerçek zamanlı konteyner takip, konum doğrulama ve anlık veri akışı sağlayan tam donanımlı lojistik web platformu.</p>
+            <div class="project-tags">
+              <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>WebSockets</span><span>React</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="4" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="datascience">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-shield-quarter'></i></div>
+            <span class="project-badge" data-i18n="prj-5-badge">Siber Güvenlik</span>
+          </div>
+          <div class="project-content">
+            <h3>Cyber Threat Log Visualizer</h3>
+            <p data-i18n="prj-5-desc">Ağ ve sistem loglarındaki anormallikleri makine öğrenimi modelleriyle tespit eden ve görsel tehdit analizi sunan güvenlik aracı.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Scikit-Learn</span><span>Dash</span><span>Security</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="5" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- SKILLS -->
     <section class="skills" id="skills">
-      <h2 class="heading">Technical <span>Skills</span></h2>
+      <h2 class="heading" data-i18n="heading-skills">Technical <span>Skills</span></h2>
       <div class="skills-container">
         <div class="skill-category">
           <div class="category-header">
@@ -347,7 +427,7 @@
     <!-- CERTIFICATES -->
       <section class="certificates" id="certificates">
         <div class="section-scroll">
-          <h2 class="heading">My <span>Certificates</span></h2>
+          <h2 class="heading" data-i18n="heading-certificates">My <span>Certificates</span></h2>
           <p class="certificates-subtitle">Certifications and achievements that showcase my continuous learning journey</p>
           <div class="certificates-container">
             <div class="certificate-card" data-certificate="1">
@@ -395,15 +475,48 @@
         </div>
       </div>
 
+      <!-- Project Detail Modal -->
+      <div id="project-modal" class="modal">
+        <div class="modal-content project-modal-content">
+          <span class="modal-close" id="project-modal-close">&times;</span>
+          <div class="project-modal-header">
+            <div class="project-modal-icon" id="project-modal-icon"><i class='bx bx-code-alt'></i></div>
+            <div>
+              <span class="project-badge" id="project-modal-badge">Kategori</span>
+              <h3 id="project-modal-title">Proje Başlığı</h3>
+            </div>
+          </div>
+          <div class="project-modal-body">
+            <p id="project-modal-desc"></p>
+            <div class="project-modal-section">
+              <h4><i class='bx bx-wrench'></i> Teknolojiler &amp; Araçlar</h4>
+              <div class="project-tags" id="project-modal-tags"></div>
+            </div>
+            <div class="project-modal-section">
+              <h4><i class='bx bx-check-shield'></i> Öne Çıkan Özellikler</h4>
+              <ul class="project-modal-features" id="project-modal-features"></ul>
+            </div>
+          </div>
+          <div class="project-modal-footer">
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="project-modal-github">
+              <i class='bx bxl-github'></i> GitHub Deposu
+            </a>
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="btn" id="project-modal-live">
+              <i class='bx bx-link-external'></i> Profil / GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
     <!-- REFERENCES -->
     <section class="testimonials" id="testimonials">
       <div class="testimonials-box">
-        <h2 class="heading">References</h2>
+        <h2 class="heading" data-i18n="heading-testimonials">References</h2>
         <div class="wrapper">
           <div class="testimonial-item">
             <div class="ref-avatar">ÖK</div>
             <h2>Prof. Dr. Özgen Korkmaz</h2>
-            <p class="ref-role">Chair of the Department of Computer Engineering</p>
+            <p class="ref-role" data-i18n="ref-1-role">Chair of the Department of Computer Engineering</p>
             <p class="ref-org">Bandırma Onyedi Eylül University</p>
             <a href="mailto:ozgenkorkmaz@bandirma.edu.tr" class="ref-email">
               <i class='bx bx-envelope'></i> ozgenkorkmaz@bandirma.edu.tr
@@ -412,7 +525,7 @@
           <div class="testimonial-item">
             <div class="ref-avatar">GE</div>
             <h2>Gökhan Erbaş</h2>
-            <p class="ref-role">IT Director</p>
+            <p class="ref-role" data-i18n="ref-2-role">IT Director</p>
             <p class="ref-org">DP World Evyap Türkiye</p>
             <a href="mailto:gokhan.erbas@dpworld.com" class="ref-email">
               <i class='bx bx-envelope'></i> gokhan.erbas@dpworld.com
@@ -421,7 +534,7 @@
           <div class="testimonial-item">
             <div class="ref-avatar">AK</div>
             <h2>Ayhan Karslı</h2>
-            <p class="ref-role">Technical Director</p>
+            <p class="ref-role" data-i18n="ref-3-role">Technical Director</p>
             <p class="ref-org">DP World Evyap Türkiye</p>
             <a href="mailto:ayhan.karsli@dpworld.com" class="ref-email">
               <i class='bx bx-envelope'></i> ayhan.karsli@dpworld.com
@@ -433,67 +546,67 @@
 
     <!-- ABOUT ME -->
     <section class="about" id="about">
-      <h2 class="heading">About <span>Me</span></h2>
+      <h2 class="heading" data-i18n="heading-about">About <span>Me</span></h2>
       <div class="about-container">
         <div class="about-card">
           <div class="card-icon"><i class='bx bx-user-circle'></i></div>
-          <h3>Who Am I?</h3>
-          <p>I'm a passionate Computer Engineering graduate with a deep interest in artificial intelligence, full-stack development, and data science. I love turning complex problems into elegant solutions through code.</p>
+          <h3 data-i18n="ab-1-title">Who Am I?</h3>
+          <p data-i18n="ab-1-desc">I'm a passionate Computer Engineering graduate with a deep interest in artificial intelligence, full-stack development, and data science. I love turning complex problems into elegant solutions through code.</p>
         </div>
         <div class="about-card">
           <div class="card-icon"><i class='bx bx-code-curly'></i></div>
-          <h3>What I Do?</h3>
-          <p>I build intelligent systems using AI and machine learning, develop responsive web applications, and create mobile apps that solve real-world problems. From frontend design to backend architecture.</p>
+          <h3 data-i18n="ab-2-title">What I Do?</h3>
+          <p data-i18n="ab-2-desc">I build intelligent systems using AI and machine learning, develop responsive web applications, and create mobile apps that solve real-world problems. From frontend design to backend architecture.</p>
         </div>
         <div class="about-card">
           <div class="card-icon"><i class='bx bx-rocket'></i></div>
-          <h3>My Approach</h3>
-          <p>I believe in clean code, continuous learning, and collaborative teamwork. I'm always exploring new technologies to stay ahead. Quality, efficiency, and user experience are at the core of everything I create.</p>
+          <h3 data-i18n="ab-3-title">My Approach</h3>
+          <p data-i18n="ab-3-desc">I believe in clean code, continuous learning, and collaborative teamwork. I'm always exploring new technologies to stay ahead. Quality, efficiency, and user experience are at the core of everything I create.</p>
         </div>
         <div class="about-card">
           <div class="card-icon"><i class='bx bx-heart'></i></div>
-          <h3>Beyond Coding</h3>
-          <p>When I'm not coding, you'll find me exploring tech trends, contributing to open-source projects, or learning new frameworks. I enjoy tech blogs, webinars, and connecting with fellow developers.</p>
+          <h3 data-i18n="ab-4-title">Beyond Coding</h3>
+          <p data-i18n="ab-4-desc">When I'm not coding, you'll find me exploring tech trends, contributing to open-source projects, or learning new frameworks. I enjoy tech blogs, webinars, and connecting with fellow developers.</p>
         </div>
         <div class="about-card">
           <div class="card-icon"><i class='bx bx-target-lock'></i></div>
-          <h3>Current Goals</h3>
-          <p>I'm currently focused on deepening my expertise in artificial intelligence and machine learning. My goal is to work on innovative projects that make a real impact and collaborate with talented teams.</p>
+          <h3 data-i18n="ab-5-title">Current Goals</h3>
+          <p data-i18n="ab-5-desc">I'm currently focused on deepening my expertise in artificial intelligence and machine learning. My goal is to work on innovative projects that make a real impact and collaborate with talented teams.</p>
         </div>
         <div class="about-card">
           <div class="card-icon"><i class='bx bx-happy-beaming'></i></div>
-          <h3>Fun Facts</h3>
+          <h3 data-i18n="ab-6-title">Fun Facts</h3>
           <ul class="fun-facts-list">
-            <li><i class='bx bx-check-circle'></i> I wrote my first line of code during university</li>
-            <li><i class='bx bx-check-circle'></i> I love solving complex algorithmic challenges</li>
-            <li><i class='bx bx-check-circle'></i> Coffee is my favorite debugging tool ☕</li>
-            <li><i class='bx bx-check-circle'></i> I believe in lifelong learning and growth</li>
+            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-1">I wrote my first line of code during university</span></li>
+            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-2">I love solving complex algorithmic challenges</span></li>
+            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-3">Coffee is my favorite debugging tool ☕</span></li>
+            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-4">I believe in lifelong learning and growth</span></li>
           </ul>
         </div>
       </div>
 
       <div class="values-section">
-        <h3 class="values-title">My Core Values</h3>
+        <h3 class="values-title" data-i18n="val-title">My Core Values</h3>
         <div class="values-grid">
           <div class="value-item">
             <i class='bx bx-bulb'></i>
-            <h4>Innovation</h4>
-            <p>Always seeking creative solutions</p>
+            <h4 data-i18n="val-1-title">Innovation</h4>
+            <p data-i18n="val-1-desc">Always seeking creative solutions</p>
           </div>
           <div class="value-item">
             <i class='bx bx-shield-alt-2'></i>
-            <h4>Integrity</h4>
-            <p>Honest and ethical in all I do</p>
+            <h4 data-i18n="val-2-title">Integrity</h4>
+            <p data-i18n="val-2-desc">Honest and ethical in all I do</p>
           </div>
           <div class="value-item">
             <i class='bx bx-trending-up'></i>
-            <h4>Excellence</h4>
-            <p>Committed to high-quality work</p>
+            <h4 data-i18n="val-3-title">Excellence</h4>
+            <p data-i18n="val-3-desc">Committed to high-quality work</p>
           </div>
           <div class="value-item">
             <i class='bx bx-group'></i>
-            <h4>Collaboration</h4>
-            <p>Better together than alone</p>
+            <h4 data-i18n="val-4-title">Collaboration</h4>
+            <p data-i18n="val-4-desc">Better together than alone</p>
           </div>
         </div>
       </div>
@@ -501,15 +614,15 @@
       <div class="contact-info-section">
         <div class="contact-info-card">
           <i class='bx bx-envelope'></i>
-          <h3>Let's Connect!</h3>
-          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+          <h3 data-i18n="cnt-title">Let's Connect!</h3>
+          <p data-i18n="cnt-desc">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
           <div class="email-box">
             <a href="mailto:ercanpolat.tr@gmail.com" class="email-link">
               <i class='bx bx-mail-send'></i>
               ercanpolat.tr@gmail.com
             </a>
           </div>
-          <p class="contact-note">Feel free to reach out anytime. I typically respond within 24 hours!</p>
+          <p class="contact-note" data-i18n="cnt-note">Feel free to reach out anytime. I typically respond within 24 hours!</p>
         </div>
       </div>
     </section>
@@ -522,16 +635,16 @@
         <a href="https://www.instagram.com/ercann.plt/" target="_blank"><i class="bx bxl-instagram"></i></a>
       </div>
       <ul class="list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#testimonials">References</a></li>
-        <li><a href="#about">About Me</a></li>
+        <li><a href="#home" data-i18n="nav-home">Home</a></li>
+        <li><a href="#education" data-i18n="nav-education">Education</a></li>
+        <li><a href="#services" data-i18n="nav-services">Services</a></li>
+        <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+        <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+        <li><a href="#certificates" data-i18n="nav-certificates">Certificates</a></li>
+        <li><a href="#testimonials" data-i18n="nav-testimonials">References</a></li>
+        <li><a href="#about" data-i18n="nav-about">About Me</a></li>
       </ul>
-      <p class="copyright">&copy; <span>Ercan Polat</span> | All Rights Reserved</p>
+      <p class="copyright">&copy; <span>Ercan Polat</span> | <span data-i18n="ftr-copy">All Rights Reserved</span></p>
     </footer>
 
     </main>
