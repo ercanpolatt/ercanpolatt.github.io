@@ -1,6 +1,6 @@
 // ─── MENU ICON TOGGLE ─────────────────────────────────────────
 const menuIcon = document.querySelector("#menu-icon");
-const navbar   = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 
 if (menuIcon && navbar) {
   menuIcon.onclick = () => {
@@ -22,9 +22,9 @@ const translations = {
     "nav-certificates": "Certificates",
     "nav-testimonials": "References",
     "nav-about": "About Me",
-    "hero-title": "Ercan Polat | Computer Engineer & Data Analyst",
+    "hero-title": "Ercan Polat | Computer Engineer - Data & Business Analyst",
     "hero-im": "I'm a",
-    "hero-desc": "I am Ercan Polat, a Computer Engineering graduate specializing in Artificial Intelligence, Data Analysis & Pipelines, Machine Learning, and Full-Stack Development. I focus on turning complex datasets into actionable business intelligence and building scalable digital applications with analytical rigor.",
+    "hero-desc": "I am Ercan Polat, a Computer Engineering graduate specializing in Business Analysis, Data Analytics, and Full-Stack Development. I bridge the gap between business needs and technical solutions, turning requirements and complex datasets into actionable business intelligence.",
     "btn-cv": "Download CV",
     "btn-about": "About Me",
     "heading-education": "Education &amp; Experience",
@@ -42,8 +42,8 @@ const translations = {
     "btn-details": "Details",
     "prj-1-badge": "AI & ML",
     "prj-1-desc": "AI mentor and sentiment analytics dashboard analyzing user feedback using NLP and LLM models, tracking performance and learning workflows.",
-    "prj-2-badge": "Data Science",
-    "prj-2-desc": "High-performance data analytics portal built for logistics and port operations, visualizing container movements, operational metrics, and ERP data flows.",
+    "prj-2-badge": "Business & Data Analytics",
+    "prj-2-desc": "A business intelligence and analytics portal designed for logistics and port terminal operations, streamlining workflows by visualizing operational KPIs and ERP data flows.",
     "prj-3-badge": "Mobile Apps",
     "prj-3-desc": "Advanced task management mobile app with fast interactions, offline-first sync, and smooth UI transitions.",
     "prj-4-badge": "Full-Stack",
@@ -54,7 +54,7 @@ const translations = {
     "edu-1-desc": "Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis & ML, database architectures, and scalable software systems.",
     "edu-2-title": "IT & Data Analytics Specialist Intern",
     "edu-2-desc": "DP World Evyap, Kocaeli. Analyzed operational logistics workflows for terminal operations, conducted SAP & ERP data extraction/validation, provided 1st-line IT support, and monitored network traffic for cyber security audits.",
-    "edu-3-title": "Freelance Software Engineer & Data Analyst",
+    "edu-3-title": "Freelance Computer Engineer & Data Analyst",
     "edu-3-desc": "Custom full-stack web applications, end-to-end data pipelines, statistical data cleaning, and database automation script integrations tailored to client business metrics.",
     "srv-1-title": "AI & Machine Learning",
     "srv-1-desc": "Designing and deploying predictive models, text classification, computer vision, and NLP architectures with Python, Scikit-Learn, and TensorFlow to extract actionable insights from complex data.",
@@ -64,20 +64,22 @@ const translations = {
     "srv-3-desc": "Developing automated data pipelines (ETL), statistical data cleaning, Exploratory Data Analysis (EDA) with Pandas/NumPy, and interactive visualization dashboards with Plotly.",
     "srv-4-title": "Databases & ERP Systems",
     "srv-4-desc": "Designing and querying relational (PostgreSQL, MySQL, MSSQL) and NoSQL (MongoDB) databases, managing ERP/SAP data consistency, and automating query workflows.",
+    "srv-5-title": "Business Analysis & BI",
+    "srv-5-desc": "Analyzing business processes, eliciting requirements, and designing interactive dashboards to streamline operations and bridge the gap between business stakeholders and engineering teams.",
     "cert-subtitle": "Official certifications, university diploma, and professional achievements showcasing my continuous engineering growth",
     "ref-1-role": "Chair of the Department of Computer Engineering",
     "ref-2-role": "IT Director",
     "ref-3-role": "Technical Director",
     "ab-1-title": "Who Am I?",
-    "ab-1-desc": "I am a Computer Engineer focused on data analysis, machine learning, and full-stack development. I combine strong analytical muscles with high adaptability to optimize business decisions through quantitative analysis.",
+    "ab-1-desc": "I am a Computer Engineer focused on business analysis, data analytics, and full-stack development. I bridge the gap between stakeholders and technical teams, using analytical frameworks and quantitative data to optimize business decisions.",
     "ab-2-title": "What I Do?",
-    "ab-2-desc": "I engineer end-to-end data pipelines, predictive models, interactive business dashboards, and responsive web applications. I turn raw complex datasets into strategic business intelligence.",
+    "ab-2-desc": "I map complex business workflows, define technical requirements, engineer data pipelines, and design interactive dashboards. I turn raw data and business needs into strategic, high-value technical solutions.",
     "ab-3-title": "My Approach",
     "ab-3-desc": "I prioritize clean code, strict data quality control, scalable software architecture, and continuous learning. Engineering precision and user value guide everything I build.",
     "ab-4-title": "Beyond Coding",
     "ab-4-desc": "When not engineering systems, I explore open-source AI projects, contribute to GitHub repositories, write technical automation scripts, and read data science research.",
     "ab-5-title": "Current Goals",
-    "ab-5-desc": "I am looking for engineering opportunities to apply my AI, data analysis, and full-stack skills to solve challenging real-world problems and deliver measurable impact within collaborative teams.",
+    "ab-5-desc": "I am seeking a Data Analyst or Business Analyst role where I can leverage my skills in data pipelines, reporting, requirements analysis, and engineering to solve business challenges and deliver measurable value.",
     "ab-6-title": "Technical Strengths",
     "ab-ff-1": "Proficient in Python, SQL, React.js, Flask & Docker",
     "ab-ff-2": "Hands-on experience in port & logistics ERP data analysis",
@@ -95,7 +97,7 @@ const translations = {
     "cnt-title": "Let's Work Together!",
     "cnt-desc": "I'm open to full-time career opportunities, engineering projects, or technical collaborations. Feel free to connect or drop an email!",
     "cnt-note": "I typically respond within 24 hours. Looking forward to hearing from you!",
-    "ftr-copy": "All Rights Reserved | Portfolio & Software Resume"
+    "ftr-copy": "All Rights Reserved | Portfolio & Engineering Resume"
   },
   tr: {
     "nav-home": "Ana Sayfa",
@@ -106,9 +108,9 @@ const translations = {
     "nav-certificates": "Sertifikalar",
     "nav-testimonials": "Referanslar",
     "nav-about": "Hakkımda",
-    "hero-title": "Ercan Polat | Bilgisayar Mühendisi & Veri Analisti",
+    "hero-title": "Ercan Polat | Bilgisayar Mühendisi - Veri & İş Analisti",
     "hero-im": "Ben bir",
-    "hero-desc": "Veri analizi, makine öğrenmesi, veri hatları (data pipeline) ve full-stack web geliştirme süreçlerine odaklanmış Bilgisayar Mühendisiyim. Python ve SQL mimarileriyle karmaşık veri kümelerini aksiyon alınabilir iş zekası çıktılarına ve yüksek performanslı yazılımlara dönüştürüyorum.",
+    "hero-desc": "İş analizi, veri analitiği ve full-stack geliştirme süreçlerine odaklanmış Bilgisayar Mühendisiyim. İş gereksinimleri ile teknik çözümler arasında köprü kurarak, gereksinimleri ve karmaşık veri kümelerini aksiyon alınabilir iş zekası çıktılarına dönüştürüyorum.",
     "btn-cv": "Özgeçmişi İndir",
     "btn-about": "Hakkımda",
     "heading-education": "Eğitim &amp; Deneyim",
@@ -126,8 +128,8 @@ const translations = {
     "btn-details": "Detaylar",
     "prj-1-badge": "Yapay Zekâ",
     "prj-1-desc": "NLP ve LLM modellerini kullanarak kullanıcı geri bildirimlerini analiz eden, performans ve öğrenme iş akışlarını takip eden duygu analizi ve AI asistan paneli.",
-    "prj-2-badge": "Veri Bilimi",
-    "prj-2-desc": "Liman ve lojistik operasyonları için geliştirilmiş yüksek performanslı analitik platformu. Konteyner hareketlerini, operasyonel raporlamayı ve ERP veri akışlarını görselleştirir.",
+    "prj-2-badge": "İş & Veri Analitiği",
+    "prj-2-desc": "Liman ve terminal operasyonları için tasarlanmış iş zekası ve analitik portalı. Operasyonel KPI'ları ve ERP veri akışlarını görselleştirerek iş süreçlerini kolaylaştırır.",
     "prj-3-badge": "Mobil Uygulama",
     "prj-3-desc": "Hızlı etkileşimler, çevrimdışı senkronizasyon ve akıcı UI geçişleri sunan gelişmiş mobil görev ve üretkenlik yönetimi uygulaması.",
     "prj-4-badge": "Full-Stack",
@@ -138,7 +140,7 @@ const translations = {
     "edu-1-desc": "Amasya Üniversitesi (GNO: 2.95 / 4.00). Yazılım mühendisliği prensipleri, veri analizi, makine öğrenmesi algoritmaları ve veri tabanı mimarileri odaklı lisans eğitimi.",
     "edu-2-title": "BT Operasyonları & Veri Analitiği Stajyeri",
     "edu-2-desc": "DP World Evyap, Kocaeli. Liman ve terminal lojistik iş akışlarının analizi, SAP/ERP sistemleri üzerinden veri çıkarma ve tutarlılık kontrolleri, 1. seviye BT desteği ve siber güvenlik denetim loglarının izlenmesi.",
-    "edu-3-title": "Freelance Yazılım Mühendisi & Veri Analisti",
+    "edu-3-title": "Freelance Bilgisayar Mühendisi & Veri Analisti",
     "edu-3-desc": "Müşterilerin ticari metriklerine özel full-stack web uygulamaları, uçtan uca veri hatları (data pipeline), istatistiksel veri temizleme ve otomasyon script entegrasyonları.",
     "srv-1-title": "Yapay Zekâ & Makine Öğrenmesi",
     "srv-1-desc": "Python, Scikit-Learn ve TensorFlow kullanarak karmaşık veri kümelerinden tahmine dayalı modeller, metin sınıflandırma ve görüntü işleme çözümleri geliştirme.",
@@ -148,20 +150,22 @@ const translations = {
     "srv-3-desc": "Otomatize veri hatlarının (ETL) kurulması, Pandas/NumPy ile istatistiksel veri temizleme ve Plotly/Dash ile etkileşimli iş zekası panellerinin oluşturulması.",
     "srv-4-title": "Veri Tabanları & ERP Sistemleri",
     "srv-4-desc": "İlişkisel (PostgreSQL, MySQL, MSSQL) ve NoSQL (MongoDB) veri tabanı tasarımları, SQL sorgu optimizasyonu, SAP/ERP sistemlerinde yüksek veri kalitesi yönetimi.",
+    "srv-5-title": "İş Analizi & İş Zekası (BI)",
+    "srv-5-desc": "İş süreçlerinin analiz edilmesi, gereksinimlerin belirlenmesi ve operasyonel verimliliği artırmak amacıyla iş paydaşları ile mühendislik ekipleri arasında köprü kurarak interaktif raporlama panellerinin tasarlanması.",
     "cert-subtitle": "Mühendislik yetkinliklerimi ve sürekli gelişim yolculuğumu kanıtlayan resmi sertifika ve diplomalarım",
     "ref-1-role": "Bilgisayar Mühendisliği Bölüm Başkanı",
     "ref-2-role": "Bilgi Teknolojileri Direktörü",
     "ref-3-role": "Teknik Direktör",
     "ab-1-title": "Ben Kimim?",
-    "ab-1-desc": "Veri analizi ve makine öğrenmesi süreçlerine odaklanmış, analitik yaklaşıma sahip Bilgisayar Mühendisiyim. Güçlü analitik kaslarım ve yüksek adaptasyon yeteneğimle nicel analizler üzerinden kararları optimize ediyorum.",
+    "ab-1-desc": "İş analizi, veri analitiği ve yazılım süreçlerine odaklanmış, analitik yaklaşıma sahip Bilgisayar Mühendisiyim. İş birimleri ile teknik ekipler arasında köprü kurarak, nicel analizler ve iş gereksinimleri üzerinden süreçleri optimize ediyorum.",
     "ab-2-title": "Ne Yapıyorum?",
-    "ab-2-desc": "Uçtan uca veri hatları, tahmine dayalı ML modelleri, etkileşimli kullanıcı arayüzleri ve full-stack web çözümleri geliştiriyorum. Ham veriyi aksiyon alınabilir iş zekası çıktılarına çeviriyorum.",
+    "ab-2-desc": "İş süreçlerini modelliyor, teknik gereksinimleri tanımlıyor, veri hatları ve etkileşimli iş zekası panelleri geliştiriyorum. Ham veriyi ve iş ihtiyaçlarını aksiyon alınabilir teknik çözümlere çeviriyorum.",
     "ab-3-title": "Mühendislik Yaklaşımım",
     "ab-3-desc": "Temiz kod prensipleri, yüksek veri kalitesi kontrolleri, ölçeklenebilir kod mimarileri ve sürekli öğrenme tutkusu. İş çözümlerimde verimlilik ve kullanıcı deneyimi esastır.",
     "ab-4-title": "Kodlamanın Ötesinde",
     "ab-4-desc": "Açık kaynak teknolojileri takip ediyor, GitHub üzerinde projeler geliştiriyor, veri analitiği bloglarını inceliyor ve yeni framework'leri pratiğe dönüştürüyorum.",
     "ab-5-title": "Kariyer Hedeflerim",
-    "ab-5-desc": "Yapay zekâ, veri analitiği ve full-stack becerilerimi uygulayarak gerçek problemlere katma değerli çözümler üretebileceğim yenilikçi takımlarda yer almak.",
+    "ab-5-desc": "Veri Analisti veya İş Analisti pozisyonlarında, veri analizi, iş süreçleri tasarımı ve gereksinim analizi becerilerimi kullanarak gerçek problemlere veri odaklı ve katma değerli çözümler üretebileceğim yenilikçi takımlarda yer almayı hedefliyorum.",
     "ab-6-title": "Teknik Öne Çıkanlar",
     "ab-ff-1": "Python, SQL, React.js, Flask ve Docker yetkinliği",
     "ab-ff-2": "Lojistik operasyonlarında SAP/ERP veri analizi deneyimi",
@@ -274,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ─── SCROLL: ACTIVE LINKS + STICKY HEADER ─────────────────────
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
-const header   = document.querySelector(".header");
+const header = document.querySelector(".header");
 
 function handleScroll() {
   const scrollY = window.scrollY;
@@ -286,7 +290,7 @@ function handleScroll() {
   sections.forEach((sec) => {
     const offset = sec.offsetTop - 160;
     const height = sec.offsetHeight;
-    const id     = sec.getAttribute("id");
+    const id = sec.getAttribute("id");
 
     if (scrollY >= offset && scrollY < offset + height) {
       navLinks.forEach((link) => link.classList.remove("active"));
@@ -306,8 +310,8 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll, { passive: true });
 
 // ─── SKILLS ANIMATION ─────────────────────────────────────────
-const skillsSection     = document.querySelector(".skills");
-const skillsContainer   = document.querySelector(".skills-container");
+const skillsSection = document.querySelector(".skills");
+const skillsContainer = document.querySelector(".skills-container");
 const skillProgressBars = document.querySelectorAll(".skill-progress");
 
 function isInViewport(element) {
@@ -315,9 +319,9 @@ function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
     rect.bottom > 0 &&
-    rect.right  > 0 &&
-    rect.top    < (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.left   < (window.innerWidth  || document.documentElement.clientWidth)
+    rect.right > 0 &&
+    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.left < (window.innerWidth || document.documentElement.clientWidth)
   );
 }
 
@@ -448,28 +452,28 @@ const projectDataMap = {
   },
   "2": {
     en: {
-      badge: "Data Science",
+      badge: "Business & Data Analytics",
       title: "Smart Freight Analytics Portal",
-      description: "High-performance data analytics portal built for logistics and port operations, visualizing container movements, operational metrics, and ERP data flows.",
+      description: "A business intelligence and analytics portal designed for logistics and port terminal operations, streamlining workflows by visualizing operational KPIs and ERP data flows.",
       features: [
-        "Processing large-scale logistics datasets with Pandas",
-        "Interactive Plotly dashboards for real-time operational reporting",
-        "Optimized database queries for fast data retrieval",
-        "User-friendly filtering with CSV/PDF export capability"
+        "Elicited operational requirements from terminal stakeholders to define core KPIs",
+        "Designed interactive Plotly dashboards for real-time executive reporting",
+        "Mapped end-to-end data flows between SAP/ERP systems and database schemas",
+        "Developed optimized SQL queries for high-performance data retrieval"
       ]
     },
     tr: {
-      badge: "Veri Bilimi",
+      badge: "İş & Veri Analitiği",
       title: "Smart Freight Analytics Portal",
-      description: "Liman ve lojistik operasyonları için geliştirilmiş yüksek performanslı analitik platformu. Konteyner hareketlerini, operasyonel raporlamayı ve ERP veri akışlarını görselleştirir.",
+      description: "Liman ve terminal operasyonları için tasarlanmış iş zekası ve analitik portalı. Operasyonel KPI'ları ve ERP veri akışlarını görselleştirerek iş süreçlerini kolaylaştırır.",
       features: [
-        "Büyük ölçekli lojistik veri setlerinin Pandas ile işlenmesi",
-        "İnteraktif Plotly grafikleri ile anlık operasyonel raporlama",
-        "Gelişmiş sorgu optimizasyonu ile hızlı veri getirme",
-        "Kullanıcı dostu filtreleme ve CSV/PDF dışa aktarım desteği"
+        "Temel KPI'ları belirlemek için liman paydaşlarından operasyonel gereksinimlerin toplanması",
+        "Gerçek zamanlı yönetici raporlaması için etkileşimli Plotly panellerinin tasarlanması",
+        "SAP/ERP sistemleri ile veri tabanı şemaları arasındaki uçtan uca veri akışlarının modellenmesi",
+        "Yüksek performanslı veri çekme işlemleri için optimize edilmiş SQL sorguları"
       ]
     },
-    tags: ["Python", "Pandas", "Plotly", "Flask", "SQL", "Data Science"],
+    tags: ["Python", "Pandas", "Plotly", "Flask", "SQL", "Business Analysis"],
     iconClass: "bx bx-bar-chart-alt-2",
     github: "https://github.com/ercanpolatt",
     live: "https://github.com/ercanpolatt"
@@ -508,10 +512,10 @@ const projectDataMap = {
       title: "Smart Logistics Container Tracker",
       description: "Full-stack tracking platform monitoring container movements on live maps in real time, delivering instant status updates via WebSockets.",
       features: [
+        "Designed user stories, system wireframes, and mapped requirements to technical specifications",
         "Real-time location and status updates via WebSockets (Socket.io)",
         "PostgreSQL relational database schema with query optimization",
-        "Secure JWT authentication and role-based access control",
-        "Responsive admin dashboard and live notification alert system"
+        "Secure JWT authentication and role-based access control"
       ]
     },
     tr: {
@@ -519,10 +523,10 @@ const projectDataMap = {
       title: "Smart Logistics Container Tracker",
       description: "Tedarik zincirindeki konteyner hareketlerini canlı harita üzerinde izleyen, statü değişikliklerini WebSockets ile anlık ileten full-stack takip platformu.",
       features: [
+        "Kullanıcı hikayeleri (user stories), sistem tel kafesleri (wireframe) ve teknik gereksinimlerin tasarlanması",
         "WebSockets (Socket.io) ile anlık konteyner konum ve durum güncellemeleri",
         "PostgreSQL ilişkisel veritabanı mimarisi ve optimize edilmiş sorgular",
-        "Güvenli JWT tabanlı kullanıcı yetkilendirme ve rol yönetimi",
-        "Responsive yönetim paneli ve canlı bildirim paneli"
+        "Güvenli JWT tabanlı kullanıcı yetkilendirme ve rol yönetimi"
       ]
     },
     tags: ["Node.js", "Express", "PostgreSQL", "WebSockets", "React"],
@@ -572,7 +576,7 @@ if (projectDetailsBtns.length > 0 && projectModal) {
         document.getElementById("project-modal-badge").textContent = langData.badge;
         document.getElementById("project-modal-title").textContent = langData.title;
         document.getElementById("project-modal-desc").textContent = langData.description;
-        
+
         const iconContainer = document.getElementById("project-modal-icon");
         iconContainer.innerHTML = `<i class='${projectItem.iconClass}'></i>`;
 
@@ -613,53 +617,53 @@ function closeProjectModal() {
 
 // ─── CERTIFICATE MODAL ────────────────────────────────────────
 const certificateCards = document.querySelectorAll(".certificate-card");
-const certModal       = document.getElementById("certificate-modal");
-const certModalImage  = document.getElementById("modal-image");
-const certModalTitle  = document.getElementById("modal-title");
+const certModal = document.getElementById("certificate-modal");
+const certModalImage = document.getElementById("modal-image");
+const certModalTitle = document.getElementById("modal-title");
 const certModalIssuer = document.getElementById("modal-issuer");
-const certModalDate   = document.getElementById("modal-date");
-const certModalClose  = document.querySelector("#certificate-modal .modal-close");
-const certModalPrev   = document.querySelector(".modal-prev");
-const certModalNext   = document.querySelector(".modal-next");
+const certModalDate = document.getElementById("modal-date");
+const certModalClose = document.querySelector("#certificate-modal .modal-close");
+const certModalPrev = document.querySelector(".modal-prev");
+const certModalNext = document.querySelector(".modal-next");
 
 let currentCertificateIndex = 0;
 
 const certificatesData = [
   {
     image: "certificates/promt-muhendisligi_page-0001.jpg",
-    title:  "ChatGPT 2026: Prompt Mühendisliği",
+    title: "ChatGPT 2026: Prompt Mühendisliği",
     issuer: "Udemy / Atil Samancioglu",
-    date:   "February 2026"
+    date: "February 2026"
   },
   {
     image: "certificates/yuksekogretim-mezun-belgesi-sorgulama.jpg",
-    title:  "Mezun Belgesi",
+    title: "Mezun Belgesi",
     issuer: "Amasya University",
-    date:   "January 2026"
+    date: "January 2026"
   },
   {
     image: "certificates/Siber_Güvenliğe_Giriş_Sertifika_page-0001.jpg",
-    title:  "Siber Güvenlik Sertifikası",
+    title: "Siber Güvenlik Sertifikası",
     issuer: "T.C. Türkiye Bilgi Teknolojileri ve İletişim Kurumu",
-    date:   "October 2025"
+    date: "October 2025"
   },
   {
     image: "certificates/ingilizce_page-0001.jpg",
-    title:  "İngilizce Sertifikası",
+    title: "İngilizce Sertifikası",
     issuer: "Amasya University",
-    date:   "December 2022"
+    date: "December 2022"
   },
   {
     image: "certificates/bilgiteknogiris_page-0001.jpg",
-    title:  "Bilgi Teknolojileri Giriş Sertifikası",
+    title: "Bilgi Teknolojileri Giriş Sertifikası",
     issuer: "T.C. Türkiye Bilgi Teknolojileri ve İletişim Kurumu",
-    date:   "October 2025"
+    date: "October 2025"
   },
   {
     image: "certificates/Ağ_Temelleri_Sertifika_page-0001.jpg",
-    title:  "Ağ Temelleri Sertifikası",
+    title: "Ağ Temelleri Sertifikası",
     issuer: "T.C. Türkiye Bilgi Teknolojileri ve İletişim Kurumu",
-    date:   "October 2025"
+    date: "October 2025"
   }
 ];
 
@@ -679,10 +683,10 @@ function showCertificate(index) {
   if (!cert || !certModalImage || !certModalTitle || !certModalIssuer || !certModalDate) return;
 
   certModalImage.style.opacity = "0";
-  certModalImage.src    = cert.image;
-  certModalTitle.textContent  = cert.title;
+  certModalImage.src = cert.image;
+  certModalTitle.textContent = cert.title;
   certModalIssuer.textContent = cert.issuer;
-  certModalDate.textContent   = cert.date;
+  certModalDate.textContent = cert.date;
 
   setTimeout(() => { certModalImage.style.opacity = "1"; }, 120);
 }
