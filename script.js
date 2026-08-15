@@ -51,7 +51,7 @@ const translations = {
     "prj-5-badge": "Cyber Security",
     "prj-5-desc": "Security data visualizer analyzing server and network logs using Scikit-Learn machine learning algorithms to detect anomalies and threat vectors.",
     "edu-1-title": "Computer Engineering Degree",
-    "edu-1-desc": "Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis & ML, database architectures, and scalable software systems.",
+    "edu-1-desc": "Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis & ML, database architectures, and scalable technical systems.",
     "edu-2-title": "IT & Data Analytics Specialist Intern",
     "edu-2-desc": "DP World Evyap, Kocaeli. Analyzed operational logistics workflows for terminal operations, conducted SAP & ERP data extraction/validation, provided 1st-line IT support, and monitored network traffic for cyber security audits.",
     "edu-3-title": "Freelance Computer Engineer & Data Analyst",
@@ -137,7 +137,7 @@ const translations = {
     "prj-5-badge": "Siber Güvenlik",
     "prj-5-desc": "Sunucu ve ağ loglarını Scikit-Learn makine öğrenimi modelleriyle analiz ederek anormallikleri ve siber tehditleri tespit eden güvenlik görselleştirici.",
     "edu-1-title": "Bilgisayar Mühendisliği Lisans",
-    "edu-1-desc": "Amasya Üniversitesi (GNO: 2.95 / 4.00). Yazılım mühendisliği prensipleri, veri analizi, makine öğrenmesi algoritmaları ve veri tabanı mimarileri odaklı lisans eğitimi.",
+    "edu-1-desc": "Amasya Üniversitesi (GNO: 2.95 / 4.00). Bilgisayar mühendisliği temelleri, veri analizi, makine öğrenmesi algoritmaları ve veri tabanı mimarileri odaklı lisans eğitimi.",
     "edu-2-title": "BT Operasyonları & Veri Analitiği Stajyeri",
     "edu-2-desc": "DP World Evyap, Kocaeli. Liman ve terminal lojistik iş akışlarının analizi, SAP/ERP sistemleri üzerinden veri çıkarma ve tutarlılık kontrolleri, 1. seviye BT desteği ve siber güvenlik denetim loglarının izlenmesi.",
     "edu-3-title": "Freelance Bilgisayar Mühendisi & Veri Analisti",
@@ -157,7 +157,7 @@ const translations = {
     "ref-2-role": "Bilgi Teknolojileri Direktörü",
     "ref-3-role": "Teknik Direktör",
     "ab-1-title": "Ben Kimim?",
-    "ab-1-desc": "İş analizi, veri analitiği ve yazılım süreçlerine odaklanmış, analitik yaklaşıma sahip Bilgisayar Mühendisiyim. İş birimleri ile teknik ekipler arasında köprü kurarak, nicel analizler ve iş gereksinimleri üzerinden süreçleri optimize ediyorum.",
+    "ab-1-desc": "İş analizi, veri analitiği ve bilgisayar mühendisliği süreçlerine odaklanmış, analitik yaklaşıma sahip Bilgisayar Mühendisiyim. İş birimleri ile teknik ekipler arasında köprü kurarak, nicel analizler ve iş gereksinimleri üzerinden süreçleri optimize ediyorum.",
     "ab-2-title": "Ne Yapıyorum?",
     "ab-2-desc": "İş süreçlerini modelliyor, teknik gereksinimleri tanımlıyor, veri hatları ve etkileşimli iş zekası panelleri geliştiriyorum. Ham veriyi ve iş ihtiyaçlarını aksiyon alınabilir teknik çözümlere çeviriyorum.",
     "ab-3-title": "Mühendislik Yaklaşımım",
@@ -228,14 +228,14 @@ const typingText = document.querySelector(".typing-text");
 const typingWords = {
   en: [
     "Business Analyst",
-    "AI & Data Analyst",
-    "Full Stack Developer",
+    "Data & Business Analyst",
+    "Computer Engineer",
     "Data Scientist"
   ],
   tr: [
     "İş Analisti",
-    "Yapay Zekâ & Veri Analisti",
-    "Full Stack Geliştirici",
+    "Veri & İş Analisti",
+    "Bilgisayar Mühendisi",
     "Veri Bilimci"
   ]
 };
