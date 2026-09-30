@@ -1,13 +1,31 @@
 // ─── MENU ICON TOGGLE ─────────────────────────────────────────
+const menuBtn = document.querySelector("#menu-icon-btn");
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
 
-if (menuIcon && navbar) {
-  menuIcon.onclick = () => {
-    menuIcon.classList.toggle("bx-x");
-    navbar.classList.toggle("active");
-  };
+function toggleMenu() {
+  if (!navbar) return;
+  const isActive = navbar.classList.toggle("active");
+  if (menuIcon) menuIcon.classList.toggle("bx-x", isActive);
+  if (menuBtn) menuBtn.setAttribute("aria-expanded", String(isActive));
 }
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", toggleMenu);
+} else if (menuIcon) {
+  menuIcon.addEventListener("click", toggleMenu);
+}
+
+// Close menu when clicking on any navigation link
+document.querySelectorAll(".navbar a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navbar && navbar.classList.contains("active")) {
+      navbar.classList.remove("active");
+      if (menuIcon) menuIcon.classList.remove("bx-x");
+      if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+});
 
 // ─── LANGUAGE TRANSLATIONS (CV-BASED ENHANCED) ──────────────
 let currentLang = localStorage.getItem("portfolio_lang") || "tr"; // Default Turkish
@@ -22,27 +40,45 @@ const translations = {
     "nav-certificates": "Certificates",
     "nav-testimonials": "References",
     "nav-about": "About Me",
-    "hero-title": "Ercan Polat | Computer Engineer - Data & Business Analyst",
+    "hero-status": "Available for Opportunities &amp; Projects",
+    "hero-title": "Ercan Polat | Computer Engineer - Data &amp; Business Analyst",
     "hero-im": "I'm a",
     "hero-desc": "I am Ercan Polat, a Computer Engineering graduate specializing in Business Analysis, Data Analytics, and Full-Stack Development. I bridge the gap between business needs and technical solutions, turning requirements and complex datasets into actionable business intelligence.",
     "btn-cv": "Download CV",
     "btn-about": "About Me",
     "heading-education": "Education &amp; Experience",
     "heading-services": "Technical <span>Services</span>",
-    "heading-projects": "Featured <span>Projects</span>",
+    "heading-projects": "Featured <span>Projects &amp; Presentations</span>",
+    "projects-subtitle": "Real-world enterprise automations, data analytics systems, and end-to-end software solutions",
+    "catalog-title": "Full Projects Portfolio",
+    "catalog-subtitle": "Filter by domain and explore architectural details",
     "heading-skills": "Technical <span>Skills</span>",
     "heading-certificates": "My <span>Certificates</span>",
     "heading-testimonials": "Professional <span>References</span>",
     "heading-about": "About <span>Me</span>",
-    "filter-all": "All",
-    "filter-ai": "AI & ML",
+    "filter-all": "All (7)",
+    "filter-featured": "⭐ Featured",
+    "filter-automation": "Automation &amp; Tools",
+    "filter-datascience": "Data Science &amp; Analytics",
+    "filter-ai": "AI &amp; ML",
     "filter-fullstack": "Full-Stack Web",
     "filter-mobile": "Mobile Apps",
-    "filter-datascience": "Data Science",
     "btn-details": "Details",
-    "prj-1-badge": "AI & ML",
+    "btn-video": "Watch Video Demo",
+    "btn-presentation": "View Detailed Presentation",
+    "spotlight-fide-tag": "Flagship Solution",
+    "spotlight-fide-title": "FİDE Konserve - Smart Attendance &amp; PDKS System",
+    "spotlight-fide-desc": "An enterprise automation platform that parses hardware PDKS attendance logs, calculates complex shift durations, overtime, weekend compensations, and generates ERP-ready timesheet schedules with zero data loss.",
+    "spotlight-qr-tag": "Professional Desktop Suite",
+    "spotlight-qr-title": "Barcode &amp; QR Code Studio (Excel &amp; National ID)",
+    "spotlight-qr-desc": "A professional desktop utility generating 1D/2D barcodes and QR codes for personnel IDs, serials, and national IDs with direct embedded Excel cell export and automatic 3-column A4 grid printing.",
+    "prj-puantaj-badge": "PDKS &amp; Automation",
+    "prj-puantaj-desc": "Smart attendance platform developed with FastAPI and Pandas, interpreting badge logs, computing shifts &amp; overtime, and generating automated Excel timesheets.",
+    "prj-qrcode-badge": "Barcode Studio",
+    "prj-qrcode-desc": "Desktop software generating 1D/2D codes, verifying TC ID checksums, embedding images into Excel cells, and printing A4 grids.",
+    "prj-1-badge": "AI &amp; ML",
     "prj-1-desc": "AI mentor and sentiment analytics dashboard analyzing user feedback using NLP and LLM models, tracking performance and learning workflows.",
-    "prj-2-badge": "Business & Data Analytics",
+    "prj-2-badge": "Business &amp; Data Analytics",
     "prj-2-desc": "A business intelligence and analytics portal designed for logistics and port terminal operations, streamlining workflows by visualizing operational KPIs and ERP data flows.",
     "prj-3-badge": "Mobile Apps",
     "prj-3-desc": "Advanced task management mobile app with fast interactions, offline-first sync, and smooth UI transitions.",
@@ -108,6 +144,7 @@ const translations = {
     "nav-certificates": "Sertifikalar",
     "nav-testimonials": "Referanslar",
     "nav-about": "Hakkımda",
+    "hero-status": "Kariyer Fırsatlarına &amp; Projelere Açık",
     "hero-title": "Ercan Polat | Bilgisayar Mühendisi - Veri & İş Analisti",
     "hero-im": "Ben bir",
     "hero-desc": "İş analizi, veri analitiği ve full-stack geliştirme süreçlerine odaklanmış Bilgisayar Mühendisiyim. İş gereksinimleri ile teknik çözümler arasında köprü kurarak, gereksinimleri ve karmaşık veri kümelerini aksiyon alınabilir iş zekası çıktılarına dönüştürüyorum.",
@@ -115,17 +152,34 @@ const translations = {
     "btn-about": "Hakkımda",
     "heading-education": "Eğitim &amp; Deneyim",
     "heading-services": "Teknik <span>Hizmetler</span>",
-    "heading-projects": "Öne Çıkan <span>Projeler</span>",
+    "heading-projects": "Öne Çıkan <span>Projeler &amp; Sunumlar</span>",
+    "projects-subtitle": "Gerçek dünya kurumsal otomasyonları, veri analitiği sistemleri ve uçtan uca yazılım çözümleri",
+    "catalog-title": "Tüm Proje Portfolyosu",
+    "catalog-subtitle": "Kategoriye göre filtreleyip detaylı inceleyebilirsiniz",
     "heading-skills": "Teknik <span>Yetkinlikler</span>",
     "heading-certificates": "Sertifikalarım",
     "heading-testimonials": "Kurumsal <span>Referanslar</span>",
     "heading-about": "Hakkımda",
-    "filter-all": "Tümü",
-    "filter-ai": "Yapay Zekâ & ML",
+    "filter-all": "Tümü (7)",
+    "filter-featured": "⭐ Öne Çıkanlar",
+    "filter-automation": "Otomasyon &amp; Araçlar",
+    "filter-datascience": "Veri Bilimi &amp; Analitik",
+    "filter-ai": "Yapay Zekâ &amp; ML",
     "filter-fullstack": "Full-Stack Web",
     "filter-mobile": "Mobil Uygulama",
-    "filter-datascience": "Veri Bilimi",
     "btn-details": "Detaylar",
+    "btn-video": "Video Sunumu İzle",
+    "btn-presentation": "Detaylı Sunumu Gör",
+    "spotlight-fide-tag": "Amiral Gemisi Çözüm",
+    "spotlight-fide-title": "FİDE Konserve - Akıllı Puantaj ve PDKS Sistemi",
+    "spotlight-fide-desc": "Donanım terminallerinden gelen karmaşık personel giriş-çıkış kart verilerini analiz ederek, İnsan Kaynakları ve Muhasebe departmanları için vardiya, fazla mesai ve puantaj hesaplama sürecini tam otomatik hale getiren kurumsal yazılım.",
+    "spotlight-qr-tag": "Profesyonel Masaüstü Yazılımı",
+    "spotlight-qr-title": "Barkod &amp; QR Kod Studio (TC Kimlik &amp; Excel Destekli)",
+    "spotlight-qr-desc": "Personel kartları, ürün seri numaraları ve TC kimlikler için 1D Barkod ve 2D QR Kod üreten, Excel hücrelerine gömülü resimler olarak aktaran ve 3'lü A4 baskı sayfaları hazırlayan profesyonel masaüstü otomasyon stüdyosu.",
+    "prj-puantaj-badge": "PDKS &amp; Otomasyon",
+    "prj-puantaj-desc": "PDKS kart basım verilerini analiz eden, vardiya ve mesaileri hesaplayan ve Excel puantaj cetvelleri oluşturan akıllı otomasyon.",
+    "prj-qrcode-badge": "Barkod Studio",
+    "prj-qrcode-desc": "1D Barkod ve 2D QR Kod üreten, TC kimlik doğrulayan, Excel'e resim gömen ve A4 grid baskı sağlayan masaüstü yazılımı.",
     "prj-1-badge": "Yapay Zekâ",
     "prj-1-desc": "NLP ve LLM modellerini kullanarak kullanıcı geri bildirimlerini analiz eden, performans ve öğrenme iş akışlarını takip eden duygu analizi ve AI asistan paneli.",
     "prj-2-badge": "İş & Veri Analitiği",
@@ -215,6 +269,10 @@ if (langToggleBtn) {
   langToggleBtn.addEventListener("click", () => {
     const newLang = currentLang === "en" ? "tr" : "en";
     updateLanguage(newLang);
+    trackAnalyticsEvent("language_change", {
+      event_category: "Localization",
+      target_lang: newLang
+    });
   });
 }
 
@@ -275,10 +333,32 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeEffect, 400);
 });
 
-// ─── SCROLL: ACTIVE LINKS + STICKY HEADER ─────────────────────
+// ─── SCROLL: ACTIVE LINKS + STICKY HEADER + PROGRESS BAR ────────
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
 const header = document.querySelector(".header");
+const scrollProgressBar = document.getElementById("scroll-progress");
+const backToTopBtn = document.getElementById("back-to-top");
+
+function updateScrollUI() {
+  const scrollY = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+  // Reading progress bar calculation
+  if (scrollProgressBar && docHeight > 0) {
+    const progress = Math.min(100, Math.max(0, (scrollY / docHeight) * 100));
+    scrollProgressBar.style.width = `${progress}%`;
+  }
+
+  // Floating Back to Top Button
+  if (backToTopBtn) {
+    if (scrollY > 400) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  }
+}
 
 function handleScroll() {
   const scrollY = window.scrollY;
@@ -286,6 +366,8 @@ function handleScroll() {
   if (header) {
     header.classList.toggle("sticky", scrollY > 80);
   }
+
+  updateScrollUI();
 
   sections.forEach((sec) => {
     const offset = sec.offsetTop - 160;
@@ -308,6 +390,92 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll, { passive: true });
+
+// Floating Back to Top Click
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
+// ─── ANALYTICS EVENT TRACKING HELPER ─────────────────────────
+function trackAnalyticsEvent(eventName, eventParams = {}) {
+  try {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, eventParams);
+    }
+  } catch (err) {
+    // Fail silently in development
+  }
+}
+
+// Track CV Download Click
+const cvDownloadBtn = document.getElementById("cv-download-btn");
+if (cvDownloadBtn) {
+  cvDownloadBtn.addEventListener("click", () => {
+    trackAnalyticsEvent("cv_download", {
+      event_category: "Engagement",
+      file_name: "Ercan_Polat.pdf"
+    });
+  });
+}
+
+// ─── TOAST NOTIFICATION & 1-CLICK EMAIL COPY ──────────────────
+const toastEl = document.getElementById("toast");
+const toastMsg = document.getElementById("toast-msg");
+let toastTimeout;
+
+function showToast(message) {
+  if (!toastEl || !toastMsg) return;
+  toastMsg.textContent = message;
+  toastEl.classList.add("show");
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toastEl.classList.remove("show");
+  }, 3200);
+}
+
+const copyEmailBtn = document.getElementById("copy-email-btn");
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener("click", async () => {
+    const emailToCopy = "ercanpolatt.tr@gmail.com";
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(emailToCopy);
+      } else {
+        const tempInput = document.createElement("input");
+        tempInput.value = emailToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+      }
+
+      const copyIcon = document.getElementById("copy-icon-status");
+      if (copyIcon) {
+        copyIcon.className = "bx bx-check copy-icon";
+        setTimeout(() => {
+          copyIcon.className = "bx bx-copy copy-icon";
+        }, 2500);
+      }
+
+      const successMsg = currentLang === "en" 
+        ? "Email copied to clipboard! (ercanpolatt.tr@gmail.com)"
+        : "E-posta adresi kopyalandı! (ercanpolatt.tr@gmail.com)";
+      showToast(successMsg);
+
+      trackAnalyticsEvent("email_copy", {
+        event_category: "Lead",
+        event_label: "ercanpolatt.tr@gmail.com"
+      });
+    } catch (err) {
+      window.location.href = `mailto:${emailToCopy}`;
+    }
+  });
+}
 
 // ─── SKILLS ANIMATION ─────────────────────────────────────────
 const skillsSection = document.querySelector(".skills");
@@ -361,6 +529,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// ─── SPOTLIGHT THUMBNAILS SWITCHER ─────────────────────────
+document.querySelectorAll(".spotlight-thumbs").forEach((container) => {
+  const targetId = container.getAttribute("data-target");
+  const targetImg = document.getElementById(targetId);
+  const thumbBtns = container.querySelectorAll(".thumb-btn");
+
+  if (targetImg && thumbBtns.length > 0) {
+    thumbBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("active")) return;
+        thumbBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const newSrc = btn.getAttribute("data-img");
+        targetImg.style.opacity = "0.25";
+        setTimeout(() => {
+          targetImg.src = newSrc;
+          targetImg.style.opacity = "1";
+        }, 140);
+      });
+    });
+  }
+});
+
 // ─── PROJECT FILTERING ────────────────────────────────────────
 const filterBtns = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".projects-grid .project-card");
@@ -376,6 +568,10 @@ if (filterBtns.length > 0 && projectCards.length > 0) {
       btn.classList.add("active");
 
       const filter = btn.getAttribute("data-filter");
+      trackAnalyticsEvent("project_filter_click", {
+        event_category: "Portfolio",
+        filter_category: filter
+      });
 
       // Phase 1: Fade out all current cards first
       projectCards.forEach((card) => {
@@ -388,8 +584,9 @@ if (filterBtns.length > 0 && projectCards.length > 0) {
         let matchingIndex = 0;
 
         projectCards.forEach((card) => {
-          const category = card.getAttribute("data-category");
-          const isMatch = (filter === "all" || filter === category);
+          const categoryAttr = card.getAttribute("data-category") || "";
+          const categories = categoryAttr.split(/\s+/);
+          const isMatch = (filter === "all" || categories.includes(filter));
 
           if (isMatch) {
             card.style.display = "flex";
@@ -416,12 +613,125 @@ if (filterBtns.length > 0 && projectCards.length > 0) {
   });
 }
 
-// ─── PROJECT DETAIL MODAL ─────────────────────────────────────
+// ─── PROJECT DETAIL & PRESENTATION MODAL ──────────────────────
 const projectModal = document.getElementById("project-modal");
 const projectModalClose = document.getElementById("project-modal-close");
+const projectModalCloseBtn = document.getElementById("project-modal-close-btn");
 const projectDetailsBtns = document.querySelectorAll(".btn-details");
 
 const projectDataMap = {
+  "puantaj": {
+    en: {
+      badge: "Enterprise Attendance & PDKS Automation",
+      title: "FİDE Konserve - Smart Attendance & PDKS System",
+      description: "Custom-built enterprise automation system for FİDE Konserve to automate factory human resources and payroll operations. The platform analyzes thousands of raw punch-clock badge records from hardware terminals, identifies missed or corrupted badge events, computes regular/overtime/weekend/night shifts with strict labor law compliance, and outputs comprehensive Excel/BIFF spreadsheets ready for ERP integration with zero data loss.",
+      features: [
+        "Automated PDKS Punch Log Ingestion & Data Cleansing from hardware terminal logs (CSV, Excel & DB)",
+        "Intelligent Shift & Overtime Engine (Regular shift, Saturday overtime, Sunday overtime, and Night Shift bonus)",
+        "Exception & Anomaly Detection (Instantly alerts HR for personnel who forgot badges or registered invalid times)",
+        "Advanced Excel/BIFF & ERP Reporting (Official timesheets, daily work summaries, salary radar, and compliance radar)",
+        "High-Performance Python Architecture (FastAPI, Pandas, SQLite, processing tens of thousands of rows in seconds)",
+        "Interactive Web Management Portal with real-time analytics dashboard"
+      ],
+      specsTitle: "System Architecture & Execution Modes",
+      specs: [
+        "Backend Architecture: Python 3.10+, FastAPI, Pandas, Uvicorn, SQLite, Openpyxl, BIFF Engine",
+        "Frontend & UI: Responsive Web Dashboard, Chart.js, HTML5/CSS3",
+        "Launch Web Portal: python run.py --mode web  (Access at http://127.0.0.1:8000)",
+        "Batch Monthly Calculation: python run.py --month 10 --year 2026",
+        "Unit Test Suite: python run.py --mode test"
+      ]
+    },
+    tr: {
+      badge: "Kurumsal PDKS & Puantaj Otomasyonu",
+      title: "FİDE Konserve - Akıllı Puantaj ve PDKS Sistemi",
+      description: "FİDE Konserve fabrikası için özel olarak geliştirilmiş kurumsal otomasyon sistemi. Personel devam kontrol sistemi (PDKS) terminal verilerini işler, kart basmayı unutan veya hatalı basım yapan personelleri tespit eder, vardiya, fazla mesai, hafta sonu / pazar ve gece vardiyası sürelerini yasal mevzuata uygun hesaplar ve muhasebe/ERP sistemlerine aktarılabilir puantaj cetvellerini saniyeler içinde sıfır hatayla hazırlar.",
+      features: [
+        "Otomatik PDKS Analizi: Donanım terminallerinden gelen binlerce ham basım kaydını anında ayrıştırır, temizler ve doğrular.",
+        "Akıllı Vardiya ve Mesai Motoru: Normal çalışma, fazla mesai, pazar mesaisi ve gece vardiyası sürelerini mevzuata tam uyumlu otomatik hesaplar.",
+        "İstisna & Anomali Yönetimi: Kart basmayan veya eksik basan personeli tespit ederek İnsan Kaynakları departmanına anında raporlar.",
+        "Gelişmiş Raporlama & ERP Entegrasyonu: Excel puantaj cetveli, günlük çalışma raporları, maaş radarı ve yasal uyum analizleri üretir.",
+        "Yüksek Performanslı Altyapı: Python, FastAPI ve Pandas ile on binlerce satırlık veriyi birkaç saniyede kayıpsız işler.",
+        "Modern Web Portalı: PDKS verilerini yönetmek ve tek tıkla rapor üretmek için interaktif web dashboard arayüzü sunar."
+      ],
+      specsTitle: "Sistem Mimarisi ve Çalıştırma Modları",
+      specs: [
+        "Arka Plan Mimarisi: Python 3.10+, FastAPI, Pandas, Uvicorn, SQLite, Openpyxl, BIFF Motoru",
+        "Arayüz / Dashboard: Web Yönetim Portalı, İnteraktif Grafikler, Modern CSS3",
+        "Web Portalı Başlatma: python run.py --mode web  (http://127.0.0.1:8000)",
+        "Aylık Toplu Hesaplama: python run.py --month 10 --year 2026",
+        "Birim Testleri: python run.py --mode test"
+      ]
+    },
+    images: [
+      { src: "img/projects/puantaj/app_screen_1.png", title: "PDKS Analizi & Kart Basım Hareketleri" },
+      { src: "img/projects/puantaj/app_screen_2.png", title: "Vardiya & Fazla Mesai Hesaplama Motoru" },
+      { src: "img/projects/puantaj/app_screen_3.png", title: "İstisna & Kart Unutma Hata Tespiti" },
+      { src: "img/projects/puantaj/app_screen_4.png", title: "Excel Puantaj Cetveli & Rapor Çıktısı" },
+      { src: "img/projects/puantaj/app_screen_5.png", title: "Web Yönetim Portalı & Dashboard" },
+      { src: "img/projects/puantaj/app_screen_6.png", title: "Sistem Ayarları & Yapılandırma" }
+    ],
+    tags: ["Python 3.10+", "FastAPI", "Pandas", "Uvicorn", "SQLite", "Excel BIFF", "ERP Entegrasyonu", "Data Analytics"],
+    iconClass: "bx bx-time-five",
+    github: "https://github.com/ercanpolatt/personel-pdks-verisini-puantaja-isleme",
+    video: "https://youtu.be/OnxTkWwbZQA",
+    live: "https://youtu.be/OnxTkWwbZQA"
+  },
+  "qrcode": {
+    en: {
+      badge: "Desktop Automation & Barcode Studio",
+      title: "Barcode & QR Code Studio (National ID & Excel Integrated)",
+      description: "A professional desktop application built with Python and Tkinter for generating 1D barcodes and 2D QR codes. Designed for corporate operations, personnel ID card generation, and serial labeling with native embedded Excel cell image export, algorithmic TC ID checksum validation, and automated 3-column A4 grid printing.",
+      features: [
+        "Multi-Format Engine: 2D QR Code and 1D Barcodes (Code 128, Code 39, EAN-13, EAN-8, UPC-A)",
+        "Combined Badge Cards: Embed both QR code and 1D Barcode on a single card layout",
+        "National ID Algorithmic Checksum: Strict mathematical algorithm validation for 11-digit Turkish National IDs",
+        "Native Excel Image Embedding: Inserts high-resolution barcode images directly inside Excel spreadsheet cells",
+        "A4 Grid Print Layout: Automatically organizes records into an optimized 3-column A4 print sheet",
+        "Clipboard Integration: Copy barcode graphic directly to Windows clipboard (Ctrl+Shift+C) or paste table data (Ctrl+V)",
+        "Batch Sequential Generation: Generate hundreds of sequential codes with customizable prefix and numbering"
+      ],
+      specsTitle: "Keyboard Shortcuts & Stack",
+      specs: [
+        "Ctrl + C: Copy selected table rows in Excel format",
+        "Ctrl + Shift + C: Copy active barcode graphic directly to Windows clipboard",
+        "Ctrl + V: Smart paste clipboard rows into table",
+        "Ctrl + P: Send print jobs directly to default system printer",
+        "Technologies: Python 3.8+, Tkinter GUI, Pillow (PIL), qrcode, python-barcode, openpyxl, pywin32, SQLite"
+      ]
+    },
+    tr: {
+      badge: "Masaüstü & Barkod Otomasyonu",
+      title: "Barkod & QR Kod Studio (TC Kimlik & Excel Destekli)",
+      description: "T.C. Kimlik numaraları, personel kodları, ürün seri numaraları ve özel metinler için gelişmiş 1D Barkod ve 2D QR Kod üretimi sağlayan profesyonel bir masaüstü uygulamasıdır. Gelişmiş Excel entegrasyonu, toplu üretim özellikleri ve A4 baskı yetenekleriyle iş süreçlerini hızlandırır.",
+      features: [
+        "Çoklu Format Desteği: QR Kod (2D) ve 1D Barkodlar (Code 128, Code 39, EAN-13, EAN-8, UPC-A)",
+        "Kombine Kartlar: Tek bir kart üzerinde hem QR kod hem de Barkod barındırabilme",
+        "Akıllı T.C. Doğrulama: 11 haneli T.C. Kimlik numaraları için matematiksel algoritma kontrolü",
+        "Excel Hücresine Gömülü Resim: Oluşturulan barkodları hücre içine gömülü resimler olarak Excel'e aktarma",
+        "A4 Grid Baskı Modu: Toplu kayıtları otomatik olarak A4 sayfalarına 3'lü sütunlar halinde dizme",
+        "Gelişmiş Pano Entegrasyonu: Barkodları doğrudan Windows panosuna resim olarak kopyalama (Ctrl+Shift+C)",
+        "Seri & Ardışık Üretim: Tek tıkla yüzlerce sıralı barkod üretimi (Örn: URUN-0001, URUN-0002)"
+      ],
+      specsTitle: "Kısayol Tuşları ve Teknolojiler",
+      specs: [
+        "Ctrl + C: Tabloda seçili satırları Excel uyumlu formatta metin olarak kopyalar",
+        "Ctrl + Shift + C: Önizlemedeki barkod görselini doğrudan Windows panosuna kopyalar",
+        "Ctrl + V: Excel'den kopyalanan satırları akıllıca tabloya aktarır",
+        "Ctrl + P: Seçili kayıtları doğrudan varsayılan yazıcıya gönderir",
+        "Teknolojiler: Python 3.8+, Tkinter GUI, Pillow (PIL), qrcode, python-barcode, openpyxl, pywin32, SQLite"
+      ]
+    },
+    images: [
+      { src: "img/projects/qr-code/uygulama_arayuzu.png", title: "Geniş ve Detaylı Uygulama Arayüzü" },
+      { src: "img/projects/qr-code/toplu_a4_formati.png", title: "A4 Sayfa Grid Dizilimi ve Baskı Çıktısı" },
+      { src: "img/projects/qr-code/png_formati.png", title: "Detaylı ve Okunabilir PNG Kod Formatı" }
+    ],
+    tags: ["Python 3.8+", "Tkinter GUI", "Pillow (PIL)", "qrcode", "python-barcode", "openpyxl", "pywin32", "SQLite"],
+    iconClass: "bx bx-qr-scan",
+    github: "https://github.com/ercanpolatt/belirli-bir-sayi-icin-QR-code-olusturma-TC-KIMLIK-",
+    live: "https://github.com/ercanpolatt/belirli-bir-sayi-icin-QR-code-olusturma-TC-KIMLIK-"
+  },
   "1": {
     en: {
       badge: "AI & ML",
@@ -564,42 +874,122 @@ const projectDataMap = {
   }
 };
 
-if (projectDetailsBtns.length > 0 && projectModal) {
-  projectDetailsBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const projectId = btn.getAttribute("data-project");
-      const projectItem = projectDataMap[projectId];
+function openProjectModal(projectId) {
+  const projectItem = projectDataMap[projectId];
+  if (!projectItem || !projectModal) return;
 
-      if (projectItem) {
-        const langData = projectItem[currentLang] || projectItem.tr;
+  const langData = projectItem[currentLang] || projectItem.tr;
 
-        document.getElementById("project-modal-badge").textContent = langData.badge;
-        document.getElementById("project-modal-title").textContent = langData.title;
-        document.getElementById("project-modal-desc").textContent = langData.description;
-
-        const iconContainer = document.getElementById("project-modal-icon");
-        iconContainer.innerHTML = `<i class='${projectItem.iconClass}'></i>`;
-
-        const tagsContainer = document.getElementById("project-modal-tags");
-        tagsContainer.innerHTML = projectItem.tags.map(t => `<span>${t}</span>`).join("");
-
-        const featuresContainer = document.getElementById("project-modal-features");
-        featuresContainer.innerHTML = langData.features.map(f => `<li><i class='bx bx-check-circle'></i> ${f}</li>`).join("");
-
-        const githubLink = document.getElementById("project-modal-github");
-        const liveLink = document.getElementById("project-modal-live");
-        if (githubLink) githubLink.href = projectItem.github;
-        if (liveLink) liveLink.href = projectItem.live;
-
-        projectModal.style.display = "block";
-        document.body.style.overflow = "hidden";
-      }
-    });
+  trackAnalyticsEvent("project_modal_open", {
+    event_category: "Portfolio",
+    project_id: projectId,
+    project_title: langData.title || projectId
   });
+
+  const badgeEl = document.getElementById("project-modal-badge");
+  const titleEl = document.getElementById("project-modal-title");
+  const descEl = document.getElementById("project-modal-desc");
+  const iconContainer = document.getElementById("project-modal-icon");
+  const tagsContainer = document.getElementById("project-modal-tags");
+  const featuresContainer = document.getElementById("project-modal-features");
+  const specsSection = document.getElementById("project-modal-specs-section");
+  const specsTitle = document.getElementById("project-modal-specs-title");
+  const specsContainer = document.getElementById("project-modal-specs");
+  const galleryContainer = document.getElementById("project-modal-gallery");
+  const mainImg = document.getElementById("project-modal-main-img");
+  const captionEl = document.getElementById("project-modal-gallery-caption");
+  const thumbsContainer = document.getElementById("project-modal-thumbs");
+  const githubLink = document.getElementById("project-modal-github");
+  const videoLink = document.getElementById("project-modal-video");
+
+  if (badgeEl) badgeEl.textContent = langData.badge;
+  if (titleEl) titleEl.textContent = langData.title;
+  if (descEl) descEl.textContent = langData.description;
+
+  if (iconContainer) {
+    iconContainer.innerHTML = `<i class='${projectItem.iconClass}'></i>`;
+  }
+
+  if (tagsContainer) {
+    tagsContainer.innerHTML = projectItem.tags.map(t => `<span>${t}</span>`).join("");
+  }
+
+  if (featuresContainer) {
+    featuresContainer.innerHTML = langData.features.map(f => `<li><i class='bx bx-check-circle'></i> <span>${f}</span></li>`).join("");
+  }
+
+  // Gallery Handling
+  if (projectItem.images && projectItem.images.length > 0 && galleryContainer && mainImg && thumbsContainer) {
+    galleryContainer.style.display = "block";
+    mainImg.src = projectItem.images[0].src;
+    if (captionEl) captionEl.textContent = projectItem.images[0].title;
+
+    thumbsContainer.innerHTML = projectItem.images.map((img, idx) => `
+      <div class="modal-thumb ${idx === 0 ? 'active' : ''}" data-idx="${idx}">
+        <img src="${img.src}" alt="${img.title}" />
+      </div>
+    `).join("");
+
+    const modalThumbs = thumbsContainer.querySelectorAll(".modal-thumb");
+    modalThumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        modalThumbs.forEach(t => t.classList.remove("active"));
+        thumb.classList.add("active");
+        const idx = parseInt(thumb.getAttribute("data-idx"), 10);
+        const selectedImg = projectItem.images[idx];
+        mainImg.style.opacity = "0.2";
+        setTimeout(() => {
+          mainImg.src = selectedImg.src;
+          if (captionEl) captionEl.textContent = selectedImg.title;
+          mainImg.style.opacity = "1";
+        }, 120);
+      });
+    });
+  } else if (galleryContainer) {
+    galleryContainer.style.display = "none";
+  }
+
+  // Specs Handling
+  if (langData.specs && langData.specs.length > 0 && specsSection && specsContainer) {
+    specsSection.style.display = "block";
+    if (specsTitle && langData.specsTitle) specsTitle.innerHTML = `<i class='bx bx-terminal'></i> ${langData.specsTitle}`;
+    specsContainer.innerHTML = langData.specs.map(s => `<li>${s}</li>`).join("");
+  } else if (specsSection) {
+    specsSection.style.display = "none";
+  }
+
+  // Links
+  if (githubLink) githubLink.href = projectItem.github;
+  if (videoLink) {
+    if (projectItem.video) {
+      videoLink.href = projectItem.video;
+      videoLink.style.display = "inline-flex";
+    } else {
+      videoLink.style.display = "none";
+    }
+  }
+
+  projectModal.style.display = "block";
+  document.body.style.overflow = "hidden";
 }
+
+// Bind all details buttons (grid cards + spotlight cards)
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".btn-details");
+  if (btn) {
+    const projectId = btn.getAttribute("data-project");
+    if (projectId) {
+      openProjectModal(projectId);
+    }
+  }
+});
 
 if (projectModalClose) {
   projectModalClose.addEventListener("click", closeProjectModal);
+}
+
+if (projectModalCloseBtn) {
+  projectModalCloseBtn.addEventListener("click", closeProjectModal);
 }
 
 if (projectModal) {
@@ -766,6 +1156,16 @@ function setVH() {
 
 setVH();
 window.addEventListener('resize', setVH);
+
+// ─── OUTBOUND SOCIAL CLICKS TRACKING ──────────────────────────
+document.querySelectorAll(".social-icons a, .footer .social a").forEach((link) => {
+  link.addEventListener("click", () => {
+    trackAnalyticsEvent("social_click", {
+      event_category: "Outbound",
+      platform: link.getAttribute("aria-label") || link.href
+    });
+  });
+});
 
 // ─── GSAP SOFT ENTRANCE ANIMATIONS ────────────────────────────
 if (window.gsap) {

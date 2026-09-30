@@ -22,6 +22,26 @@
     <meta name="twitter:image" content="https://ercanpolatt.github.io/img/image.png" />
     <meta name="twitter:image:alt" content="Ercan Polat - Bilgisayar Mühendisi, Veri ve İş Analisti Portfolyo Fotoğrafı" />
     <meta name="theme-color" content="#0f172a" />
+    
+    <!-- Preconnect & Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Google Analytics 4 (GA4) -->
+    <!-- ÖNEMLİ: analytics.google.com üzerinden alacağınız Ölçüm Kimliği ile 'G-MEASUREMENT_ID' alanını değiştirin -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MEASUREMENT_ID', {
+        page_path: window.location.pathname,
+        anonymize_ip: true
+      });
+    </script>
+    
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -30,10 +50,15 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Ercan Polat",
+        "email": "ercanpolatt.tr@gmail.com",
         "jobTitle": ["Computer Engineer", "Data Analyst", "Business Analyst"],
         "alternateName": "Ercan Polat | Bilgisayar Mühendisi - Veri & İş Analisti",
         "url": "https://ercanpolatt.github.io/",
         "image": "https://ercanpolatt.github.io/img/image.png",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Amasya University"
+        },
         "sameAs": [
           "https://github.com/ercanpolatt",
           "https://www.linkedin.com/in/ercanpolatt/"
@@ -50,15 +75,19 @@
     </script>
   </head>
   <body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
 
     <main>
 
     <!-- HEADER -->
     <header class="header">
       <a href="#home" class="logo">Ercan <span>Polat</span></a>
-      <i class="bx bx-menu" id="menu-icon"></i>
+      <button class="menu-icon-btn" id="menu-icon-btn" aria-label="Menüyü Aç veya Kapat" aria-expanded="false">
+        <i class="bx bx-menu" id="menu-icon"></i>
+      </button>
 
-      <nav class="navbar">
+      <nav class="navbar" id="main-nav" aria-label="Ana Menü">
         <a href="#home" class="active" data-i18n="nav-home">Home</a>
         <a href="#education" data-i18n="nav-education">Education</a>
         <a href="#services" data-i18n="nav-services">Services</a>
@@ -67,7 +96,7 @@
         <a href="#certificates" data-i18n="nav-certificates">Certificates</a>
         <a href="#testimonials" data-i18n="nav-testimonials">References</a>
         <a href="#about" data-i18n="nav-about">About Me</a>
-        <button class="lang-toggle-btn" id="lang-toggle" title="Dil Değiştir / Switch Language">
+        <button class="lang-toggle-btn" id="lang-toggle" title="Dil Değiştir / Switch Language" aria-label="Dil Değiştir / Switch Language">
           <i class='bx bx-globe'></i> <span id="lang-text">TR</span>
         </button>
       </nav>
@@ -76,30 +105,37 @@
     <!-- HOME -->
     <section class="home" id="home">
       <div class="home-content">
+        <!-- Live Availability Radar Badge -->
+        <div class="status-badge">
+          <span class="status-pulse"></span>
+          <span data-i18n="hero-status">Kariyer Fırsatlarına &amp; Projelere Açık</span>
+        </div>
+
         <h1 data-i18n="hero-title">Ercan Polat | Computer Engineer - Data &amp; Business Analyst</h1>
         <h3 class="text-animation"><span class="hero-im-text" data-i18n="hero-im">I'm a</span> <span class="typing-text"></span><span class="typing-cursor">|</span></h3>
         <p data-i18n="hero-desc">
           I am Ercan Polat, a computer engineering graduate and computer engineer specializing in artificial intelligence, full-stack web development, machine learning, and data science. I build modern digital products, practical solutions, and user-focused applications with clean code and continuous learning.
         </p>
         <div class="social-icons">
-          <a href="https://github.com/ercanpolatt" target="_blank"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/ercanpolatt/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.instagram.com/ercann.plt/" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" aria-label="Ercan Polat GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/ercanpolatt/" target="_blank" rel="noopener noreferrer" aria-label="Ercan Polat LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.instagram.com/ercann.plt/" target="_blank" rel="noopener noreferrer" aria-label="Ercan Polat Instagram"><i class="bx bxl-instagram"></i></a>
         </div>
         
         <div class="btn-group">
-          <a href="./cv/Ercan_Polat.pdf" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="btn-cv">CV</a>
+          <a href="./cv/Ercan_Polat.pdf" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="btn-cv" id="cv-download-btn">CV</a>
           <a href="#about" class="btn" data-i18n="btn-about">About Me</a>
         </div>
       </div>
 
       <div class="home-img">
-        <img src="img/image.png" alt="Ercan Polat - Bilgisayar Mühendisi, Veri ve İş Analisti Profil Fotoğrafı" title="Ercan Polat | Bilgisayar Mühendisi - Veri &amp; İş Analisti" loading="eager" fetchpriority="high" />
+        <img src="img/image.png" alt="Ercan Polat - Bilgisayar Mühendisi, Veri ve İş Analisti Profil Fotoğrafı" title="Ercan Polat | Bilgisayar Mühendisi - Veri &amp; İş Analisti" loading="eager" fetchpriority="high" width="380" height="380" />
       </div>
 
-      <div class="home-email-fixed">
+      <div class="home-email-fixed" id="copy-email-btn" role="button" tabindex="0" title="Tıkla ve E-postayı Kopyala" aria-label="E-posta adresini kopyala">
         <i class="bx bx-envelope"></i>
-        <a href="mailto:ercanpolat.tr@gmail.com">ercanpolat.tr@gmail.com</a>
+        <span id="fixed-email-text">ercanpolatt.tr@gmail.com</span>
+        <i class="bx bx-copy copy-icon"></i>
       </div>
     </section>
 
@@ -193,17 +229,316 @@
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
-      <h2 class="heading" data-i18n="heading-projects">Featured <span>Projects</span></h2>
+      <h2 class="heading" data-i18n="heading-projects">Öne Çıkan <span>Projeler &amp; Sunumlar</span></h2>
+      <p class="projects-subtitle" data-i18n="projects-subtitle">Gerçek dünya kurumsal otomasyonları, veri analitiği sistemleri ve uçtan uca yazılım çözümleri</p>
       
+      <!-- SPOTLIGHT / AMİRAL GEMİSİ PROJE SUNUMLARI -->
+      <div class="projects-spotlight">
+        <!-- SPOTLIGHT 1: PUANTAJ VE PDKS SİSTEMİ -->
+        <article class="spotlight-card" id="spotlight-puantaj">
+          <div class="spotlight-window">
+            <div class="window-topbar">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-title"><i class='bx bx-globe'></i> fide-pdks-portal.local:8000 &mdash; PDKS &amp; Puantaj Portalı</div>
+              <span class="window-status"><i class='bx bx-check-circle'></i> Canlı Kurumsal Sistem</span>
+            </div>
+
+            <div class="spotlight-preview-frame">
+              <img src="img/projects/puantaj/app_screen_1.png" alt="FİDE Konserve Puantaj Sistemi" class="spotlight-main-img" id="spotlight-img-puantaj" loading="lazy" />
+              <div class="preview-overlay-badge">
+                <i class='bx bx-layer'></i> Fast, Reliable &amp; Automated
+              </div>
+            </div>
+
+            <!-- Interaktif Thumbnail Galerisi -->
+            <div class="spotlight-thumbs-wrapper">
+              <span class="thumbs-label"><i class='bx bx-images'></i> Ekran Görüntüleri &amp; Modüller:</span>
+              <div class="spotlight-thumbs" data-target="spotlight-img-puantaj">
+                <button type="button" class="thumb-btn active" data-img="img/projects/puantaj/app_screen_1.png" title="PDKS Analizi">
+                  <img src="img/projects/puantaj/app_screen_1.png" alt="PDKS Analizi" />
+                  <span>PDKS Analizi</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/puantaj/app_screen_2.png" title="Vardiya Hesaplama">
+                  <img src="img/projects/puantaj/app_screen_2.png" alt="Vardiya Hesaplama" />
+                  <span>Vardiya &amp; Mesai</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/puantaj/app_screen_3.png" title="İstisna Yönetimi">
+                  <img src="img/projects/puantaj/app_screen_3.png" alt="İstisna Yönetimi" />
+                  <span>İstisna Tespiti</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/puantaj/app_screen_4.png" title="Puantaj Cetveli">
+                  <img src="img/projects/puantaj/app_screen_4.png" alt="Puantaj Cetveli" />
+                  <span>Puantaj Raporu</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/puantaj/app_screen_5.png" title="Yönetim Dashboard">
+                  <img src="img/projects/puantaj/app_screen_5.png" alt="Yönetim Dashboard" />
+                  <span>Web Portal</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/puantaj/app_screen_6.png" title="Sistem Mimarisi">
+                  <img src="img/projects/puantaj/app_screen_6.png" alt="Sistem Mimarisi" />
+                  <span>Sistem Yapısı</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight-content">
+            <div class="spotlight-header">
+              <div class="spotlight-tags-row">
+                <span class="spotlight-badge badge-flagship"><i class='bx bx-star'></i> <span data-i18n="spotlight-fide-tag">Amiral Gemisi Çözüm</span></span>
+                <span class="spotlight-badge badge-domain">Kurumsal PDKS &amp; İK Otomasyonu</span>
+              </div>
+              <h3 class="spotlight-title" data-i18n="spotlight-fide-title">FİDE Konserve - Akıllı Puantaj ve PDKS Sistemi</h3>
+              <p class="spotlight-desc" data-i18n="spotlight-fide-desc">
+                Donanım terminallerinden gelen karmaşık personel giriş-çıkış kart verilerini analiz ederek, İnsan Kaynakları ve Muhasebe departmanları için vardiya, fazla mesai ve puantaj hesaplama sürecini tam otomatik hale getiren kurumsal yazılım.
+              </p>
+            </div>
+
+            <div class="spotlight-metrics">
+              <div class="metric-card">
+                <i class='bx bx-bolt-circle'></i>
+                <div class="metric-info">
+                  <strong>%100 Otomatik</strong>
+                  <span>Saniyeler İçinde Hesaplama</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <i class='bx bx-shield-quarter'></i>
+                <div class="metric-info">
+                  <strong>ERP &amp; Yasal Uyum</strong>
+                  <span>Sıfır Hata Toleransı</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <i class='bx bx-time'></i>
+                <div class="metric-info">
+                  <strong>Çoklu Vardiya</strong>
+                  <span>Pazar &amp; Gece Mesaisi</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="spotlight-highlights">
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div><strong>Otomatik PDKS Analizi:</strong> Ham terminal loglarını temizler, eksik veya unutulan kart basımlarını anında tespit eder.</div>
+              </li>
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div><strong>Vardiya &amp; Mesai Motoru:</strong> Normal çalışma, hafta sonu (pazar) ve gece vardiyası mesailerini yasal mevzuata tam uyumlu hesaplar.</div>
+              </li>
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div><strong>Gelişmiş BI &amp; Excel Raporlama:</strong> Detaylı puantaj cetvelleri, günlük çalışma dökümleri ve ERP'ye hazır maliyet analizleri üretir.</div>
+              </li>
+            </ul>
+
+            <div class="project-tags">
+              <span>Python 3.10+</span>
+              <span>FastAPI</span>
+              <span>Pandas</span>
+              <span>Uvicorn</span>
+              <span>SQLite</span>
+              <span>Excel BIFF</span>
+              <span>RESTful API</span>
+            </div>
+
+            <div class="spotlight-actions">
+              <a href="https://github.com/ercanpolatt/personel-pdks-verisini-puantaja-isleme" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+                <i class='bx bxl-github'></i> GitHub Deposu
+              </a>
+              <a href="https://youtu.be/OnxTkWwbZQA" target="_blank" rel="noopener noreferrer" class="project-btn btn-video">
+                <i class='bx bx-play-circle'></i> <span data-i18n="btn-video">Video Sunumu İzle</span>
+              </a>
+              <button type="button" class="project-btn btn-details btn-spotlight-details" data-project="puantaj">
+                <i class='bx bx-slideshow'></i> <span data-i18n="btn-presentation">Detaylı Sunumu Gör</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- SPOTLIGHT 2: BARKOD & QR KOD STUDIO -->
+        <article class="spotlight-card" id="spotlight-qrcode">
+          <div class="spotlight-window">
+            <div class="window-topbar">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-title"><i class='bx bx-desktop'></i> Barkod &amp; QR Kod Studio v2.4 &mdash; Masaüstü Uygulaması</div>
+              <span class="window-status"><i class='bx bx-check-circle'></i> Masaüstü Üretim Aracı</span>
+            </div>
+
+            <div class="spotlight-preview-frame">
+              <img src="img/projects/qr-code/uygulama_arayuzu.png" alt="Barkod ve QR Kod Studio Arayüzü" class="spotlight-main-img" id="spotlight-img-qrcode" loading="lazy" />
+              <div class="preview-overlay-badge">
+                <i class='bx bx-barcode'></i> 1D &amp; 2D Hybrid Studio
+              </div>
+            </div>
+
+            <!-- Interaktif Thumbnail Galerisi -->
+            <div class="spotlight-thumbs-wrapper">
+              <span class="thumbs-label"><i class='bx bx-images'></i> Ekran Görüntüleri &amp; Modüller:</span>
+              <div class="spotlight-thumbs" data-target="spotlight-img-qrcode">
+                <button type="button" class="thumb-btn active" data-img="img/projects/qr-code/uygulama_arayuzu.png" title="Uygulama Arayüzü">
+                  <img src="img/projects/qr-code/uygulama_arayuzu.png" alt="Uygulama Arayüzü" />
+                  <span>Ana Arayüz</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/qr-code/toplu_a4_formati.png" title="Toplu A4 Formatı">
+                  <img src="img/projects/qr-code/toplu_a4_formati.png" alt="Toplu A4 Formatı" />
+                  <span>A4 Grid Baskı</span>
+                </button>
+                <button type="button" class="thumb-btn" data-img="img/projects/qr-code/png_formati.png" title="PNG Formatı">
+                  <img src="img/projects/qr-code/png_formati.png" alt="PNG Formatı" />
+                  <span>Yüksek Çözünürlük</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight-content">
+            <div class="spotlight-header">
+              <div class="spotlight-tags-row">
+                <span class="spotlight-badge badge-flagship"><i class='bx bx-star'></i> <span data-i18n="spotlight-qr-tag">Profesyonel Masaüstü Yazılımı</span></span>
+                <span class="spotlight-badge badge-domain">Baskı &amp; Barkod Otomasyonu</span>
+              </div>
+              <h3 class="spotlight-title" data-i18n="spotlight-qr-title">Barkod &amp; QR Kod Studio (TC Kimlik &amp; Excel Destekli)</h3>
+              <p class="spotlight-desc" data-i18n="spotlight-qr-desc">
+                Personel kartları, ürün seri numaraları ve TC kimlikler için 1D Barkod ve 2D QR Kod üreten, Excel hücrelerine gömülü resimler olarak aktaran ve 3'lü A4 baskı sayfaları hazırlayan profesyonel masaüstü otomasyon stüdyosu.
+              </p>
+            </div>
+
+            <div class="spotlight-metrics">
+              <div class="metric-card">
+                <i class='bx bx-printer'></i>
+                <div class="metric-info">
+                  <strong>A4 Grid Baskı</strong>
+                  <span>3'lü Otomatik Sayfalama</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <i class='bx bx-id-card'></i>
+                <div class="metric-info">
+                  <strong>11 Haneli TC Doğrulama</strong>
+                  <span>Matematiksel Algoritma</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <i class='bx bx-table'></i>
+                <div class="metric-info">
+                  <strong>Excel Resim Gömme</strong>
+                  <span>Hücre İçi Direkt Baskı</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="spotlight-highlights">
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div><strong>1D &amp; 2D Kod Üretimi:</strong> QR Kod (2D) ile Code 128, Code 39, EAN-13, EAN-8 ve UPC-A formatlarında tekli veya kombine kartlar.</div>
+              </li>
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div><strong>Akıllı TC Kimlik Kontrolü:</strong> 11 haneli T.C. kimlik numaraları için matematiksel sağlama algoritmasıyla sıkı denetim ve hata önleme.</div>
+              </li>
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div><strong>Hızlı Pano &amp; Seri Üretim:</strong> Ctrl+Shift+C ile doğrudan Windows panosuna resim kopyalama ve sıralı seri kod üretimi.</div>
+              </li>
+            </ul>
+
+            <div class="project-tags">
+              <span>Python 3.8+</span>
+              <span>Tkinter GUI</span>
+              <span>Pillow (PIL)</span>
+              <span>qrcode</span>
+              <span>python-barcode</span>
+              <span>openpyxl</span>
+              <span>pywin32</span>
+              <span>SQLite</span>
+            </div>
+
+            <div class="spotlight-actions">
+              <a href="https://github.com/ercanpolatt/belirli-bir-sayi-icin-QR-code-olusturma-TC-KIMLIK-" target="_blank" rel="noopener noreferrer" class="project-btn btn-github">
+                <i class='bx bxl-github'></i> GitHub Deposu
+              </a>
+              <button type="button" class="project-btn btn-details btn-spotlight-details" data-project="qrcode">
+                <i class='bx bx-slideshow'></i> <span data-i18n="btn-presentation">Detaylı Sunumu Gör</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJE KATALOĞU & FİLTRELEME -->
+      <div class="catalog-section-header">
+        <h3 class="catalog-title" data-i18n="catalog-title">Tüm Proje Portfolyosu</h3>
+        <p class="catalog-subtitle" data-i18n="catalog-subtitle">Kategoriye göre filtreleyip detaylı inceleyebilirsiniz</p>
+      </div>
+
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tümü</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tümü (7)</button>
+        <button class="filter-btn" data-filter="featured" data-i18n="filter-featured">⭐ Öne Çıkanlar</button>
+        <button class="filter-btn" data-filter="automation" data-i18n="filter-automation">Otomasyon &amp; Araçlar</button>
+        <button class="filter-btn" data-filter="datascience" data-i18n="filter-datascience">Veri Bilimi &amp; Analitik</button>
         <button class="filter-btn" data-filter="ai" data-i18n="filter-ai">Yapay Zekâ &amp; ML</button>
         <button class="filter-btn" data-filter="fullstack" data-i18n="filter-fullstack">Full-Stack Web</button>
         <button class="filter-btn" data-filter="mobile" data-i18n="filter-mobile">Mobil Uygulama</button>
-        <button class="filter-btn" data-filter="datascience" data-i18n="filter-datascience">Veri Bilimi</button>
       </div>
 
       <div class="projects-grid">
+        <!-- PROJE: PUANTAJ VE PDKS SİSTEMİ -->
+        <article class="project-card" data-category="datascience automation featured">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-time-five'></i></div>
+            <span class="project-badge" data-i18n="prj-puantaj-badge">PDKS &amp; Otomasyon</span>
+          </div>
+          <div class="project-content">
+            <h3>FİDE Konserve PDKS &amp; Puantaj</h3>
+            <p data-i18n="prj-puantaj-desc">PDKS kart basım verilerini analiz eden, vardiya ve mesaileri hesaplayan ve Excel puantaj cetvelleri oluşturan akıllı otomasyon.</p>
+            <div class="project-tags">
+              <span>Python</span><span>FastAPI</span><span>Pandas</span><span>SQLite</span><span>Excel BIFF</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt/personel-pdks-verisini-puantaja-isleme" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="puantaj" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJE: BARKOD VE QR KOD STUDIO -->
+        <article class="project-card" data-category="automation featured">
+          <div class="project-card-header">
+            <div class="project-icon"><i class='bx bx-qr-scan'></i></div>
+            <span class="project-badge" data-i18n="prj-qrcode-badge">Barkod Studio</span>
+          </div>
+          <div class="project-content">
+            <h3>Barkod &amp; QR Kod Studio</h3>
+            <p data-i18n="prj-qrcode-desc">1D Barkod ve 2D QR Kod üreten, TC kimlik doğrulayan, Excel'e resim gömen ve A4 grid baskı sağlayan masaüstü yazılımı.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Tkinter</span><span>Pillow</span><span>qrcode</span><span>openpyxl</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ercanpolatt/belirli-bir-sayi-icin-QR-code-olusturma-TC-KIMLIK-" target="_blank" rel="noopener noreferrer" class="project-btn btn-github" title="GitHub Deposu">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <button class="project-btn btn-details" data-project="qrcode" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- MEVCUT PROJE 1 -->
         <article class="project-card" data-category="ai">
           <div class="project-card-header">
             <div class="project-icon"><i class='bx bx-brain'></i></div>
@@ -226,6 +561,7 @@
           </div>
         </article>
 
+        <!-- MEVCUT PROJE 2 -->
         <article class="project-card" data-category="datascience">
           <div class="project-card-header">
             <div class="project-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
@@ -248,6 +584,7 @@
           </div>
         </article>
 
+        <!-- MEVCUT PROJE 3 -->
         <article class="project-card" data-category="mobile">
           <div class="project-card-header">
             <div class="project-icon"><i class='bx bx-mobile-alt'></i></div>
@@ -270,6 +607,7 @@
           </div>
         </article>
 
+        <!-- MEVCUT PROJE 4 -->
         <article class="project-card" data-category="fullstack">
           <div class="project-card-header">
             <div class="project-icon"><i class='bx bx-code-block'></i></div>
@@ -292,6 +630,7 @@
           </div>
         </article>
 
+        <!-- MEVCUT PROJE 5 -->
         <article class="project-card" data-category="datascience">
           <div class="project-card-header">
             <div class="project-icon"><i class='bx bx-shield-quarter'></i></div>
@@ -466,27 +805,27 @@
           <p class="certificates-subtitle">Certifications and achievements that showcase my continuous learning journey</p>
           <div class="certificates-container">
             <div class="certificate-card" data-certificate="1">
-              <div class="certificate-image-wrapper"><img src="certificates/promt-muhendisligi_page-0001.jpg" alt="Prompt Mühendisliği" class="certificate-thumbnail"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+              <div class="certificate-image-wrapper"><img src="certificates/promt-muhendisligi_page-0001.jpg" alt="Prompt Mühendisliği" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
               <div class="certificate-info"><h3>ChatGPT 2026: Prompt Mühendisliği</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Udemy/Atil Samancioglu</p><p class="certificate-date"><i class='bx bx-calendar'></i> February 2026</p></div>
             </div>
             <div class="certificate-card" data-certificate="2">
-              <div class="certificate-image-wrapper"><img src="certificates/yuksekogretim-mezun-belgesi-sorgulama.jpg" alt="Mezun Belgesi" class="certificate-thumbnail"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+              <div class="certificate-image-wrapper"><img src="certificates/yuksekogretim-mezun-belgesi-sorgulama.jpg" alt="Mezun Belgesi" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
               <div class="certificate-info"><h3>Mezun Belgesi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Amasya University</p><p class="certificate-date"><i class='bx bx-calendar'></i> January 2026</p></div>
             </div>
             <div class="certificate-card" data-certificate="3">
-              <div class="certificate-image-wrapper"><img src="certificates/Siber_Güvenliğe_Giriş_Sertifika_page-0001.jpg" alt="Siber Güvenlik" class="certificate-thumbnail"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+              <div class="certificate-image-wrapper"><img src="certificates/Siber_Güvenliğe_Giriş_Sertifika_page-0001.jpg" alt="Siber Güvenlik" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
               <div class="certificate-info"><h3>Siber Güvenlik Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
             </div>
             <div class="certificate-card" data-certificate="4">
-              <div class="certificate-image-wrapper"><img src="certificates/ingilizce_page-0001.jpg" alt="İngilizce" class="certificate-thumbnail"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+              <div class="certificate-image-wrapper"><img src="certificates/ingilizce_page-0001.jpg" alt="İngilizce" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
               <div class="certificate-info"><h3>İngilizce Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Amasya University</p><p class="certificate-date"><i class='bx bx-calendar'></i> December 2022</p></div>
             </div>
             <div class="certificate-card" data-certificate="5">
-              <div class="certificate-image-wrapper"><img src="certificates/bilgiteknogiris_page-0001.jpg" alt="Bilgi Teknolojileri" class="certificate-thumbnail"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+              <div class="certificate-image-wrapper"><img src="certificates/bilgiteknogiris_page-0001.jpg" alt="Bilgi Teknolojileri" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
               <div class="certificate-info"><h3>Bilgi Teknolojileri Giriş Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
             </div>
             <div class="certificate-card" data-certificate="6">
-              <div class="certificate-image-wrapper"><img src="certificates/Ağ_Temelleri_Sertifika_page-0001.jpg" alt="Ağ Temelleri" class="certificate-thumbnail"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+              <div class="certificate-image-wrapper"><img src="certificates/Ağ_Temelleri_Sertifika_page-0001.jpg" alt="Ağ Temelleri" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
               <div class="certificate-info"><h3>Ağ Temelleri Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
             </div>
           </div>
@@ -510,35 +849,56 @@
         </div>
       </div>
 
-      <!-- Project Detail Modal -->
+      <!-- Project Detail & Presentation Modal -->
       <div id="project-modal" class="modal">
         <div class="modal-content project-modal-content">
           <span class="modal-close" id="project-modal-close">&times;</span>
           <div class="project-modal-header">
             <div class="project-modal-icon" id="project-modal-icon"><i class='bx bx-code-alt'></i></div>
-            <div>
+            <div class="project-modal-titles">
               <span class="project-badge" id="project-modal-badge">Kategori</span>
               <h3 id="project-modal-title">Proje Başlığı</h3>
             </div>
           </div>
+          
           <div class="project-modal-body">
-            <p id="project-modal-desc"></p>
+            <!-- Interaktif Ekran Görüntüleri Galerisi -->
+            <div class="project-modal-gallery" id="project-modal-gallery" style="display:none;">
+              <div class="modal-gallery-main-frame">
+                <img id="project-modal-main-img" src="" alt="Proje Ekran Görüntüsü" />
+                <span class="gallery-caption" id="project-modal-gallery-caption"></span>
+              </div>
+              <div class="modal-gallery-thumbs" id="project-modal-thumbs"></div>
+            </div>
+
+            <p id="project-modal-desc" class="modal-project-desc"></p>
+
             <div class="project-modal-section">
               <h4><i class='bx bx-wrench'></i> Teknolojiler &amp; Araçlar</h4>
               <div class="project-tags" id="project-modal-tags"></div>
             </div>
+
             <div class="project-modal-section">
-              <h4><i class='bx bx-check-shield'></i> Öne Çıkan Özellikler</h4>
+              <h4><i class='bx bx-check-shield'></i> Öne Çıkan Özellikler &amp; Yetenekler</h4>
               <ul class="project-modal-features" id="project-modal-features"></ul>
             </div>
+
+            <div class="project-modal-section" id="project-modal-specs-section" style="display:none;">
+              <h4 id="project-modal-specs-title"><i class='bx bx-terminal'></i> Sistem Mimarisi &amp; Kullanım Bilgisi</h4>
+              <ul class="project-modal-specs" id="project-modal-specs"></ul>
+            </div>
           </div>
+
           <div class="project-modal-footer">
             <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="project-modal-github">
               <i class='bx bxl-github'></i> GitHub Deposu
             </a>
-            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="btn" id="project-modal-live">
-              <i class='bx bx-link-external'></i> Profil / GitHub
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-video" id="project-modal-video" style="display:none;">
+              <i class='bx bx-play-circle'></i> <span data-i18n="btn-video">Video Sunumu İzle</span>
             </a>
+            <button type="button" class="btn btn-modal-close" id="project-modal-close-btn">
+              Kapat
+            </button>
           </div>
         </div>
       </div>
@@ -665,9 +1025,9 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="social">
-        <a href="https://github.com/ercanpolatt" target="_blank"><i class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/ercanpolatt/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://www.instagram.com/ercann.plt/" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" aria-label="Ercan Polat GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/ercanpolatt/" target="_blank" rel="noopener noreferrer" aria-label="Ercan Polat LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.instagram.com/ercann.plt/" target="_blank" rel="noopener noreferrer" aria-label="Ercan Polat Instagram"><i class="bx bxl-instagram"></i></a>
       </div>
       <ul class="list">
         <li><a href="#home" data-i18n="nav-home">Home</a></li>
@@ -683,6 +1043,14 @@
     </footer>
 
     </main>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Sayfanın Başına Çık" title="Başa Dön">
+      <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- Global Toast Notification -->
+    <div id="toast" class="toast-notification" aria-live="polite"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
