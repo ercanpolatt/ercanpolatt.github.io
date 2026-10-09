@@ -403,17 +403,28 @@ function handleScroll() {
 
   updateScrollUI();
 
-  sections.forEach((sec) => {
-    const offset = sec.offsetTop - 160;
-    const height = sec.offsetHeight;
-    const id = sec.getAttribute("id");
+  // Scrollspy: Check if user has reached or is near the bottom of the page (where Contact is)
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+  const isNearBottom = (scrollY + windowHeight) >= (docHeight - 120);
 
-    if (scrollY >= offset && scrollY < offset + height) {
-      navLinks.forEach((link) => link.classList.remove("active"));
-      const activeLink = document.querySelector("header nav a[href*=" + id + "]");
-      if (activeLink) activeLink.classList.add("active");
-    }
-  });
+  if (isNearBottom) {
+    navLinks.forEach((link) => link.classList.remove("active"));
+    const contactLink = document.querySelector('header nav a[href*="contact"]');
+    if (contactLink) contactLink.classList.add("active");
+  } else {
+    sections.forEach((sec) => {
+      const offset = sec.offsetTop - 160;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute("id");
+
+      if (scrollY >= offset && scrollY < offset + height) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        const activeLink = document.querySelector("header nav a[href*=" + id + "]");
+        if (activeLink) activeLink.classList.add("active");
+      }
+    });
+  }
 
   if (menuIcon && navbar && navbar.classList.contains("active")) {
     menuIcon.classList.remove("bx-x");
@@ -603,7 +614,29 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         menuIcon.classList.remove("bx-x");
         navbar.classList.remove("active");
       }
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Immediately activate corresponding nav link for crisp user feedback
+      if (this.closest(".navbar") || this.classList.contains("nav-link")) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        this.classList.add("active");
+      } else {
+        const matchingLink = document.querySelector('header nav a[href="' + targetId + '"]');
+        if (matchingLink) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          matchingLink.classList.add("active");
+        }
+      }
+
+      // Smooth scroll with header clearance
+      const headerEl = document.querySelector(".header");
+      const headerHeight = headerEl ? headerEl.offsetHeight : 80;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      const scrollPosition = Math.max(0, targetTop - headerHeight + 5);
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth"
+      });
     }
   });
 });
