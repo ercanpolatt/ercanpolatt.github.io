@@ -30,7 +30,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     
     <!-- Google Analytics 4 (GA4) -->
-    <!-- ÖNEMLİ: analytics.google.com üzerinden alacağınız Ölçüm Kimliği ile 'G-MEASUREMENT_ID' alanını değiştirin -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -89,13 +88,11 @@
 
       <nav class="navbar" id="main-nav" aria-label="Ana Menü">
         <a href="#home" class="active" data-i18n="nav-home">Home</a>
-        <a href="#education" data-i18n="nav-education">Education</a>
-        <a href="#services" data-i18n="nav-services">Services</a>
+        <a href="#education" data-i18n="nav-education">Experience</a>
         <a href="#projects" data-i18n="nav-projects">Projects</a>
         <a href="#skills" data-i18n="nav-skills">Skills</a>
-        <a href="#certificates" data-i18n="nav-certificates">Certificates</a>
-        <a href="#testimonials" data-i18n="nav-testimonials">References</a>
-        <a href="#about" data-i18n="nav-about">About Me</a>
+        <a href="#about" data-i18n="nav-about">About</a>
+        <a href="#contact" data-i18n="nav-contact">Contact</a>
         <button class="lang-toggle-btn" id="lang-toggle" title="Dil Değiştir / Switch Language" aria-label="Dil Değiştir / Switch Language">
           <i class='bx bx-globe'></i> <span id="lang-text">TR</span>
         </button>
@@ -105,7 +102,6 @@
     <!-- HOME -->
     <section class="home" id="home">
       <div class="home-content">
-
         <h1 data-i18n="hero-title">Ercan Polat | Computer Engineer - Data &amp; Business Analyst</h1>
         <h3 class="text-animation"><span class="hero-im-text" data-i18n="hero-im">I'm a</span> <span class="typing-text"></span><span class="typing-cursor">|</span></h3>
         <p data-i18n="hero-desc">
@@ -126,12 +122,6 @@
       <div class="home-img">
         <img src="img/image.png" alt="Ercan Polat - Bilgisayar Mühendisi, Veri ve İş Analisti Profil Fotoğrafı" title="Ercan Polat | Bilgisayar Mühendisi - Veri &amp; İş Analisti" loading="eager" fetchpriority="high" width="380" height="380" />
       </div>
-
-      <div class="home-email-fixed" id="copy-email-btn" role="button" tabindex="0" title="Tıkla ve E-postayı Kopyala" aria-label="E-posta adresini kopyala">
-        <i class="bx bx-envelope"></i>
-        <span id="fixed-email-text">ercanpolatt.tr@gmail.com</span>
-        <i class="bx bx-copy copy-icon"></i>
-      </div>
     </section>
 
     <!-- EDUCATION & EXPERIENCE -->
@@ -140,10 +130,18 @@
       <div class="timeline-items">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2021 - 2026</div>
+          <div class="timeline-date">FİDE Konserve</div>
           <div class="timeline-content">
-            <h3 data-i18n="edu-1-title">Computer Engineering</h3>
-            <p data-i18n="edu-1-desc">Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis, machine learning algorithms, database architectures, and software engineering principles.</p>
+            <h3 data-i18n="edu-fide-title">Business Analyst</h3>
+            <p data-i18n="edu-fide-desc">FİDE Konserve bünyesinde departmanlar arası iş süreçlerinin analizi, İK ve bordro gereksinimlerinin modellenmesi, donanım kart terminallerinden gelen verilerin PDKS ve puantaj sistemlerine entegrasyonu ve ERP/Excel tabanlı raporlama akışlarının uçtan uca dijitalleştirilmesi.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Freelance</div>
+          <div class="timeline-content">
+            <h3 data-i18n="edu-3-title">Freelance Computer Engineer &amp; Data Analyst</h3>
+            <p data-i18n="edu-3-desc">End-to-end development of custom full-stack web applications, data pipelines, statistical data cleaning, and automated SQL/NoSQL database workflows tailored to client business metrics.</p>
           </div>
         </div>
         <div class="timeline-item">
@@ -156,67 +154,10 @@
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Freelance</div>
+          <div class="timeline-date">2021 - 2026</div>
           <div class="timeline-content">
-            <h3 data-i18n="edu-3-title">Freelance Computer Engineer &amp; Data Analyst</h3>
-            <p data-i18n="edu-3-desc">End-to-end development of custom full-stack web applications, data pipelines, statistical data cleaning, and automated SQL/NoSQL database workflows tailored to client business metrics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="services">
-      <h2 class="heading" data-i18n="heading-services">Services</h2>
-      <div class="services-container">
-        <div class="service-box">
-          <div class="service-info">
-            <div class="service-icon"><i class='bx bx-brain'></i></div>
-            <h4 data-i18n="srv-1-title">AI Engineer</h4>
-            <p data-i18n="srv-1-desc">I design and develop intelligent systems using artificial intelligence and machine learning techniques. My focus is on turning data into smart, scalable solutions that solve real problems and create value.</p>
-            <div class="service-tags">
-              <span>NLP / LLM</span><span>TensorFlow</span><span>Python</span><span>ML</span>
-            </div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-info">
-            <div class="service-icon"><i class='bx bx-layer'></i></div>
-            <h4 data-i18n="srv-2-title">Full Stack Developer</h4>
-            <p data-i18n="srv-2-desc">I develop complete web applications by working on both front-end and back-end layers. I enjoy building well-structured systems that are efficient, maintainable, and user-focused.</p>
-            <div class="service-tags">
-              <span>React.js</span><span>Node.js</span><span>Flask</span><span>SQL</span>
-            </div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-info">
-            <div class="service-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
-            <h4 data-i18n="srv-3-title">Data Scientist</h4>
-            <p data-i18n="srv-3-desc">I work with data to analyze patterns, build predictive models, and visualize insights. I enjoy transforming raw data into meaningful information that supports better decisions.</p>
-            <div class="service-tags">
-              <span>Pandas</span><span>NumPy</span><span>Visualization</span><span>Modeling</span>
-            </div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-info">
-            <div class="service-icon"><i class='bx bx-data'></i></div>
-            <h4 data-i18n="srv-4-title">Databases &amp; ERP Systems</h4>
-            <p data-i18n="srv-4-desc">Designing and querying relational (PostgreSQL, MySQL, MSSQL) and NoSQL (MongoDB) databases, managing ERP/SAP data consistency, and automating query workflows.</p>
-            <div class="service-tags">
-              <span>SQL / NoSQL</span><span>PostgreSQL</span><span>SAP / ERP</span><span>Data Quality</span>
-            </div>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-info">
-            <div class="service-icon"><i class='bx bx-analyse'></i></div>
-            <h4 data-i18n="srv-5-title">Business Analysis &amp; BI</h4>
-            <p data-i18n="srv-5-desc">Analyzing business processes, eliciting requirements, and designing interactive dashboards to streamline operations and bridge the gap between business stakeholders and engineering teams.</p>
-            <div class="service-tags">
-              <span>Requirements</span><span>BPMN</span><span>Agile / Scrum</span><span>Power BI</span>
-            </div>
+            <h3 data-i18n="edu-1-title">Computer Engineering</h3>
+            <p data-i18n="edu-1-desc">Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis, machine learning algorithms, database architectures, and software engineering principles.</p>
           </div>
         </div>
       </div>
@@ -650,256 +591,184 @@
 
     <!-- SKILLS -->
     <section class="skills" id="skills">
-      <h2 class="heading" data-i18n="heading-skills">Technical <span>Skills</span></h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-code-alt'></i>
-            <h3>Frontend</h3>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">React.js</span><span class="skill-percentage">85%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">HTML/CSS</span><span class="skill-percentage">90%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percentage">80%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+      <h2 class="heading" data-i18n="heading-skills">Yetenekler <span>&amp; Teknoloji Yığını</span></h2>
+      <p class="skills-subtitle" data-i18n="skills-subtitle">İş analitiği, veri mühendisliği ve uçtan uca modern yazılım mimarilerinde kullandığım araçlar</p>
+      
+      <div class="skills-grid-modern" id="skills-container">
+        <!-- 1: İŞ & VERİ ANALİTİĞİ -->
+        <div class="skill-card-modern">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class='bx bx-analyse'></i></div>
+            <div class="skill-card-title-group">
+              <h3 data-i18n="sk-cat-1-title">İş Analitiği &amp; İş Zekası</h3>
+              <span data-i18n="sk-cat-1-sub">Süreç Modelleme &amp; Karar Destek</span>
             </div>
           </div>
-        </div>
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-server'></i>
-            <h3>Backend</h3>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Python/Flask</span><span class="skill-percentage">75%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Node.js</span><span class="skill-percentage">70%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">SQL</span><span class="skill-percentage">85%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
-            </div>
+          <div class="skill-pills">
+            <span class="skill-pill highlight"><i class='bx bx-git-repo-forked'></i> BPMN Süreç Modelleme</span>
+            <span class="skill-pill highlight"><i class='bx bx-task'></i> Gereksinim Çıkarma (Elicitation)</span>
+            <span class="skill-pill"><i class='bx bx-sync'></i> Agile &amp; Scrum (SDLC)</span>
+            <span class="skill-pill"><i class='bx bx-data'></i> SAP / ERP Veri Akışları</span>
+            <span class="skill-pill highlight"><i class='bx bx-table'></i> Excel BIFF / Puantaj Raporlama</span>
+            <span class="skill-pill"><i class='bx bx-bar-chart-alt-2'></i> Power BI &amp; KPI Takibi</span>
+            <span class="skill-pill"><i class='bx bx-check-double'></i> Fonksiyonel Kabul Kriterleri</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-mobile'></i>
-            <h3>Mobile</h3>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">React Native</span><span class="skill-percentage">80%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Flutter</span><span class="skill-percentage">65%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="65"></div></div>
+
+        <!-- 2: YAZILIM & BACKEND MİMARİSİ -->
+        <div class="skill-card-modern">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class='bx bx-server'></i></div>
+            <div class="skill-card-title-group">
+              <h3 data-i18n="sk-cat-2-title">Backend &amp; Veri Tabanları</h3>
+              <span data-i18n="sk-cat-2-sub">Sunucu Mimarisi &amp; API Sistemleri</span>
             </div>
           </div>
-        </div>
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-brain'></i>
-            <h3>AI &amp; Data Science</h3>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">NLP / LLM</span><span class="skill-percentage">80%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">TensorFlow</span><span class="skill-percentage">70%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Data Analysis</span><span class="skill-percentage">85%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
-            </div>
+          <div class="skill-pills">
+            <span class="skill-pill highlight"><i class='bx bxl-python'></i> Python 3.10+</span>
+            <span class="skill-pill highlight"><i class='bx bx-bolt-circle'></i> FastAPI</span>
+            <span class="skill-pill"><i class='bx bx-code-curly'></i> Flask</span>
+            <span class="skill-pill"><i class='bx bx-transfer-alt'></i> RESTful API Tasarımı</span>
+            <span class="skill-pill highlight"><i class='bx bxs-data'></i> PostgreSQL &amp; MySQL</span>
+            <span class="skill-pill"><i class='bx bx-cylinder'></i> SQLite</span>
+            <span class="skill-pill"><i class='bx bxl-nodejs'></i> Node.js</span>
+            <span class="skill-pill"><i class='bx bx-network-chart'></i> Uvicorn &amp; Async Geliştirme</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-wrench'></i>
-            <h3>DevOps &amp; Tools</h3>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Git &amp; GitHub</span><span class="skill-percentage">90%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Docker</span><span class="skill-percentage">65%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="65"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Linux / Bash</span><span class="skill-percentage">75%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+
+        <!-- 3: YAPAY ZEKÂ & VERİ BİLİMİ -->
+        <div class="skill-card-modern">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class='bx bx-brain'></i></div>
+            <div class="skill-card-title-group">
+              <h3 data-i18n="sk-cat-3-title">Yapay Zekâ &amp; Veri Bilimi</h3>
+              <span data-i18n="sk-cat-3-sub">Makine Öğrenmesi &amp; Analitik</span>
             </div>
           </div>
-        </div>
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-analyse'></i>
-            <h3>Business Analysis</h3>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Requirements Elicitation</span><span class="skill-percentage">90%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Agile &amp; Scrum (SDLC)</span><span class="skill-percentage">85%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Process Mapping (BPMN)</span><span class="skill-percentage">80%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
-            </div>
+          <div class="skill-pills">
+            <span class="skill-pill highlight"><i class='bx bx-brain'></i> Scikit-Learn</span>
+            <span class="skill-pill highlight"><i class='bx bx-message-rounded-dots'></i> NLP &amp; LLM Entegrasyonları</span>
+            <span class="skill-pill"><i class='bx bx-chip'></i> TensorFlow</span>
+            <span class="skill-pill highlight"><i class='bx bx-line-chart'></i> Pandas &amp; NumPy</span>
+            <span class="skill-pill"><i class='bx bx-shield-quarter'></i> Anomali Tespiti (Isolation Forest)</span>
+            <span class="skill-pill"><i class='bx bx-scatter-chart'></i> İstatistiksel Veri Temizleme</span>
+            <span class="skill-pill"><i class='bx bx-pie-chart-alt-2'></i> Veri Görselleştirme (Plotly)</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="category-header">
-            <i class='bx bx-user-circle'></i>
-            <h3>Soft Skills</h3>
+
+        <!-- 4: FRONTEND, MASAÜSTÜ & DEVOPS -->
+        <div class="skill-card-modern">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class='bx bx-code-alt'></i></div>
+            <div class="skill-card-title-group">
+              <h3 data-i18n="sk-cat-4-title">Arayüz &amp; Mühendislik Araçları</h3>
+              <span data-i18n="sk-cat-4-sub">Web, Masaüstü &amp; Sürüm Kontrolü</span>
+            </div>
           </div>
-          <div class="skill-bars">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Team Collaboration</span><span class="skill-percentage">95%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Problem Solving</span><span class="skill-percentage">90%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Leadership</span><span class="skill-percentage">85%</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
-            </div>
+          <div class="skill-pills">
+            <span class="skill-pill highlight"><i class='bx bxl-react'></i> React.js</span>
+            <span class="skill-pill"><i class='bx bxl-javascript'></i> JavaScript (ES6+)</span>
+            <span class="skill-pill"><i class='bx bxl-html5'></i> HTML5 &amp; Modern CSS3</span>
+            <span class="skill-pill highlight"><i class='bx bx-desktop'></i> Tkinter GUI (Desktop Studio)</span>
+            <span class="skill-pill highlight"><i class='bx bxl-git'></i> Git &amp; GitHub</span>
+            <span class="skill-pill"><i class='bx bxl-tux'></i> Linux &amp; Bash</span>
+            <span class="skill-pill"><i class='bx bxl-docker'></i> Docker Temelleri</span>
+            <span class="skill-pill"><i class='bx bxl-windows'></i> Windows API / Pano Otomasyonu</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES -->
-      <section class="certificates" id="certificates">
-        <div class="section-scroll">
-          <h2 class="heading" data-i18n="heading-certificates">My <span>Certificates</span></h2>
-          <p class="certificates-subtitle">Certifications and achievements that showcase my continuous learning journey</p>
-          <div class="certificates-container">
-            <div class="certificate-card" data-certificate="1">
-              <div class="certificate-image-wrapper"><img src="certificates/promt-muhendisligi_page-0001.jpg" alt="Prompt Mühendisliği" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
-              <div class="certificate-info"><h3>ChatGPT 2026: Prompt Mühendisliği</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Udemy/Atil Samancioglu</p><p class="certificate-date"><i class='bx bx-calendar'></i> February 2026</p></div>
-            </div>
-            <div class="certificate-card" data-certificate="2">
-              <div class="certificate-image-wrapper"><img src="certificates/yuksekogretim-mezun-belgesi-sorgulama.jpg" alt="Mezun Belgesi" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
-              <div class="certificate-info"><h3>Mezun Belgesi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Amasya University</p><p class="certificate-date"><i class='bx bx-calendar'></i> January 2026</p></div>
-            </div>
-            <div class="certificate-card" data-certificate="3">
-              <div class="certificate-image-wrapper"><img src="certificates/Siber_Güvenliğe_Giriş_Sertifika_page-0001.jpg" alt="Siber Güvenlik" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
-              <div class="certificate-info"><h3>Siber Güvenlik Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
-            </div>
-            <div class="certificate-card" data-certificate="4">
-              <div class="certificate-image-wrapper"><img src="certificates/ingilizce_page-0001.jpg" alt="İngilizce" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
-              <div class="certificate-info"><h3>İngilizce Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Amasya University</p><p class="certificate-date"><i class='bx bx-calendar'></i> December 2022</p></div>
-            </div>
-            <div class="certificate-card" data-certificate="5">
-              <div class="certificate-image-wrapper"><img src="certificates/bilgiteknogiris_page-0001.jpg" alt="Bilgi Teknolojileri" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
-              <div class="certificate-info"><h3>Bilgi Teknolojileri Giriş Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
-            </div>
-            <div class="certificate-card" data-certificate="6">
-              <div class="certificate-image-wrapper"><img src="certificates/Ağ_Temelleri_Sertifika_page-0001.jpg" alt="Ağ Temelleri" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
-              <div class="certificate-info"><h3>Ağ Temelleri Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
-            </div>
-          </div>
+    <!-- ABOUT ME (Biyografi + Sertifikalar + Referanslar) -->
+    <section class="about" id="about">
+      <h2 class="heading" data-i18n="heading-about">Hakkımda <span>&amp; Mühendislik Vizyonum</span></h2>
+      <p class="about-subtitle" data-i18n="about-subtitle">İş hedefleri ile teknik mimarileri birleştiren mühendislik yaklaşımım ve ilkelerim</p>
+      
+      <!-- 1. Biyografi & 3 Mühendislik İlkesi -->
+      <div class="about-card-modern">
+        <div class="about-lead">
+          <h3 data-i18n="ab-lead-title">Veri, Süreç ve Yazılımı Tek Çatıda Birleştiren Mühendislik Bakışı</h3>
+          <p data-i18n="ab-lead-desc-1">
+            Amasya Üniversitesi Bilgisayar Mühendisliği mezunuyum. Yazılım geliştirme disiplinini saha ve iş süreçleri analitiğiyle harmanlayarak, kurumların operasyonel darboğazlarını uçtan uca dijital çözümlere dönüştürüyorum. FİDE Konserve bünyesinde PDKS ve puantaj mimarileri, DP World Evyap'ta lojistik/terminal veri akışları üzerinde edindiğim tecrübelerle, salt kod yazmanın ötesinde iş birimleri için ölçülebilir değer üretmeye odaklanıyorum.
+          </p>
+          <p data-i18n="ab-lead-desc-2">
+            Karar destek sistemleri, otomasyon araçları, veri temizleme boru hatları ve RESTful mimariler inşa ederken; paydaşların dilinden anlayan bir analist ve arka planı kusursuz kurgulayan bir mühendis olarak köprü görevi görüyorum.
+          </p>
         </div>
-      </section>
 
-      <!-- Certificate Modal -->
-      <div id="certificate-modal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <div class="modal-navigation">
-            <button class="modal-nav-btn modal-prev"><i class='bx bx-chevron-left'></i></button>
-            <button class="modal-nav-btn modal-next"><i class='bx bx-chevron-right'></i></button>
+        <div class="about-pillars">
+          <div class="about-pillar-item">
+            <div class="pillar-icon"><i class='bx bx-analyse'></i></div>
+            <div class="pillar-content">
+              <h4 data-i18n="ab-p1-title">İş &amp; Veri Odaklı Düşünce</h4>
+              <p data-i18n="ab-p1-desc">Varsayımlarla değil; saha gereksinimleri, kullanıcı hikâyeleri ve nicel veri analizleriyle hareket ederek iş süreçlerini en aza indirgenmiş hata ile modellerim.</p>
+            </div>
           </div>
-          <img id="modal-image" src="" alt="Certificate">
-          <div class="modal-info">
-            <h3 id="modal-title"></h3>
-            <p id="modal-issuer"></p>
-            <p id="modal-date"></p>
+
+          <div class="about-pillar-item">
+            <div class="pillar-icon"><i class='bx bx-code-block'></i></div>
+            <div class="pillar-content">
+              <h4 data-i18n="ab-p2-title">Mühendislik Standartları &amp; Kalite</h4>
+              <p data-i18n="ab-p2-desc">Modüler mimari, temiz kod, yüksek veri bütünlüğü ve edge-case'leri kapsayan test disiplini ile uzun vadeli, sürdürülebilir sistemler kurarım.</p>
+            </div>
+          </div>
+
+          <div class="about-pillar-item">
+            <div class="pillar-icon"><i class='bx bx-rocket'></i></div>
+            <div class="pillar-content">
+              <h4 data-i18n="ab-p3-title">Hızlı Adaptasyon &amp; Yüksek İcraat</h4>
+              <p data-i18n="ab-p3-desc">Yeni teknolojilere, yapay zekâ destekli araçlara ve kurumsal ihtiyaçlara hızla uyum sağlayarak gereksinimden çalışan ürüne giden süreyi kısaltırım.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Detail & Presentation Modal -->
-      <div id="project-modal" class="modal">
-        <div class="modal-content project-modal-content">
-          <span class="modal-close" id="project-modal-close">&times;</span>
-          <div class="project-modal-header">
-            <div class="project-modal-icon" id="project-modal-icon"><i class='bx bx-code-alt'></i></div>
-            <div class="project-modal-titles">
-              <span class="project-badge" id="project-modal-badge">Kategori</span>
-              <h3 id="project-modal-title">Proje Başlığı</h3>
-            </div>
+      <!-- 2. SERTİFİKALAR & BELGELER ALT BÖLÜMÜ -->
+      <div class="about-subblock" id="about-certificates-block">
+        <div class="about-subblock-header">
+          <div class="subblock-badge"><i class='bx bx-certification'></i></div>
+          <div class="subblock-titles">
+            <h3 data-i18n="heading-certificates">Sertifikalarım &amp; Başarı Belgeleri</h3>
+            <p data-i18n="cert-subtitle">Sürekli mesleki gelişimimi ve resmi yetkinliklerimi belgeleyen resmi sertifikalar</p>
           </div>
-          
-          <div class="project-modal-body">
-            <!-- Interaktif Ekran Görüntüleri Galerisi -->
-            <div class="project-modal-gallery" id="project-modal-gallery" style="display:none;">
-              <div class="modal-gallery-main-frame">
-                <img id="project-modal-main-img" src="" alt="Proje Ekran Görüntüsü" />
-                <span class="gallery-caption" id="project-modal-gallery-caption"></span>
-              </div>
-              <div class="modal-gallery-thumbs" id="project-modal-thumbs"></div>
-            </div>
-
-            <p id="project-modal-desc" class="modal-project-desc"></p>
-
-            <div class="project-modal-section">
-              <h4><i class='bx bx-wrench'></i> Teknolojiler &amp; Araçlar</h4>
-              <div class="project-tags" id="project-modal-tags"></div>
-            </div>
-
-            <div class="project-modal-section">
-              <h4><i class='bx bx-check-shield'></i> Öne Çıkan Özellikler &amp; Yetenekler</h4>
-              <ul class="project-modal-features" id="project-modal-features"></ul>
-            </div>
-
-            <div class="project-modal-section" id="project-modal-specs-section" style="display:none;">
-              <h4 id="project-modal-specs-title"><i class='bx bx-terminal'></i> Sistem Mimarisi &amp; Kullanım Bilgisi</h4>
-              <ul class="project-modal-specs" id="project-modal-specs"></ul>
-            </div>
+        </div>
+        <div class="certificates-container">
+          <div class="certificate-card" data-certificate="1">
+            <div class="certificate-image-wrapper"><img src="certificates/promt-muhendisligi_page-0001.jpg" alt="Prompt Mühendisliği" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+            <div class="certificate-info"><h3>ChatGPT 2026: Prompt Mühendisliği</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Udemy/Atil Samancioglu</p><p class="certificate-date"><i class='bx bx-calendar'></i> February 2026</p></div>
           </div>
-
-          <div class="project-modal-footer">
-            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="project-modal-github">
-              <i class='bx bxl-github'></i> GitHub Deposu
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-video" id="project-modal-video" style="display:none;">
-              <i class='bx bx-play-circle'></i> <span data-i18n="btn-video">Video Sunumu İzle</span>
-            </a>
-            <button type="button" class="btn btn-modal-close" id="project-modal-close-btn">
-              Kapat
-            </button>
+          <div class="certificate-card" data-certificate="2">
+            <div class="certificate-image-wrapper"><img src="certificates/yuksekogretim-mezun-belgesi-sorgulama.jpg" alt="Mezun Belgesi" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+            <div class="certificate-info"><h3>Mezun Belgesi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Amasya University</p><p class="certificate-date"><i class='bx bx-calendar'></i> January 2026</p></div>
+          </div>
+          <div class="certificate-card" data-certificate="3">
+            <div class="certificate-image-wrapper"><img src="certificates/Siber_Güvenliğe_Giriş_Sertifika_page-0001.jpg" alt="Siber Güvenlik" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+            <div class="certificate-info"><h3>Siber Güvenlik Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
+          </div>
+          <div class="certificate-card" data-certificate="4">
+            <div class="certificate-image-wrapper"><img src="certificates/ingilizce_page-0001.jpg" alt="İngilizce" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+            <div class="certificate-info"><h3>İngilizce Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> Amasya University</p><p class="certificate-date"><i class='bx bx-calendar'></i> December 2022</p></div>
+          </div>
+          <div class="certificate-card" data-certificate="5">
+            <div class="certificate-image-wrapper"><img src="certificates/bilgiteknogiris_page-0001.jpg" alt="Bilgi Teknolojileri" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+            <div class="certificate-info"><h3>Bilgi Teknolojileri Giriş Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
+          </div>
+          <div class="certificate-card" data-certificate="6">
+            <div class="certificate-image-wrapper"><img src="certificates/Ağ_Temelleri_Sertifika_page-0001.jpg" alt="Ağ Temelleri" class="certificate-thumbnail" loading="lazy" decoding="async"><div class="certificate-overlay"><i class='bx bx-search-alt'></i><span>Click to View</span></div></div>
+            <div class="certificate-info"><h3>Ağ Temelleri Sertifikasi</h3><p class="certificate-issuer"><i class='bx bx-building'></i> T.C. BTK</p><p class="certificate-date"><i class='bx bx-calendar'></i> October 2025</p></div>
           </div>
         </div>
       </div>
 
-    <!-- REFERENCES -->
-    <section class="testimonials" id="testimonials">
-      <div class="testimonials-box">
-        <h2 class="heading" data-i18n="heading-testimonials">References</h2>
+      <!-- 3. KURUMSAL & AKADEMİK REFERANSLAR ALT BÖLÜMÜ -->
+      <div class="about-subblock" id="about-references-block">
+        <div class="about-subblock-header">
+          <div class="subblock-badge"><i class='bx bx-user-check'></i></div>
+          <div class="subblock-titles">
+            <h3 data-i18n="heading-testimonials">Kurumsal &amp; Akademik Referanslar</h3>
+            <p data-i18n="ref-subtitle">Akademik ve kurumsal iş birliklerimde birlikte çalıştığım yöneticilerim ve danışmanlarım</p>
+          </div>
+        </div>
         <div class="wrapper">
           <div class="testimonial-item">
             <div class="ref-avatar">ÖK</div>
@@ -932,85 +801,55 @@
       </div>
     </section>
 
-    <!-- ABOUT ME -->
-    <section class="about" id="about">
-      <h2 class="heading" data-i18n="heading-about">About <span>Me</span></h2>
-      <div class="about-container">
-        <div class="about-card">
-          <div class="card-icon"><i class='bx bx-user-circle'></i></div>
-          <h3 data-i18n="ab-1-title">Who Am I?</h3>
-          <p data-i18n="ab-1-desc">I'm a passionate Computer Engineering graduate with a deep interest in artificial intelligence, full-stack development, and data science. I love turning complex problems into elegant solutions through code.</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon"><i class='bx bx-code-curly'></i></div>
-          <h3 data-i18n="ab-2-title">What I Do?</h3>
-          <p data-i18n="ab-2-desc">I build intelligent systems using AI and machine learning, develop responsive web applications, and create mobile apps that solve real-world problems. From frontend design to backend architecture.</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon"><i class='bx bx-rocket'></i></div>
-          <h3 data-i18n="ab-3-title">My Approach</h3>
-          <p data-i18n="ab-3-desc">I believe in clean code, continuous learning, and collaborative teamwork. I'm always exploring new technologies to stay ahead. Quality, efficiency, and user experience are at the core of everything I create.</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon"><i class='bx bx-heart'></i></div>
-          <h3 data-i18n="ab-4-title">Beyond Coding</h3>
-          <p data-i18n="ab-4-desc">When I'm not coding, you'll find me exploring tech trends, contributing to open-source projects, or learning new frameworks. I enjoy tech blogs, webinars, and connecting with fellow developers.</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon"><i class='bx bx-target-lock'></i></div>
-          <h3 data-i18n="ab-5-title">Current Goals</h3>
-          <p data-i18n="ab-5-desc">I'm currently focused on deepening my expertise in artificial intelligence and machine learning. My goal is to work on innovative projects that make a real impact and collaborate with talented teams.</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon"><i class='bx bx-happy-beaming'></i></div>
-          <h3 data-i18n="ab-6-title">Fun Facts</h3>
-          <ul class="fun-facts-list">
-            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-1">I wrote my first line of code during university</span></li>
-            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-2">I love solving complex algorithmic challenges</span></li>
-            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-3">Coffee is my favorite debugging tool ☕</span></li>
-            <li><i class='bx bx-check-circle'></i> <span data-i18n="ab-ff-4">I believe in lifelong learning and growth</span></li>
-          </ul>
-        </div>
-      </div>
+    <!-- CONTACT (DEDICATED SECTION) -->
+    <section class="contact" id="contact">
+      <h2 class="heading" data-i18n="heading-contact">İletişim <span>&amp; İş Birliği</span></h2>
+      <p class="contact-subtitle" data-i18n="contact-subtitle">Kariyer fırsatları, teknik iş birlikleri veya projeleriniz için doğrudan iletişime geçebilirsiniz</p>
 
-      <div class="values-section">
-        <h3 class="values-title" data-i18n="val-title">My Core Values</h3>
-        <div class="values-grid">
-          <div class="value-item">
-            <i class='bx bx-bulb'></i>
-            <h4 data-i18n="val-1-title">Innovation</h4>
-            <p data-i18n="val-1-desc">Always seeking creative solutions</p>
+      <div class="contact-container">
+        <div class="contact-card">
+          <div class="contact-card-header">
+            <h3 data-i18n="cnt-title">Bir Fikriniz veya Projeniz mi Var?</h3>
+            <p data-i18n="cnt-desc">Veri analitiği, iş analizi ve yazılım geliştirme alanlarındaki roller için benimle hemen iletişime geçebilirsiniz. Tüm mesajlara en geç 24 saat içinde dönüş yapıyorum.</p>
           </div>
-          <div class="value-item">
-            <i class='bx bx-shield-alt-2'></i>
-            <h4 data-i18n="val-2-title">Integrity</h4>
-            <p data-i18n="val-2-desc">Honest and ethical in all I do</p>
-          </div>
-          <div class="value-item">
-            <i class='bx bx-trending-up'></i>
-            <h4 data-i18n="val-3-title">Excellence</h4>
-            <p data-i18n="val-3-desc">Committed to high-quality work</p>
-          </div>
-          <div class="value-item">
-            <i class='bx bx-group'></i>
-            <h4 data-i18n="val-4-title">Collaboration</h4>
-            <p data-i18n="val-4-desc">Better together than alone</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="contact-info-section">
-        <div class="contact-info-card">
-          <i class='bx bx-envelope'></i>
-          <h3 data-i18n="cnt-title">Let's Connect!</h3>
-          <p data-i18n="cnt-desc">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-          <div class="email-box">
-            <a href="mailto:ercanpolat.tr@gmail.com" class="email-link">
-              <i class='bx bx-mail-send'></i>
-              ercanpolat.tr@gmail.com
+          <div class="contact-email-box">
+            <div class="contact-email-info">
+              <i class='bx bx-envelope'></i>
+              <div class="email-details">
+                <span class="email-label" data-i18n="cnt-email-label">Doğrudan E-posta Adresi</span>
+                <span class="email-address">ercanpolat.tr@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-email-actions">
+              <button type="button" class="btn btn-copy" id="copy-contact-email" aria-label="E-posta Adresini Kopyala">
+                <i class='bx bx-copy' id="contact-copy-icon"></i> <span id="contact-copy-text" data-i18n="cnt-btn-copy">Adresi Kopyala</span>
+              </button>
+              <a href="mailto:ercanpolat.tr@gmail.com" class="btn btn-mail" data-i18n="cnt-btn-send">
+                <i class='bx bx-send'></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-channels">
+            <a href="https://www.linkedin.com/in/ercanpolatt/" target="_blank" rel="noopener noreferrer" class="contact-channel-item" aria-label="LinkedIn Profili">
+              <i class='bx bxl-linkedin-square'></i>
+              <div class="channel-info">
+                <span class="channel-platform">LinkedIn</span>
+                <span class="channel-handle">/in/ercanpolatt</span>
+              </div>
+              <i class='bx bx-link-external channel-arrow'></i>
+            </a>
+
+            <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="contact-channel-item" aria-label="GitHub Profili">
+              <i class='bx bxl-github'></i>
+              <div class="channel-info">
+                <span class="channel-platform">GitHub</span>
+                <span class="channel-handle">github.com/ercanpolatt</span>
+              </div>
+              <i class='bx bx-link-external channel-arrow'></i>
             </a>
           </div>
-          <p class="contact-note" data-i18n="cnt-note">Feel free to reach out anytime. I typically respond within 24 hours!</p>
         </div>
       </div>
     </section>
@@ -1024,16 +863,88 @@
       </div>
       <ul class="list">
         <li><a href="#home" data-i18n="nav-home">Home</a></li>
-        <li><a href="#education" data-i18n="nav-education">Education</a></li>
-        <li><a href="#services" data-i18n="nav-services">Services</a></li>
+        <li><a href="#education" data-i18n="nav-education">Experience</a></li>
         <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
         <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
-        <li><a href="#certificates" data-i18n="nav-certificates">Certificates</a></li>
-        <li><a href="#testimonials" data-i18n="nav-testimonials">References</a></li>
-        <li><a href="#about" data-i18n="nav-about">About Me</a></li>
+        <li><a href="#about" data-i18n="nav-about">About</a></li>
+        <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
       </ul>
       <p class="copyright">&copy; <span>Ercan Polat</span> | <span data-i18n="ftr-copy">All Rights Reserved</span></p>
     </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-navigation">
+          <button class="modal-nav-btn modal-prev"><i class='bx bx-chevron-left'></i></button>
+          <button class="modal-nav-btn modal-next"><i class='bx bx-chevron-right'></i></button>
+        </div>
+        <img id="modal-image" src="" alt="Certificate">
+        <div class="modal-info">
+          <h3 id="modal-title"></h3>
+          <p id="modal-issuer"></p>
+          <p id="modal-date"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Detail & Presentation Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content project-modal-content">
+        <button type="button" class="project-modal-close" id="project-modal-close" aria-label="Kapat" title="Kapat (ESC)">&times;</button>
+        <div class="project-modal-header">
+          <div class="project-modal-icon" id="project-modal-icon"><i class='bx bx-code-alt'></i></div>
+          <div class="project-modal-titles">
+            <span class="project-badge" id="project-modal-badge">Kategori</span>
+            <h3 id="project-modal-title">Proje Başlığı</h3>
+          </div>
+        </div>
+        
+        <div class="project-modal-body">
+          <!-- Interaktif Ekran Görüntüleri Galerisi -->
+          <div class="project-modal-gallery" id="project-modal-gallery" style="display:none;">
+            <div class="modal-gallery-main-frame" id="modal-gallery-main-frame" title="Görseli Tam Boyut Büyüt">
+              <img id="project-modal-main-img" src="" alt="Proje Ekran Görüntüsü" />
+              <button type="button" class="gallery-zoom-trigger" id="gallery-zoom-trigger" aria-label="Görseli Büyüt" title="Büyük Boyutta Gör (HD)">
+                <i class='bx bx-fullscreen'></i> <span>HD Büyüt</span>
+              </button>
+              <span class="gallery-caption" id="project-modal-gallery-caption"></span>
+            </div>
+            <div class="modal-gallery-thumbs" id="project-modal-thumbs"></div>
+          </div>
+
+          <p id="project-modal-desc" class="modal-project-desc"></p>
+
+          <div class="project-modal-section">
+            <h4><i class='bx bx-wrench'></i> Teknolojiler &amp; Araçlar</h4>
+            <div class="project-tags" id="project-modal-tags"></div>
+          </div>
+
+          <div class="project-modal-section">
+            <h4><i class='bx bx-check-shield'></i> Öne Çıkan Özellikler &amp; Yetenekler</h4>
+            <ul class="project-modal-features" id="project-modal-features"></ul>
+          </div>
+
+          <div class="project-modal-section" id="project-modal-specs-section" style="display:none;">
+            <h4 id="project-modal-specs-title"><i class='bx bx-terminal'></i> Sistem Mimarisi &amp; Kullanım Bilgisi</h4>
+            <ul class="project-modal-specs" id="project-modal-specs"></ul>
+          </div>
+        </div>
+
+        <div class="project-modal-footer">
+          <a href="https://github.com/ercanpolatt" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="project-modal-github">
+            <i class='bx bxl-github'></i> GitHub Deposu
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-video" id="project-modal-video" style="display:none;">
+            <i class='bx bx-play-circle'></i> <span data-i18n="btn-video">Video Sunumu İzle</span>
+          </a>
+          <button type="button" class="btn btn-modal-close" id="project-modal-close-btn">
+            Kapat
+          </button>
+        </div>
+      </div>
+    </div>
 
     </main>
 
@@ -1043,7 +954,46 @@
     </button>
 
     <!-- Global Toast Notification -->
-    <div id="toast" class="toast-notification" aria-live="polite"></div>
+    <div id="toast" class="toast-notification" aria-live="polite">
+      <i class='bx bx-check-circle toast-icon'></i>
+      <span class="toast-msg" id="toast-msg">Kopyalandı!</span>
+    </div>
+
+    <!-- FULLSCREEN HIGH-RES IMAGE LIGHTBOX & ZOOM MODAL -->
+    <div id="image-lightbox-modal" class="image-lightbox" aria-hidden="true" role="dialog" aria-label="Görsel Detay Görüntüleyici">
+      <div class="lightbox-overlay" id="lightbox-backdrop"></div>
+      <div class="lightbox-wrapper">
+        <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Kapat (ESC)" title="Kapat (ESC)">&times;</button>
+        
+        <div class="lightbox-header">
+          <div class="lightbox-info">
+            <span class="lightbox-counter" id="lightbox-counter">1 / 1</span>
+            <h4 class="lightbox-caption" id="lightbox-caption">Ekran Görüntüsü</h4>
+          </div>
+          <div class="lightbox-actions">
+            <button type="button" class="lightbox-action-btn" id="lightbox-zoom-btn" title="Yakınlaştır / Sıfırla (Çift Tıklama)">
+              <i class='bx bx-zoom-in' id="lightbox-zoom-icon"></i> <span id="lightbox-zoom-text">Yakınlaştır</span>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightbox-prev-btn" aria-label="Önceki Görsel" title="Önceki (Sol Ok)">
+          <i class='bx bx-chevron-left'></i>
+        </button>
+
+        <div class="lightbox-body" id="lightbox-body">
+          <img id="lightbox-image" src="" alt="Tam Boy Ekran Görüntüsü" draggable="false" />
+        </div>
+
+        <button type="button" class="lightbox-nav-btn lightbox-next" id="lightbox-next-btn" aria-label="Sonraki Görsel" title="Sonraki (Sağ Ok)">
+          <i class='bx bx-chevron-right'></i>
+        </button>
+
+        <div class="lightbox-hint">
+          <i class='bx bx-bulb'></i> <span data-i18n="lightbox-hint">Detayları net okumak için görsele tıklayabilir veya Yakınlaştır butonunu kullanabilirsiniz. Yön tuşlarıyla gezinebilirsiniz.</span>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

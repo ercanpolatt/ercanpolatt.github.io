@@ -40,6 +40,7 @@ const translations = {
     "nav-certificates": "Certificates",
     "nav-testimonials": "References",
     "nav-about": "About Me",
+    "nav-contact": "Contact",
     "hero-status": "Available for Opportunities &amp; Projects",
     "hero-title": "Ercan Polat | Computer Engineer - Data &amp; Business Analyst",
     "hero-im": "I'm a",
@@ -55,6 +56,7 @@ const translations = {
     "heading-skills": "Technical <span>Skills</span>",
     "heading-certificates": "My <span>Certificates</span>",
     "heading-testimonials": "Professional <span>References</span>",
+    "ref-subtitle": "Academic mentors and executive directors from past projects and internships",
     "heading-about": "About <span>Me</span>",
     "filter-all": "All (7)",
     "filter-featured": "⭐ Featured",
@@ -88,6 +90,8 @@ const translations = {
     "prj-5-desc": "Security data visualizer analyzing server and network logs using Scikit-Learn machine learning algorithms to detect anomalies and threat vectors.",
     "edu-1-title": "Computer Engineering Degree",
     "edu-1-desc": "Amasya University (GPA: 2.95 / 4.00). Focused on computer engineering fundamentals, data analysis & ML, database architectures, and scalable technical systems.",
+    "edu-fide-title": "Business Analyst",
+    "edu-fide-desc": "FİDE Konserve. Analyzed cross-departmental business workflows, gathered and modeled operational requirements for HR and payroll processes, integrated hardware terminal logs into automated attendance systems, and digitized timesheet/ERP reporting pipelines.",
     "edu-2-title": "IT & Data Analytics Specialist Intern",
     "edu-2-desc": "DP World Evyap, Kocaeli. Analyzed operational logistics workflows for terminal operations, conducted SAP & ERP data extraction/validation, provided 1st-line IT support, and monitored network traffic for cyber security audits.",
     "edu-3-title": "Freelance Computer Engineer & Data Analyst",
@@ -133,6 +137,32 @@ const translations = {
     "cnt-title": "Let's Work Together!",
     "cnt-desc": "I'm open to full-time career opportunities, engineering projects, or technical collaborations. Feel free to connect or drop an email!",
     "cnt-note": "I typically respond within 24 hours. Looking forward to hearing from you!",
+        "skills-subtitle": "Data analytics, business intelligence, AI, and modern software architectures",
+    "sk-cat-1-title": "Business Analytics &amp; BI",
+    "sk-cat-1-sub": "Process Modeling &amp; Decision Support",
+    "sk-cat-2-title": "Backend &amp; Databases",
+    "sk-cat-2-sub": "Server Architecture &amp; APIs",
+    "sk-cat-3-title": "AI &amp; Data Science",
+    "sk-cat-3-sub": "Machine Learning &amp; Analytics",
+    "sk-cat-4-title": "UI &amp; Engineering Tools",
+    "sk-cat-4-sub": "Web, Desktop &amp; Version Control",
+    "about-subtitle": "Engineering principles unifying business targets with technical architectures",
+    "ab-tag": "Computer Engineer &amp; Analyst",
+    "ab-lead-title": "Engineering Vision Unifying Data, Process, and Software",
+    "ab-lead-desc-1": "I am a Computer Engineering graduate from Amasya University. By blending software engineering discipline with field and business process analytics, I transform operational bottlenecks into end-to-end digital solutions. With my experience at FİDE Konserve on attendance &amp; payroll systems and at DP World Evyap on logistics/terminal workflows, I focus on delivering tangible value to business units beyond just writing code.",
+    "ab-lead-desc-2": "While building decision support systems, automation utilities, data cleaning pipelines, and RESTful APIs, I serve as a vital bridge: an analyst who speaks the stakeholders' language and an engineer who executes the backend flawlessly.",
+    "ab-p1-title": "Business &amp; Data-Driven Mindset",
+    "ab-p1-desc": "Acting upon verified field requirements, user stories, and quantitative data analysis rather than assumptions to model workflows with minimal error.",
+    "ab-p2-title": "Engineering Standards &amp; Quality",
+    "ab-p2-desc": "Building long-term, maintainable systems through modular architecture, clean code, high data integrity, and edge-case testing discipline.",
+    "ab-p3-title": "Rapid Adaptation &amp; Execution",
+    "ab-p3-desc": "Quickly mastering new technologies, AI-assisted development tools, and enterprise requirements to shorten the cycle from requirement to production-ready software.",
+    "heading-contact": "Contact <span>&amp; Collaboration</span>",
+    "contact-subtitle": "Reach out directly for career opportunities, technical collaborations, or consulting",
+    "cnt-status": "Available for Opportunities · Active",
+    "cnt-email-label": "Direct Email Address",
+    "cnt-btn-copy": "Copy Address",
+    "cnt-btn-send": "Send Email",
     "ftr-copy": "All Rights Reserved | Portfolio & Engineering Resume"
   },
   tr: {
@@ -144,6 +174,7 @@ const translations = {
     "nav-certificates": "Sertifikalar",
     "nav-testimonials": "Referanslar",
     "nav-about": "Hakkımda",
+    "nav-contact": "İletişim",
     "hero-status": "Kariyer Fırsatlarına &amp; Projelere Açık",
     "hero-title": "Ercan Polat | Bilgisayar Mühendisi - Veri & İş Analisti",
     "hero-im": "Ben bir",
@@ -158,7 +189,8 @@ const translations = {
     "catalog-subtitle": "Kategoriye göre filtreleyip detaylı inceleyebilirsiniz",
     "heading-skills": "Teknik <span>Yetkinlikler</span>",
     "heading-certificates": "Sertifikalarım",
-    "heading-testimonials": "Kurumsal <span>Referanslar</span>",
+    "heading-testimonials": "Kurumsal <span>&amp; Akademik Referanslar</span>",
+    "ref-subtitle": "Akademik ve kurumsal iş birliklerimde birlikte çalıştığım yöneticilerim ve danışmanlarım",
     "heading-about": "Hakkımda",
     "filter-all": "Tümü (7)",
     "filter-featured": "⭐ Öne Çıkanlar",
@@ -192,6 +224,8 @@ const translations = {
     "prj-5-desc": "Sunucu ve ağ loglarını Scikit-Learn makine öğrenimi modelleriyle analiz ederek anormallikleri ve siber tehditleri tespit eden güvenlik görselleştirici.",
     "edu-1-title": "Bilgisayar Mühendisliği Lisans",
     "edu-1-desc": "Amasya Üniversitesi (GNO: 2.95 / 4.00). Bilgisayar mühendisliği temelleri, veri analizi, makine öğrenmesi algoritmaları ve veri tabanı mimarileri odaklı lisans eğitimi.",
+    "edu-fide-title": "İş Analisti",
+    "edu-fide-desc": "FİDE Konserve. Departmanlar arası iş süreçlerinin analizi ve optimizasyonu, İK ve bordro gereksinimlerinin belirlenmesi, donanım terminallerinden gelen ham logların puantaj sistemlerine entegrasyonu ve ERP/Excel raporlama akışlarının uçtan uca dijitalleştirilmesi.",
     "edu-2-title": "BT Operasyonları & Veri Analitiği Stajyeri",
     "edu-2-desc": "DP World Evyap, Kocaeli. Liman ve terminal lojistik iş akışlarının analizi, SAP/ERP sistemleri üzerinden veri çıkarma ve tutarlılık kontrolleri, 1. seviye BT desteği ve siber güvenlik denetim loglarının izlenmesi.",
     "edu-3-title": "Freelance Bilgisayar Mühendisi & Veri Analisti",
@@ -473,6 +507,51 @@ if (copyEmailBtn) {
       });
     } catch (err) {
       window.location.href = `mailto:${emailToCopy}`;
+    }
+  });
+}
+
+
+// Contact Section Email Copy Button
+const copyContactBtn = document.getElementById("copy-contact-email");
+if (copyContactBtn) {
+  copyContactBtn.addEventListener("click", async () => {
+    const emailToCopy = "ercanpolat.tr@gmail.com";
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(emailToCopy);
+      } else {
+        const tempInput = document.createElement("input");
+        tempInput.value = emailToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+      }
+
+      const copyIcon = document.getElementById("contact-copy-icon");
+      const copyText = document.getElementById("contact-copy-text");
+      if (copyIcon) copyIcon.className = "bx bx-check";
+      if (copyText) {
+        const origText = copyText.textContent;
+        copyText.textContent = currentLang === "en" ? "Copied!" : "Kopyalandı!";
+        setTimeout(() => {
+          if (copyIcon) copyIcon.className = "bx bx-copy";
+          if (copyText) copyText.textContent = origText;
+        }, 2500);
+      }
+
+      const successMsg = currentLang === "en"
+        ? "Email copied to clipboard! (ercanpolat.tr@gmail.com)"
+        : "E-posta adresi kopyalandı! (ercanpolat.tr@gmail.com)";
+      showToast(successMsg);
+
+      trackAnalyticsEvent("email_copy", {
+        event_category: "Lead",
+        event_label: "contact_section_copy"
+      });
+    } catch (err) {
+      window.location.href = "mailto:" + emailToCopy;
     }
   });
 }
@@ -919,13 +998,16 @@ function openProjectModal(projectId) {
   }
 
   // Gallery Handling
+  currentActiveModalProjectId = projectId;
+  currentActiveModalImgIndex = 0;
+
   if (projectItem.images && projectItem.images.length > 0 && galleryContainer && mainImg && thumbsContainer) {
     galleryContainer.style.display = "block";
     mainImg.src = projectItem.images[0].src;
     if (captionEl) captionEl.textContent = projectItem.images[0].title;
 
     thumbsContainer.innerHTML = projectItem.images.map((img, idx) => `
-      <div class="modal-thumb ${idx === 0 ? 'active' : ''}" data-idx="${idx}">
+      <div class="modal-thumb ${idx === 0 ? 'active' : ''}" data-idx="${idx}" title="${img.title}">
         <img src="${img.src}" alt="${img.title}" />
       </div>
     `).join("");
@@ -936,6 +1018,7 @@ function openProjectModal(projectId) {
         modalThumbs.forEach(t => t.classList.remove("active"));
         thumb.classList.add("active");
         const idx = parseInt(thumb.getAttribute("data-idx"), 10);
+        currentActiveModalImgIndex = idx;
         const selectedImg = projectItem.images[idx];
         mainImg.style.opacity = "0.2";
         setTimeout(() => {
@@ -973,13 +1056,73 @@ function openProjectModal(projectId) {
   document.body.style.overflow = "hidden";
 }
 
-// Bind all details buttons (grid cards + spotlight cards)
+// Global modal tracking
+let currentActiveModalProjectId = null;
+let currentActiveModalImgIndex = 0;
+
+// Project Modal Gallery zoom triggers
+const modalMainImgEl = document.getElementById("project-modal-main-img");
+const modalGalleryZoomTrigger = document.getElementById("gallery-zoom-trigger");
+
+if (modalMainImgEl) {
+  modalMainImgEl.addEventListener("click", () => {
+    if (currentActiveModalProjectId && projectDataMap[currentActiveModalProjectId]) {
+      const imgs = projectDataMap[currentActiveModalProjectId].images;
+      if (imgs && imgs.length > 0) {
+        openLightbox(imgs, currentActiveModalImgIndex);
+      }
+    }
+  });
+}
+
+if (modalGalleryZoomTrigger) {
+  modalGalleryZoomTrigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (currentActiveModalProjectId && projectDataMap[currentActiveModalProjectId]) {
+      const imgs = projectDataMap[currentActiveModalProjectId].images;
+      if (imgs && imgs.length > 0) {
+        openLightbox(imgs, currentActiveModalImgIndex);
+      }
+    }
+  });
+}
+
+// Bind all details buttons (grid cards + spotlight cards) & Spotlight image zoom
 document.addEventListener("click", (e) => {
-  const btn = e.target.closest(".btn-details");
-  if (btn) {
-    const projectId = btn.getAttribute("data-project");
+  const detailsBtn = e.target.closest(".btn-details");
+  if (detailsBtn) {
+    const projectId = detailsBtn.getAttribute("data-project");
     if (projectId) {
       openProjectModal(projectId);
+    }
+    return;
+  }
+
+  // Spotlight Zoom trigger button
+  const zoomBtn = e.target.closest(".spotlight-zoom-trigger");
+  if (zoomBtn) {
+    const prjId = zoomBtn.getAttribute("data-project");
+    if (prjId && projectDataMap[prjId] && projectDataMap[prjId].images) {
+      const targetImg = document.getElementById(`spotlight-img-${prjId}`);
+      let startIdx = 0;
+      if (targetImg) {
+        const foundIdx = projectDataMap[prjId].images.findIndex(img => targetImg.src.includes(img.src));
+        if (foundIdx !== -1) startIdx = foundIdx;
+      }
+      openLightbox(projectDataMap[prjId].images, startIdx);
+    }
+    return;
+  }
+
+  // Spotlight main image click
+  const spotlightImg = e.target.closest(".spotlight-main-img");
+  if (spotlightImg) {
+    const prjId = spotlightImg.getAttribute("data-project") || (spotlightImg.id === "spotlight-img-puantaj" ? "puantaj" : "qrcode");
+    if (prjId && projectDataMap[prjId] && projectDataMap[prjId].images) {
+      let startIdx = 0;
+      const foundIdx = projectDataMap[prjId].images.findIndex(img => spotlightImg.src.includes(img.src));
+      if (foundIdx !== -1) startIdx = foundIdx;
+      openLightbox(projectDataMap[prjId].images, startIdx);
     }
   }
 });
@@ -1001,8 +1144,146 @@ if (projectModal) {
 function closeProjectModal() {
   if (projectModal) {
     projectModal.style.display = "none";
+    if (!lightboxModal || !lightboxModal.classList.contains("active")) {
+      document.body.style.overflow = "auto";
+    }
+  }
+}
+
+// ─── FULLSCREEN HIGH-RES IMAGE LIGHTBOX MANAGER ─────────────
+const lightboxModal = document.getElementById("image-lightbox-modal");
+const lightboxBackdrop = document.getElementById("lightbox-backdrop");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCounter = document.getElementById("lightbox-counter");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxCloseBtn = document.getElementById("lightbox-close-btn");
+const lightboxPrevBtn = document.getElementById("lightbox-prev-btn");
+const lightboxNextBtn = document.getElementById("lightbox-next-btn");
+const lightboxZoomBtn = document.getElementById("lightbox-zoom-btn");
+const lightboxZoomIcon = document.getElementById("lightbox-zoom-icon");
+const lightboxZoomText = document.getElementById("lightbox-zoom-text");
+
+let lightboxImagesList = [];
+let activeLightboxIndex = 0;
+let isImageZoomed = false;
+
+function openLightbox(images, startIndex = 0) {
+  if (!images || images.length === 0 || !lightboxModal || !lightboxImage) return;
+  lightboxImagesList = images;
+  activeLightboxIndex = Math.max(0, Math.min(startIndex, images.length - 1));
+  isImageZoomed = false;
+  lightboxImage.classList.remove("is-zoomed");
+  updateZoomButtonState();
+
+  updateLightboxView();
+  lightboxModal.classList.add("active");
+  lightboxModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function updateLightboxView() {
+  const currentItem = lightboxImagesList[activeLightboxIndex];
+  if (!currentItem) return;
+
+  lightboxImage.style.opacity = "0.2";
+  lightboxImage.src = currentItem.src;
+  lightboxImage.alt = currentItem.title || "Ekran Görüntüsü";
+
+  if (lightboxCounter) {
+    lightboxCounter.textContent = `${activeLightboxIndex + 1} / ${lightboxImagesList.length}`;
+  }
+  if (lightboxCaption) {
+    lightboxCaption.textContent = currentItem.title || "";
+  }
+
+  const hasMultiple = lightboxImagesList.length > 1;
+  if (lightboxPrevBtn) lightboxPrevBtn.style.display = hasMultiple ? "flex" : "none";
+  if (lightboxNextBtn) lightboxNextBtn.style.display = hasMultiple ? "flex" : "none";
+
+  setTimeout(() => {
+    lightboxImage.style.opacity = "1";
+  }, 90);
+}
+
+function closeLightbox() {
+  if (!lightboxModal) return;
+  lightboxModal.classList.remove("active");
+  lightboxModal.setAttribute("aria-hidden", "true");
+  isImageZoomed = false;
+  if (lightboxImage) lightboxImage.classList.remove("is-zoomed");
+  updateZoomButtonState();
+
+  const isModalOpen = (projectModal && projectModal.style.display === "block") ||
+                      (certModal && certModal.style.display === "block");
+  if (!isModalOpen) {
     document.body.style.overflow = "auto";
   }
+}
+
+function toggleLightboxZoom() {
+  if (!lightboxImage) return;
+  isImageZoomed = !isImageZoomed;
+  lightboxImage.classList.toggle("is-zoomed", isImageZoomed);
+  updateZoomButtonState();
+}
+
+function updateZoomButtonState() {
+  if (!lightboxZoomIcon || !lightboxZoomText) return;
+  if (isImageZoomed) {
+    lightboxZoomIcon.className = "bx bx-zoom-out";
+    lightboxZoomText.textContent = (typeof currentLang !== "undefined" && currentLang === "en") ? "Reset" : "Sıfırla";
+  } else {
+    lightboxZoomIcon.className = "bx bx-zoom-in";
+    lightboxZoomText.textContent = (typeof currentLang !== "undefined" && currentLang === "en") ? "Zoom" : "Yakınlaştır";
+  }
+}
+
+function nextLightboxImage() {
+  if (lightboxImagesList.length <= 1) return;
+  activeLightboxIndex = (activeLightboxIndex + 1) % lightboxImagesList.length;
+  isImageZoomed = false;
+  if (lightboxImage) lightboxImage.classList.remove("is-zoomed");
+  updateZoomButtonState();
+  updateLightboxView();
+}
+
+function prevLightboxImage() {
+  if (lightboxImagesList.length <= 1) return;
+  activeLightboxIndex = (activeLightboxIndex - 1 + lightboxImagesList.length) % lightboxImagesList.length;
+  isImageZoomed = false;
+  if (lightboxImage) lightboxImage.classList.remove("is-zoomed");
+  updateZoomButtonState();
+  updateLightboxView();
+}
+
+if (lightboxCloseBtn) lightboxCloseBtn.addEventListener("click", closeLightbox);
+if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+if (lightboxNextBtn) lightboxNextBtn.addEventListener("click", (e) => { e.stopPropagation(); nextLightboxImage(); });
+if (lightboxPrevBtn) lightboxPrevBtn.addEventListener("click", (e) => { e.stopPropagation(); prevLightboxImage(); });
+if (lightboxZoomBtn) lightboxZoomBtn.addEventListener("click", (e) => { e.stopPropagation(); toggleLightboxZoom(); });
+if (lightboxImage) {
+  lightboxImage.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleLightboxZoom();
+  });
+}
+
+// Touch swipe support for mobile lightbox
+let touchStartX = 0;
+let touchEndX = 0;
+if (lightboxModal) {
+  lightboxModal.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightboxModal.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > 50 && !isImageZoomed) {
+      if (diff < 0) nextLightboxImage();
+      else prevLightboxImage();
+    }
+  }, { passive: true });
 }
 
 // ─── CERTIFICATE MODAL ────────────────────────────────────────
@@ -1117,6 +1398,17 @@ if (certModalNext) {
 }
 
 document.addEventListener("keydown", (e) => {
+  if (lightboxModal && lightboxModal.classList.contains("active")) {
+    if (e.key === "Escape") {
+      closeLightbox();
+    } else if (e.key === "ArrowLeft") {
+      prevLightboxImage();
+    } else if (e.key === "ArrowRight") {
+      nextLightboxImage();
+    }
+    return;
+  }
+
   if (certModal && certModal.style.display === "block") {
     if (e.key === "Escape") {
       closeCertModal();
