@@ -163,6 +163,8 @@ const translations = {
     "cnt-email-label": "Direct Email Address",
     "cnt-btn-copy": "Copy Address",
     "cnt-btn-send": "Send Email",
+    "lightbox-hint": "Click on the image or use the Zoom button to view fine details. You can navigate using arrow keys.",
+    "cert-view": "Click to View",
     "ftr-copy": "All Rights Reserved | Portfolio & Engineering Resume"
   },
   tr: {
@@ -271,6 +273,34 @@ const translations = {
     "cnt-title": "İletişime Geçelim!",
     "cnt-desc": "İş fırsatları, mühendislik projeleri veya teknik iş birlikleri için dilediğiniz zaman ulaşabilirsiniz.",
     "cnt-note": "Genellikle 24 saat içinde dönüş yapıyorum. Mesajınızı bekliyorum!",
+        "skills-subtitle": "İş analitiği, veri mühendisliği ve uçtan uca modern yazılım mimarilerinde kullandığım araçlar",
+    "sk-cat-1-title": "İş Analitiği &amp; İş Zekası",
+    "sk-cat-1-sub": "Süreç Modelleme &amp; Karar Destek",
+    "sk-cat-2-title": "Yazılım &amp; Backend Mimarisi",
+    "sk-cat-2-sub": "Sunucu, Veritabanı &amp; REST API",
+    "sk-cat-3-title": "Veri Bilimi &amp; Yapay Zekâ",
+    "sk-cat-3-sub": "Makine Öğrenmesi &amp; İstatistiksel Modelleme",
+    "sk-cat-4-title": "Geliştirme &amp; Mühendislik Araçları",
+    "sk-cat-4-sub": "Frontend, Sürüm Kontrolü &amp; Dağıtım",
+    "about-subtitle": "İş hedefleri ile teknik mimarileri birleştiren mühendislik yaklaşımım ve ilkelerim",
+    "ab-tag": "Bilgisayar Mühendisi &amp; Analist",
+    "ab-lead-title": "Veri, Süreç ve Yazılımı Tek Çatıda Birleştiren Mühendislik Vizyonu",
+    "ab-lead-desc-1": "Amasya Üniversitesi Bilgisayar Mühendisliği mezunuyum. Yazılım mühendisliği disiplinini, saha ve iş süreçleri analitiğiyle harmanlayarak operasyonel darboğazları uçtan uca dijital çözümlere dönüştürüyorum. FİDE Konserve bünyesindeki PDKS ve puantaj otomasyonu ile DP World Evyap'taki lojistik/terminal süreç deneyimim sayesinde, sadece kod yazmanın ötesinde iş birimlerine doğrudan ölçülebilir değer üretmeye odaklanıyorum.",
+    "ab-lead-desc-2": "Karar destek sistemleri, otomasyon araçları, veri temizleme boru hatları ve RESTful mimariler inşa ederken; paydaşların dilinden anlayan bir analist ve arka planı kusursuz kurgulayan bir mühendis olarak köprü görevi görüyorum.",
+    "ab-p1-title": "İş &amp; Veri Odaklı Düşünce",
+    "ab-p1-desc": "Varsayımlarla değil; saha gereksinimleri, kullanıcı hikâyeleri ve nicel veri analizleriyle hareket ederek iş süreçlerini en aza indirgenmiş hata ile modellerim.",
+    "ab-p2-title": "Mühendislik Standartları &amp; Kalite",
+    "ab-p2-desc": "Modüler mimari, temiz kod, yüksek veri bütünlüğü ve edge-case'leri kapsayan test disiplini ile uzun vadeli, sürdürülebilir sistemler kurarım.",
+    "ab-p3-title": "Hızlı Adaptasyon &amp; Yüksek İcraat",
+    "ab-p3-desc": "Yeni teknolojilere, yapay zekâ destekli araçlara ve kurumsal ihtiyaçlara hızla uyum sağlayarak gereksinimden çalışan ürüne giden süreyi kısaltırım.",
+    "heading-contact": "İletişim <span>&amp; İş Birliği</span>",
+    "contact-subtitle": "Kariyer fırsatları, teknik iş birlikleri veya projeleriniz için doğrudan iletişime geçebilirsiniz",
+    "cnt-status": "Yeni Fırsatlara Açık · Aktif",
+    "cnt-email-label": "Doğrudan E-posta Adresi",
+    "cnt-btn-copy": "Adresi Kopyala",
+    "cnt-btn-send": "E-posta Gönder",
+    "lightbox-hint": "Detayları net okumak için görsele tıklayabilir veya Yakınlaştır butonunu kullanabilirsiniz. Yön tuşlarıyla gezinebilirsiniz.",
+    "cert-view": "Tıklayarak İncele",
     "ftr-copy": "Tüm Hakları Saklıdır | Mühendislik Portfolyosu"
   }
 };
@@ -279,15 +309,29 @@ function updateLanguage(lang) {
   currentLang = lang;
   localStorage.setItem("portfolio_lang", lang);
 
+  document.documentElement.lang = lang;
+
+  if (lang === "en") {
+    document.title = "Ercan Polat | Computer Engineer - Data & Business Analyst";
+  } else {
+    document.title = "Ercan Polat | Bilgisayar Mühendisi - Veri & İş Analisti";
+  }
+
   const langText = document.getElementById("lang-text");
+  const langToggleBtn = document.getElementById("lang-toggle");
   if (langText) {
     langText.textContent = lang === "tr" ? "EN" : "TR";
   }
+  if (langToggleBtn) {
+    const toggleTitle = lang === "tr" ? "Switch to English" : "Türkçe'ye Geç";
+    langToggleBtn.setAttribute("title", toggleTitle);
+    langToggleBtn.setAttribute("aria-label", toggleTitle);
+  }
 
-  // Translate data-i18n elements
+  // Translate all data-i18n elements
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
+    if (translations[lang] && translations[lang][key] !== undefined) {
       el.innerHTML = translations[lang][key];
     }
   });
