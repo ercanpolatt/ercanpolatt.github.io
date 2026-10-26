@@ -58,8 +58,9 @@ const translations = {
     "heading-testimonials": "Professional <span>References</span>",
     "ref-subtitle": "Academic mentors and executive directors from past projects and internships",
     "heading-about": "About <span>Me</span>",
-    "filter-all": "All (7)",
+    "filter-all": "All (8)",
     "filter-featured": "⭐ Featured",
+    "filter-gamedev": "🎮 Gaming &amp; Arcade",
     "filter-automation": "Automation &amp; Tools",
     "filter-datascience": "Data Science &amp; Analytics",
     "filter-ai": "AI &amp; ML",
@@ -68,6 +69,28 @@ const translations = {
     "btn-details": "Details",
     "btn-video": "Watch Video Demo",
     "btn-presentation": "View Detailed Presentation",
+    "btn-theater-watch": "Watch in Cinema Mode",
+    "badge-play-video": "MP4 Video",
+    "spotlight-spark-status": "Gameplay Video",
+    "btn-play-video-text": "Play Video",
+    "spotlight-spark-tag": "Game Development &amp; Arcade",
+    "spotlight-spark-title": "Spark Champions: 3D Arena Survival",
+    "spotlight-spark-desc": "Action-packed arena survival game featuring 5 escalating monster waves, 6 unlockable heroes, tactical perk upgrades, horde surge dynamics, and a climatic Mega Golem Titan boss battle.",
+    "spark-m1-val": "5 Waves &amp; Titan Boss",
+    "spark-m1-sub": "Escalating Horde Rush",
+    "spark-m2-val": "6 Unique Heroes",
+    "spark-m2-sub": "Perk &amp; Buff Tree",
+    "spark-m3-val": "Fluid Game Loop",
+    "spark-m3-sub": "Collision &amp; Particle FX",
+    "spark-h1": "<strong>Dynamic Horde Surge:</strong> Real-time simulation of hundreds of concurrent enemy projectiles, targeting algorithms, and collision kinematics.",
+    "spark-h2": "<strong>Interactive Upgrade System:</strong> Tactical decision making from 3 randomized ability cards upon each level-up event.",
+    "spark-h3": "<strong>Multi-Themed Arenas &amp; Sound:</strong> Themed worlds like Candy Kingdom and Jungle Grove paired with immersive SFX and dynamic combat audio.",
+    "prj-spark-badge": "🎮 Game Dev &amp; Arcade",
+    "prj-spark-desc": "Fast-paced arena survival game offering 5 escalating waves, 6 unique heroes, tactical upgrade cards, and a Mega Golem Titan boss fight.",
+    "cinema-duration": "Duration: ~42s",
+    "cinema-engine": "60 FPS Arena Engine",
+    "cinema-audio": "Stereo SFX",
+    "cinema-caption": "Live recorded gameplay demonstration of Spark Champions highlighting wave progression, perk card choices, and survival mechanics.",
     "spotlight-fide-tag": "Flagship Solution",
     "spotlight-fide-title": "FİDE Konserve - Smart Attendance &amp; PDKS System",
     "spotlight-fide-desc": "An enterprise automation platform that parses hardware PDKS attendance logs, calculates complex shift durations, overtime, weekend compensations, and generates ERP-ready timesheet schedules with zero data loss.",
@@ -194,8 +217,9 @@ const translations = {
     "heading-testimonials": "Kurumsal <span>&amp; Akademik Referanslar</span>",
     "ref-subtitle": "Akademik ve kurumsal iş birliklerimde birlikte çalıştığım yöneticilerim ve danışmanlarım",
     "heading-about": "Hakkımda",
-    "filter-all": "Tümü (7)",
+    "filter-all": "Tümü (8)",
     "filter-featured": "⭐ Öne Çıkanlar",
+    "filter-gamedev": "🎮 Oyun &amp; Eğlence",
     "filter-automation": "Otomasyon &amp; Araçlar",
     "filter-datascience": "Veri Bilimi &amp; Analitik",
     "filter-ai": "Yapay Zekâ &amp; ML",
@@ -204,6 +228,28 @@ const translations = {
     "btn-details": "Detaylar",
     "btn-video": "Video Sunumu İzle",
     "btn-presentation": "Detaylı Sunumu Gör",
+    "btn-theater-watch": "Sinema Modunda İzle",
+    "badge-play-video": "MP4 Video",
+    "spotlight-spark-status": "Oynanış Videosu",
+    "btn-play-video-text": "Play Video",
+    "spotlight-spark-tag": "Oyun Geliştirme &amp; Eğlence",
+    "spotlight-spark-title": "Spark Champions: 3D Arena Survival",
+    "spotlight-spark-desc": "5 kademeli canavar dalgası, 6 eşsiz kahraman, dinamik kart yükseltme ağacı (Twin Star Blaster, Aegis Cloud Halo vb.), sürü mekaniği (Horde Surge) ve Mega Golem Titan boss savaşı içeren yüksek tempolu arena hayatta kalma oyunu.",
+    "spark-m1-val": "5 Dalga &amp; Titan Boss",
+    "spark-m1-sub": "Kademeli Sürü Akını",
+    "spark-m2-val": "6 Eşsiz Kahraman",
+    "spark-m2-sub": "Kart &amp; Buff Ağacı",
+    "spark-m3-val": "Akıcı Oyun Döngüsü",
+    "spark-m3-sub": "Çarpışma &amp; Parçacık Fiziği",
+    "spark-h1": "<strong>Dinamik Sürü Saldırısı (Horde Surge):</strong> Ekranda yüzlerce eşzamanlı düşman mermisi, hedef takip algoritmaları ve anlık çarpışma fiziği.",
+    "spark-h2": "<strong>Etkileşimli Yükseltme Sistemi:</strong> Seviye atladıkça rastgele gelen 3 farklı yetenek kartı arasından taktiksel strateji belirleme.",
+    "spark-h3": "<strong>Çoklu Arena &amp; Ses Tasarımı:</strong> Candy Kingdom ve Jungle Grove gibi özel temalı arenalar ile sürükleyici oyun müzikleri ve SFX.",
+    "prj-spark-badge": "🎮 Oyun &amp; Eğlence",
+    "prj-spark-desc": "5 dalgalı canavar orduları, 6 eşsiz kahraman, yükseltme kartları ve Mega Golem Titan boss savaşı sunan interaktif hayatta kalma oyunu.",
+    "cinema-duration": "Süre: ~42 sn",
+    "cinema-engine": "60 FPS Arena Motoru",
+    "cinema-audio": "Stereo SFX",
+    "cinema-caption": "Spark Champions oyun içi dalga geçişleri, yükseltme kart seçimleri ve sürü (horde) hayatta kalma mekanikleri canlı oynanış kaydı.",
     "spotlight-fide-tag": "Amiral Gemisi Çözüm",
     "spotlight-fide-title": "FİDE Konserve - Akıllı Puantaj ve PDKS Sistemi",
     "spotlight-fide-desc": "Donanım terminallerinden gelen karmaşık personel giriş-çıkış kart verilerini analiz ederek, İnsan Kaynakları ve Muhasebe departmanları için vardiya, fazla mesai ve puantaj hesaplama sürecini tam otomatik hale getiren kurumsal yazılım.",
@@ -832,6 +878,58 @@ const projectDataMap = {
     github: "https://github.com/ercanpolatt/personel-pdks-verisini-puantaja-isleme",
     video: "https://youtu.be/OnxTkWwbZQA",
     live: "https://youtu.be/OnxTkWwbZQA"
+  },
+  "spark-champions": {
+    en: {
+      badge: "Game Development & 3D Cartoon Arena",
+      title: "Spark Champions: 3D Cartoon Arena Survival",
+      description: "An action-packed cartoon arena survival game built with dynamic wave progression, real-time collision mechanics, and tactical upgrade systems. Players face escalating waves of alien monsters, unlock up to 6 unique heroes, acquire game-changing perks (such as Twin Star Blaster and Aegis Cloud Halo), and battle against the massive Mega Golem Titan boss.",
+      features: [
+        "Escalating Wave Progression: 5 intense monster waves with increasing horde intensity and unique movement patterns.",
+        "Interactive Upgrade System: Level-up reward cards offering Common, Rare, and Legendary combat synergies.",
+        "6 Unique Unlockable Heroes: Varied stats, movement speeds, weapons, and signature attack archetypes.",
+        "Horde Surge Dynamics: Screen-filling enemy swarms with real-time 360° collision detection and particle physics.",
+        "Multi-Themed Arenas: Custom maps including Candy Kingdom, Jungle Grove, Neon Nebula, and Photon Garden.",
+        "Audio & SFX Integration: Dynamic sound effects, hit feedback, laser projectiles, and battle score tracking."
+      ],
+      specsTitle: "Game Architecture & Technical Stack",
+      specs: [
+        "Engine Core: JavaScript Game Loop (requestAnimationFrame), Canvas / WebGL rendering pipeline",
+        "Physics & Collisions: 360° spatial partitioning, distance checking, vector projectile kinematics",
+        "State Machine: Wave timer, leveling XP curve, upgrade pool RNG, boss encounter triggers",
+        "Audio Engine: Web Audio API sound synthesizers and stereo sound effects",
+        "Optimization: Full HD 1920x1080 60 FPS smooth gameplay"
+      ]
+    },
+    tr: {
+      badge: "Oyun Geliştirme & 3D Karikatür Arena",
+      title: "Spark Champions: 3D Arena Survival Oyunu",
+      description: "Dinamik dalga ilerlemesi, gerçek zamanlı çarpışma fiziği ve taktiksel yükseltme mekaniklerine sahip yüksek tempolu arena hayatta kalma oyunu. Oyuncular 5 zorlu dalga boyunca uzaylı canavar sürülerini alt eder, 6 eşsiz kahramanın kilidini açar, seviye atladıkça rastgele gelen güçlendirme kartlarını (Twin Star Blaster, Aegis Cloud Halo vb.) seçer ve finalde Mega Golem Titan boss ile yüzleşir.",
+      features: [
+        "Kademeli Dalga Sistemi: Giderek hızlanan ve zorlaşan 5 canavar dalgası ve özel boss dövüş mekaniği.",
+        "Taktiksel Yükseltme Ağacı: Seviye atlandığında rastgele sunulan Yaygın ve Efsanevi yetenek kartları.",
+        "6 Eşsiz Oynanabilir Kahraman: Farklı can, hız, menzil ve saldırı türlerine sahip karakter kadrosu.",
+        "Horde Surge (Sürü Saldırısı): Ekranda yüzlerce eşzamanlı nesne için 360° anlık çarpışma ve parçacık fiziği.",
+        "Farklı Temalı Arenalar: Jungle Grove, Candy Kingdom, Neon Nebula ve Photon Garden gibi harita seçenekleri.",
+        "Ses & SFX Mimarisi: Dinamik lazer ve darbe sesleri, skor sayacı ve akıcı 60 FPS oyun deneyimi."
+      ],
+      specsTitle: "Oyun Mimarisi ve Teknik Altyapı",
+      specs: [
+        "Oyun Motoru Çekirdeği: JavaScript Game Loop (requestAnimationFrame), Canvas / WebGL çizim döngüsü",
+        "Fizik & Çarpışma: 360° vektörel hareket, menzil kontrolleri, mermi kinematikleri ve anlık isabet tespiti",
+        "Durum Yönetimi: Dalga zamanlayıcısı, XP seviye eğrisi, rastgele kart havuzu ve boss tetikleyicileri",
+        "Ses Mimarisi: Web Audio API ile entegre stereo ses efektleri ve dinamik geri bildirimler",
+        "Optimizasyon: 1080p Full HD çözünürlükte 60 FPS sabit akıcılık"
+      ]
+    },
+    images: [
+      { src: "img/projects/spark-champions/spark-champions.jpg", title: "Spark Champions - 3D Arena Survival & Action" }
+    ],
+    tags: ["Game Development", "JavaScript", "WebGL", "Canvas", "Physics Engine", "State Machine", "Audio API"],
+    iconClass: "bx bx-joystick",
+    github: "https://github.com/ercanpolatt",
+    video: "spark-champions.mp4",
+    live: "spark-champions.mp4"
   },
   "qrcode": {
     en: {
@@ -1570,4 +1668,128 @@ if (window.gsap) {
       ease: 'power2.out',
     });
   });
+}
+
+
+// ─── SPARK CHAMPIONS VIDEO & CINEMA MODAL CONTROLS ──────────
+function initSparkVideoShowcase() {
+  const previewVideo = document.getElementById("spotlight-spark-video");
+  const staticImg = document.getElementById("spotlight-img-spark");
+  const playTrigger = document.getElementById("spark-play-trigger");
+  const sparkCardTheaterBtn = document.getElementById("btn-spark-theater");
+
+  // Cinema Modal Elements
+  const cinemaModal = document.getElementById("video-cinema-modal");
+  const cinemaVideo = document.getElementById("cinema-modal-video");
+  const cinemaCloseBtn = document.getElementById("cinema-close-btn");
+  const cinemaBackdrop = document.getElementById("cinema-backdrop");
+
+  // Play Video on Trigger Click: switches image to HTML5 video player and starts playback
+  function playInlineVideo() {
+    if (!previewVideo || !staticImg) return;
+    staticImg.style.display = "none";
+    if (playTrigger) playTrigger.style.display = "none";
+    previewVideo.style.display = "block";
+    previewVideo.currentTime = 0;
+    previewVideo.muted = false;
+    previewVideo.play().catch(() => {
+      // Fallback if browser requires muted autoplay
+      previewVideo.muted = true;
+      previewVideo.play();
+    });
+
+    trackAnalyticsEvent("spark_video_play_inline", {
+      event_category: "Video",
+      video_name: "Spark Champions"
+    });
+  }
+
+  if (playTrigger) {
+    playTrigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      playInlineVideo();
+    });
+    playTrigger.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        playInlineVideo();
+      }
+    });
+  }
+
+  // When video ends, show the artwork and play button again
+  if (previewVideo) {
+    previewVideo.addEventListener("ended", () => {
+      previewVideo.style.display = "none";
+      if (staticImg) staticImg.style.display = "block";
+      if (playTrigger) playTrigger.style.display = "flex";
+    });
+  }
+
+  // Cinema Modal Functions
+  function openCinemaModal(videoSrc) {
+    if (!cinemaModal || !cinemaVideo) return;
+    if (previewVideo && !previewVideo.paused) previewVideo.pause();
+    
+    if (videoSrc) {
+      cinemaVideo.src = videoSrc;
+    }
+    
+    cinemaModal.classList.add("active");
+    cinemaModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    // Play with sound in cinema mode
+    cinemaVideo.muted = false;
+    cinemaVideo.currentTime = (previewVideo && previewVideo.currentTime) ? previewVideo.currentTime : 0;
+    cinemaVideo.play().catch(() => {
+      cinemaVideo.muted = true;
+      cinemaVideo.play();
+    });
+
+    trackAnalyticsEvent("cinema_video_open", {
+      event_category: "Video",
+      video_name: "Spark Champions"
+    });
+  }
+
+  function closeCinemaModal() {
+    if (!cinemaModal || !cinemaVideo) return;
+    cinemaVideo.pause();
+    cinemaModal.classList.remove("active");
+    cinemaModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  if (sparkCardTheaterBtn) {
+    sparkCardTheaterBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openCinemaModal("spark-champions.mp4");
+    });
+  }
+
+  // All .btn-watch-cinema triggers across the page (cards, spotlights)
+  document.querySelectorAll(".btn-watch-cinema").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const videoSrc = btn.getAttribute("data-video") || "spark-champions.mp4";
+      openCinemaModal(videoSrc);
+    });
+  });
+
+  if (cinemaCloseBtn) cinemaCloseBtn.addEventListener("click", closeCinemaModal);
+  if (cinemaBackdrop) cinemaBackdrop.addEventListener("click", closeCinemaModal);
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && cinemaModal && cinemaModal.classList.contains("active")) {
+      closeCinemaModal();
+    }
+  });
+}
+
+// Initialize on DOM load
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSparkVideoShowcase);
+} else {
+  initSparkVideoShowcase();
 }

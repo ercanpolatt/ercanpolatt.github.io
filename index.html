@@ -407,6 +407,115 @@
             </div>
           </div>
         </article>
+
+        <!-- SPOTLIGHT 3: SPARK CHAMPIONS (OYUN GELİŞTİRME & ETKİLEŞİMLİ EĞLENCE) -->
+        <article class="spotlight-card spotlight-card-gaming" id="spotlight-spark">
+          <div class="spotlight-window spotlight-window-gaming">
+            <div class="window-topbar window-topbar-gaming">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-title"><i class='bx bx-joystick'></i> spark-champions-arena.local &mdash; 3D Cartoon Survival</div>
+              <span class="window-status window-status-gaming"><i class='bx bx-play-circle'></i> <span data-i18n="spotlight-spark-status">Oynanış Videosu</span></span>
+            </div>
+
+            <div class="spotlight-preview-frame spotlight-video-frame" id="spark-video-frame" title="Videoyu Oynat">
+              <!-- Visual Artwork Image on Page -->
+              <img src="img/projects/spark-champions/spark-champions.jpg" alt="Spark Champions" class="spotlight-main-img" id="spotlight-img-spark" />
+              
+              <!-- HTML5 Video Element (Revealed & Played on Click) -->
+              <video 
+                id="spotlight-spark-video" 
+                class="spotlight-main-video" 
+                src="spark-champions.mp4" 
+                controls 
+                playsinline 
+                preload="metadata"
+                style="display:none;">
+              </video>
+
+              <!-- Center Play Video Overlay Trigger -->
+              <div class="spark-play-overlay" id="spark-play-trigger" role="button" tabindex="0" aria-label="Play Video">
+                <button type="button" class="spark-play-btn" tabindex="-1" aria-hidden="true">
+                  <i class='bx bx-play'></i>
+                </button>
+                <span class="spark-play-text" data-i18n="btn-play-video-text">Play Video</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight-content">
+            <div class="spotlight-header">
+              <div class="spotlight-tags-row">
+                <span class="spotlight-badge badge-domain badge-gaming"><i class='bx bx-joystick'></i> <span data-i18n="spotlight-spark-tag">Oyun Geliştirme &amp; Eğlence</span></span>
+              </div>
+              <h3 class="spotlight-title" data-i18n="spotlight-spark-title">Spark Champions: 3D Arena Survival</h3>
+              <p class="spotlight-desc" data-i18n="spotlight-spark-desc">
+                5 kademeli canavar dalgası, 6 eşsiz kahraman, dinamik kart yükseltme ağacı (Twin Star Blaster, Aegis Cloud Halo vb.), sürü mekaniği (Horde Surge) ve Mega Golem Titan boss savaşı içeren yüksek tempolu arena hayatta kalma oyunu.
+              </p>
+            </div>
+
+            <div class="spotlight-metrics">
+              <div class="metric-card metric-gaming">
+                <i class='bx bx-skull'></i>
+                <div class="metric-info">
+                  <strong data-i18n="spark-m1-val">5 Dalga &amp; Titan Boss</strong>
+                  <span data-i18n="spark-m1-sub">Kademeli Sürü Akını</span>
+                </div>
+              </div>
+              <div class="metric-card metric-gaming">
+                <i class='bx bx-shield-plus'></i>
+                <div class="metric-info">
+                  <strong data-i18n="spark-m2-val">6 Eşsiz Kahraman</strong>
+                  <span data-i18n="spark-m2-sub">Kart &amp; Buff Ağacı</span>
+                </div>
+              </div>
+              <div class="metric-card metric-gaming">
+                <i class='bx bx-tachometer'></i>
+                <div class="metric-info">
+                  <strong data-i18n="spark-m3-val">Akıcı Oyun Döngüsü</strong>
+                  <span data-i18n="spark-m3-sub">Çarpışma &amp; Parçacık Fiziği</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="spotlight-highlights">
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div data-i18n="spark-h1"><strong>Dinamik Sürü Saldırısı (Horde Surge):</strong> Ekranda yüzlerce eşzamanlı düşman mermisi, hedef takip algoritmaları ve anlık çarpışma fiziği.</div>
+              </li>
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div data-i18n="spark-h2"><strong>Etkileşimli Yükseltme Sistemi:</strong> Seviye atladıkça rastgele gelen 3 farklı yetenek kartı arasından taktiksel strateji belirleme.</div>
+              </li>
+              <li>
+                <i class='bx bx-check-circle'></i>
+                <div data-i18n="spark-h3"><strong>Çoklu Arena &amp; Ses Tasarımı:</strong> Candy Kingdom ve Jungle Grove gibi özel temalı arenalar ile sürükleyici oyun müzikleri ve SFX.</div>
+              </li>
+            </ul>
+
+            <div class="project-tags">
+              <span>Game Development</span>
+              <span>JavaScript</span>
+              <span>WebGL / Canvas</span>
+              <span>Collision Physics</span>
+              <span>State Machine</span>
+              <span>Particle FX</span>
+              <span>Audio API</span>
+            </div>
+
+            <div class="spotlight-actions">
+              <button type="button" class="project-btn btn-theater btn-watch-cinema" id="btn-spark-theater">
+                <i class='bx bx-play-circle'></i> <span data-i18n="btn-theater-watch">Sinema Modunda İzle</span>
+              </button>
+              <button type="button" class="project-btn btn-details btn-spotlight-details" data-project="spark-champions">
+                <i class='bx bx-slideshow'></i> <span data-i18n="btn-presentation">Detaylı Sunumu Gör</span>
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
 
       <!-- PROJE KATALOĞU & FİLTRELEME -->
@@ -416,8 +525,9 @@
       </div>
 
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tümü (7)</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tümü (8)</button>
         <button class="filter-btn" data-filter="featured" data-i18n="filter-featured">⭐ Öne Çıkanlar</button>
+        <button class="filter-btn" data-filter="gamedev" data-i18n="filter-gamedev">🎮 Oyun &amp; Eğlence</button>
         <button class="filter-btn" data-filter="automation" data-i18n="filter-automation">Otomasyon &amp; Araçlar</button>
         <button class="filter-btn" data-filter="datascience" data-i18n="filter-datascience">Veri Bilimi &amp; Analitik</button>
         <button class="filter-btn" data-filter="ai" data-i18n="filter-ai">Yapay Zekâ &amp; ML</button>
@@ -467,6 +577,33 @@
               <i class='bx bxl-github'></i> GitHub
             </a>
             <button class="project-btn btn-details" data-project="qrcode" title="Proje Detayları">
+              <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJE: SPARK CHAMPIONS (OYUN GELİŞTİRME) -->
+        <article class="project-card project-card-gaming" data-category="gamedev featured">
+          <div class="project-card-header">
+            <div class="project-icon project-icon-gaming"><i class='bx bx-joystick'></i></div>
+            <span class="project-badge project-badge-gaming" data-i18n="prj-spark-badge">🎮 Oyun &amp; Eğlence</span>
+          </div>
+          <div class="project-content">
+            <div class="project-card-media-preview btn-watch-cinema" data-video="spark-champions.mp4" title="Videoyu İzle">
+              <img src="img/projects/spark-champions/spark-champions.jpg" alt="Spark Champions" loading="lazy" />
+              <span class="media-preview-play-badge"><i class='bx bx-play'></i> <span data-i18n="badge-play-video">MP4 Video</span></span>
+            </div>
+            <h3>Spark Champions: 3D Arena Survival</h3>
+            <p data-i18n="prj-spark-desc">5 dalgalı canavar orduları, 6 eşsiz kahraman, yükseltme kartları ve Mega Golem Titan boss savaşı sunan interaktif hayatta kalma oyunu.</p>
+            <div class="project-tags">
+              <span>Game Dev</span><span>JavaScript</span><span>WebGL</span><span>Physics</span><span>Audio API</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button type="button" class="project-btn btn-video-card btn-watch-cinema" data-video="spark-champions.mp4" title="Videoyu İzle">
+              <i class='bx bx-play-circle'></i> <span data-i18n="btn-video">Video İzle</span>
+            </button>
+            <button class="project-btn btn-details" data-project="spark-champions" title="Proje Detayları">
               <i class='bx bx-info-circle'></i> <span data-i18n="btn-details">Detaylar</span>
             </button>
           </div>
@@ -991,6 +1128,45 @@
 
         <div class="lightbox-hint">
           <i class='bx bx-bulb'></i> <span data-i18n="lightbox-hint">Detayları net okumak için görsele tıklayabilir veya Yakınlaştır butonunu kullanabilirsiniz. Yön tuşlarıyla gezinebilirsiniz.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEDICATED CINEMA / THEATER VIDEO PLAYER MODAL -->
+    <div id="video-cinema-modal" class="modal video-cinema-modal" aria-hidden="true" role="dialog" aria-label="Sinema Modu Video Oynatıcı">
+      <div class="cinema-backdrop" id="cinema-backdrop"></div>
+      <div class="cinema-modal-container">
+        <button type="button" class="cinema-close-btn" id="cinema-close-btn" aria-label="Kapat (ESC)" title="Kapat (ESC)">&times;</button>
+        <div class="cinema-topbar">
+          <div class="cinema-title-group">
+            <span class="cinema-badge"><i class='bx bx-joystick'></i> GAMEPLAY SHOWCASE</span>
+            <h3 id="cinema-modal-title">Spark Champions: 3D Cartoon Arena Survival</h3>
+          </div>
+          <div class="cinema-actions">
+            <span class="cinema-resolution-badge"><i class='bx bx-badge-check'></i> 1080p HD &bull; 60 FPS</span>
+          </div>
+        </div>
+        <div class="cinema-player-wrapper">
+          <video 
+            id="cinema-modal-video" 
+            class="cinema-video" 
+            src="spark-champions.mp4" 
+            controls 
+            playsinline 
+            preload="auto"
+            poster="img/projects/spark-champions/spark-champions.jpg">
+            Tarayıcınız HTML5 video etiketini desteklemiyor.
+          </video>
+        </div>
+        <div class="cinema-footer-info">
+          <div class="cinema-tags">
+            <span><i class='bx bx-time'></i> <span data-i18n="cinema-duration">Süre: ~42 sn</span></span>
+            <span><i class='bx bx-slider'></i> <span data-i18n="cinema-engine">60 FPS Arena Motoru</span></span>
+            <span><i class='bx bx-volume-full'></i> <span data-i18n="cinema-audio">Stereo SFX</span></span>
+          </div>
+          <p class="cinema-caption" data-i18n="cinema-caption">
+            Spark Champions oyun içi dalga geçişleri, yükseltme kart seçimleri ve sürü (horde) hayatta kalma mekanikleri canlı oynanış kaydı.
+          </p>
         </div>
       </div>
     </div>
