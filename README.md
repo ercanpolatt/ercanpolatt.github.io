@@ -87,8 +87,6 @@ To run this website on your local machine:
 - **Website:** [https://ercanpolatt.github.io/](https://ercanpolatt.github.io/)
 - **LinkedIn:** [linkedin.com/in/ercanpolatt](https://www.linkedin.com/in/ercanpolatt/)
 - **GitHub:** [github.com/ercanpolatt](https://github.com/ercanpolatt)
-- **Email:** [ercanpolatt.tr@gmail.com](mailto:ercanpolatt.tr@gmail.com)
+- **Email:** [ercanpolat.tr@gmail.com](mailto:ercanpolat.tr@gmail.com)
 
 ---
-
-⭐ *If you find this portfolio inspiring, consider giving the repository a star!*
