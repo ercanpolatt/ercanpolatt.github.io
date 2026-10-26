@@ -160,7 +160,7 @@ const translations = {
     "cnt-title": "Let's Work Together!",
     "cnt-desc": "I'm open to full-time career opportunities, engineering projects, or technical collaborations. Feel free to connect or drop an email!",
     "cnt-note": "I typically respond within 24 hours. Looking forward to hearing from you!",
-        "skills-subtitle": "Data analytics, business intelligence, AI, and modern software architectures",
+    "skills-subtitle": "Data analytics, business intelligence, AI, and modern software architectures",
     "sk-cat-1-title": "Business Analytics &amp; BI",
     "sk-cat-1-sub": "Process Modeling &amp; Decision Support",
     "sk-cat-2-title": "Backend &amp; Databases",
@@ -319,7 +319,7 @@ const translations = {
     "cnt-title": "İletişime Geçelim!",
     "cnt-desc": "İş fırsatları, mühendislik projeleri veya teknik iş birlikleri için dilediğiniz zaman ulaşabilirsiniz.",
     "cnt-note": "Genellikle 24 saat içinde dönüş yapıyorum. Mesajınızı bekliyorum!",
-        "skills-subtitle": "İş analitiği, veri mühendisliği ve uçtan uca modern yazılım mimarilerinde kullandığım araçlar",
+    "skills-subtitle": "İş analitiği, veri mühendisliği ve uçtan uca modern yazılım mimarilerinde kullandığım araçlar",
     "sk-cat-1-title": "İş Analitiği &amp; İş Zekası",
     "sk-cat-1-sub": "Süreç Modelleme &amp; Karar Destek",
     "sk-cat-2-title": "Yazılım &amp; Backend Mimarisi",
@@ -597,7 +597,7 @@ if (copyEmailBtn) {
         }, 2500);
       }
 
-      const successMsg = currentLang === "en" 
+      const successMsg = currentLang === "en"
         ? "Email copied to clipboard! (ercanpolatt.tr@gmail.com)"
         : "E-posta adresi kopyalandı! (ercanpolatt.tr@gmail.com)";
       showToast(successMsg);
@@ -1389,7 +1389,7 @@ function closeLightbox() {
   updateZoomButtonState();
 
   const isModalOpen = (projectModal && projectModal.style.display === "block") ||
-                      (certModal && certModal.style.display === "block");
+    (certModal && certModal.style.display === "block");
   if (!isModalOpen) {
     document.body.style.overflow = "auto";
   }
@@ -1730,11 +1730,11 @@ function initSparkVideoShowcase() {
   function openCinemaModal(videoSrc) {
     if (!cinemaModal || !cinemaVideo) return;
     if (previewVideo && !previewVideo.paused) previewVideo.pause();
-    
+
     if (videoSrc) {
       cinemaVideo.src = videoSrc;
     }
-    
+
     cinemaModal.classList.add("active");
     cinemaModal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
