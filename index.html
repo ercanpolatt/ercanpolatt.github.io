@@ -48,6 +48,7 @@
   </script>
 
   <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script type="application/ld+json">
@@ -135,9 +136,12 @@
       </div>
 
       <div class="home-img">
-        <img src="img/image.png" alt="Ercan Polat - Bilgisayar Mühendisi, Veri ve İş Analisti Profil Fotoğrafı"
-          title="Ercan Polat | Bilgisayar Mühendisi - Veri &amp; İş Analisti" loading="eager" fetchpriority="high"
-          width="380" height="380" />
+        <picture>
+          <source srcset="img/image.webp" type="image/webp" />
+          <img src="img/image.png" alt="Ercan Polat - Bilgisayar Mühendisi, Veri ve İş Analisti Profil Fotoğrafı"
+            title="Ercan Polat | Bilgisayar Mühendisi - Veri &amp; İş Analisti" loading="eager" fetchpriority="high"
+            decoding="async" width="380" height="380" />
+        </picture>
       </div>
     </section>
 
@@ -478,12 +482,15 @@
 
             <div class="spotlight-preview-frame spotlight-video-frame" id="spark-video-frame" title="Videoyu Oynat">
               <!-- Visual Artwork Image on Page -->
-              <img src="img/projects/spark-champions/spark-champions.jpg" alt="Spark Champions"
-                class="spotlight-main-img" id="spotlight-img-spark" />
+              <picture>
+                <source srcset="img/projects/spark-champions/spark-champions.webp" type="image/webp" />
+                <img src="img/projects/spark-champions/spark-champions.jpg" alt="Spark Champions"
+                  class="spotlight-main-img" id="spotlight-img-spark" loading="lazy" decoding="async" />
+              </picture>
 
               <!-- HTML5 Video Element (Revealed & Played on Click) -->
               <video id="spotlight-spark-video" class="spotlight-main-video" src="spark-champions.mp4" controls
-                playsinline preload="metadata" style="display:none;">
+                playsinline preload="none" style="display:none;">
               </video>
 
               <!-- Center Play Video Overlay Trigger -->
@@ -604,6 +611,14 @@
             <span class="project-badge" data-i18n="prj-puantaj-badge">PDKS &amp; Otomasyon</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="puantaj"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/puantaj/app_screen_1.webp" type="image/webp" />
+                <img src="img/projects/puantaj/app_screen_1.png" alt="FİDE Konserve PDKS &amp; Puantaj" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-time-five'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>FİDE Konserve PDKS &amp; Puantaj</h3>
             <p data-i18n="prj-puantaj-desc">PDKS kart basım verilerini analiz eden, vardiya ve mesaileri hesaplayan ve
               Excel puantaj cetvelleri oluşturan akıllı otomasyon.</p>
@@ -629,6 +644,14 @@
             <span class="project-badge" data-i18n="prj-qrcode-badge">Barkod Studio</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="qrcode"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/qr-code/uygulama_arayuzu.webp" type="image/webp" />
+                <img src="img/projects/qr-code/uygulama_arayuzu.png" alt="Barkod &amp; QR Kod Studio" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-qr-scan'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>Barkod &amp; QR Kod Studio</h3>
             <p data-i18n="prj-qrcode-desc">1D Barkod ve 2D QR Kod üreten, TC kimlik doğrulayan, Excel'e resim gömen ve
               A4 grid baskı sağlayan masaüstü yazılımı.</p>
@@ -656,9 +679,11 @@
           <div class="project-content">
             <div class="project-card-media-preview btn-watch-cinema" data-video="spark-champions.mp4"
               title="Videoyu İzle">
-              <img src="img/projects/spark-champions/spark-champions.jpg" alt="Spark Champions" loading="lazy" />
-              <span class="media-preview-play-badge"><i class='bx bx-play'></i> <span data-i18n="badge-play-video">MP4
-                  Video</span></span>
+              <picture>
+                <source srcset="img/projects/spark-champions/spark-champions.webp" type="image/webp" />
+                <img src="img/projects/spark-champions/spark-champions.jpg" alt="Spark Champions" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-play'></i> <span data-i18n="badge-play-video">MP4 Video</span></span>
             </div>
             <h3>Spark Champions: 3D Arena Survival</h3>
             <p data-i18n="prj-spark-desc">5 dalgalı canavar orduları, 6 eşsiz kahraman, yükseltme kartları ve Mega Golem
@@ -685,6 +710,14 @@
             <span class="project-badge" data-i18n="prj-1-badge">Yapay Zekâ</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="1"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/ai-mentor/ai-mentor-dashboard.webp" type="image/webp" />
+                <img src="img/projects/ai-mentor/ai-mentor-dashboard.jpg" alt="AI Mentor &amp; Sentiment Dashboard" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-brain'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>AI Mentor &amp; Sentiment Dashboard</h3>
             <p data-i18n="prj-1-desc">NLP ve LLM modellerini kullanarak kullanıcı geri bildirimlerini analiz eden,
               performans ve öğrenme iş akışlarını takip eden duygu analizi ve AI asistan paneli.</p>
@@ -710,6 +743,14 @@
             <span class="project-badge" data-i18n="prj-2-badge">Veri Bilimi</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="2"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/freight-analytics/freight-analytics.webp" type="image/webp" />
+                <img src="img/projects/freight-analytics/freight-analytics.jpg" alt="Smart Freight Analytics Portal" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-bar-chart-alt-2'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>Smart Freight Analytics Portal</h3>
             <p data-i18n="prj-2-desc">Lojistik ve liman operasyonları için veri analitiği platformu. Konteyner
               hareketlerini, operasyonel raporlamayı ve anlık veri akışını görselleştirir.</p>
@@ -735,6 +776,14 @@
             <span class="project-badge" data-i18n="prj-3-badge">Mobil Uygulama</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="3"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/productivity-app/productivity-flow.webp" type="image/webp" />
+                <img src="img/projects/productivity-app/productivity-flow.jpg" alt="Productivity &amp; Task Flow App" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-mobile-alt'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>Productivity &amp; Task Flow App</h3>
             <p data-i18n="prj-3-desc">Hızlı etkileşimler, çevrimdışı senkronizasyon ve akıcı UI geçişleri sunan gelişmiş
               mobil görev ve üretkenlik yönetimi uygulaması.</p>
@@ -760,6 +809,14 @@
             <span class="project-badge" data-i18n="prj-4-badge">Full-Stack</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="4"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/container-tracker/container-tracker.webp" type="image/webp" />
+                <img src="img/projects/container-tracker/container-tracker.jpg" alt="Smart Logistics Container Tracker" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-code-block'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>Smart Logistics Container Tracker</h3>
             <p data-i18n="prj-4-desc">Gerçek zamanlı konteyner takip, konum doğrulama ve anlık veri akışı sağlayan tam
               donanımlı lojistik web platformu.</p>
@@ -785,6 +842,14 @@
             <span class="project-badge" data-i18n="prj-5-badge">Siber Güvenlik</span>
           </div>
           <div class="project-content">
+            <div class="project-card-media-preview btn-details" data-project="5"
+              title="Proje Detaylarını Gör">
+              <picture>
+                <source srcset="img/projects/threat-visualizer/threat-visualizer.webp" type="image/webp" />
+                <img src="img/projects/threat-visualizer/threat-visualizer.jpg" alt="Cyber Threat Log Visualizer" loading="lazy" decoding="async" />
+              </picture>
+              <span class="media-preview-play-badge"><i class='bx bx-shield-quarter'></i> <span data-i18n="badge-preview">İncele</span></span>
+            </div>
             <h3>Cyber Threat Log Visualizer</h3>
             <p data-i18n="prj-5-desc">Ağ ve sistem loglarındaki anormallikleri makine öğrenimi modelleriyle tespit eden
               ve görsel tehdit analizi sunan güvenlik aracı.</p>
@@ -1310,7 +1375,7 @@
       </div>
       <div class="cinema-player-wrapper">
         <video id="cinema-modal-video" class="cinema-video" src="spark-champions.mp4" controls playsinline
-          preload="auto" poster="img/projects/spark-champions/spark-champions.jpg">
+          preload="none" poster="img/projects/spark-champions/spark-champions.webp">
           Tarayıcınız HTML5 video etiketini desteklemiyor.
         </video>
       </div>

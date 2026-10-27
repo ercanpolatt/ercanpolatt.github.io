@@ -1,5 +1,4 @@
-/* ─── IMPORT & RESET ──────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ─── IMPORT & RESET (Fonts preconnected & loaded via HTML head for max speed) ─── */
 
 * {
   margin: 0;
@@ -4284,23 +4283,32 @@ textarea:focus-visible {
 .project-card-media-preview {
   position: relative;
   width: 100%;
-  height: 140px;
-  border-radius: 1rem;
+  height: 148px;
+  border-radius: 1.2rem;
   overflow: hidden;
   margin-bottom: 1.4rem;
   background: #0f172a;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  display: block;
 }
 
+.project-card-media-preview picture,
 .project-card-media-preview img {
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.project-card-media-preview img {
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
 }
 
 .project-card-media-preview:hover img {
-  transform: scale(1.06);
+  transform: scale(1.07);
+  filter: brightness(1.04);
 }
 
 .media-preview-play-badge {
@@ -4308,25 +4316,44 @@ textarea:focus-visible {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #fff;
-  border: 1px solid rgba(139, 92, 246, 0.5);
-  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 0.55rem 1.35rem;
   border-radius: 999px;
   font-size: 1.2rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  transition: all 0.25s ease;
+  gap: 0.55rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.3px;
+  pointer-events: none;
 }
 
 .project-card-media-preview:hover .media-preview-play-badge {
-  background: #8b5cf6;
-  border-color: #a78bfa;
+  background: var(--main-color, #C2410C);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
   transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 10px 25px rgba(194, 65, 12, 0.45);
+}
+
+.project-card-gaming .project-card-media-preview {
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.project-card-gaming .media-preview-play-badge {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.project-card-gaming .project-card-media-preview:hover .media-preview-play-badge {
+  background: #7c3aed;
+  border-color: #a78bfa;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.45);
 }
 
 .btn-video-card {

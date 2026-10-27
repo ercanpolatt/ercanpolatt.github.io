@@ -71,6 +71,7 @@ const translations = {
     "btn-presentation": "View Detailed Presentation",
     "btn-theater-watch": "Watch in Cinema Mode",
     "badge-play-video": "MP4 Video",
+    "badge-preview": "Preview",
     "spotlight-spark-status": "Gameplay Video",
     "btn-play-video-text": "Play Video",
     "spotlight-spark-tag": "Game Development &amp; Arcade",
@@ -230,6 +231,7 @@ const translations = {
     "btn-presentation": "Detaylı Sunumu Gör",
     "btn-theater-watch": "Sinema Modunda İzle",
     "badge-play-video": "MP4 Video",
+    "badge-preview": "İncele",
     "spotlight-spark-status": "Oynanış Videosu",
     "btn-play-video-text": "Play Video",
     "spotlight-spark-tag": "Oyun Geliştirme &amp; Eğlence",
@@ -808,6 +810,9 @@ if (filterBtns.length > 0 && projectCards.length > 0) {
 
         setTimeout(() => {
           isFiltering = false;
+          if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+          }
         }, (matchingIndex || 1) * 70 + 200);
 
       }, 220);
@@ -1009,6 +1014,9 @@ const projectDataMap = {
         "Reaktif ve modern React tabanlı kullanıcı arayüzü"
       ]
     },
+    images: [
+      { src: "img/projects/ai-mentor/ai-mentor-dashboard.webp", title: "AI Mentor & Sentiment Dashboard - NLP & Model Metrikleri" }
+    ],
     tags: ["NLP", "Transformers", "React.js", "FastAPI", "Python", "TensorFlow"],
     iconClass: "bx bx-brain",
     github: "https://github.com/ercanpolatt",
@@ -1037,6 +1045,9 @@ const projectDataMap = {
         "Yüksek performanslı veri çekme işlemleri için optimize edilmiş SQL sorguları"
       ]
     },
+    images: [
+      { src: "img/projects/freight-analytics/freight-analytics.webp", title: "Smart Freight Analytics Portal - Liman ve Kargo Akış Raporu" }
+    ],
     tags: ["Python", "Pandas", "Plotly", "Flask", "SQL", "Business Analysis"],
     iconClass: "bx bx-bar-chart-alt-2",
     github: "https://github.com/ercanpolatt",
@@ -1065,6 +1076,9 @@ const projectDataMap = {
         "Smooth UI animasyonları ve karanlık mod desteği"
       ]
     },
+    images: [
+      { src: "img/projects/productivity-app/productivity-flow.webp", title: "Productivity & Task Flow App - Modern Mobil Tasarım ve Görev Akışı" }
+    ],
     tags: ["React Native", "Expo", "Redux Toolkit", "Node.js", "AsyncStorage"],
     iconClass: "bx bx-mobile-alt",
     github: "https://github.com/ercanpolatt",
@@ -1093,6 +1107,9 @@ const projectDataMap = {
         "Güvenli JWT tabanlı kullanıcı yetkilendirme ve rol yönetimi"
       ]
     },
+    images: [
+      { src: "img/projects/container-tracker/container-tracker.webp", title: "Smart Logistics Container Tracker - Canlı Küresel Harita ve Gemi Takibi" }
+    ],
     tags: ["Node.js", "Express", "PostgreSQL", "WebSockets", "React"],
     iconClass: "bx bx-code-block",
     github: "https://github.com/ercanpolatt",
@@ -1121,6 +1138,9 @@ const projectDataMap = {
         "Detaylı siber olay raporlama arayüzü"
       ]
     },
+    images: [
+      { src: "img/projects/threat-visualizer/threat-visualizer.webp", title: "Cyber Threat Log Visualizer - SOC Tehdit Radarı ve ML Anomali Tespiti" }
+    ],
     tags: ["Python", "Scikit-Learn", "Dash", "Security", "Machine Learning"],
     iconClass: "bx bx-shield-quarter",
     github: "https://github.com/ercanpolatt",
